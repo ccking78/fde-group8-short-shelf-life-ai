@@ -1,0 +1,6 @@
+FreshRetailNet-50K
+发布者 Dingdong-Inc
+数据许可 CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+https://huggingface.co/datasets/Dingdong-Inc/FreshRetailNet-50K
+原始数值保持不变，派生表将数组按小时展开并汇总11至13点销售与缺货标记。

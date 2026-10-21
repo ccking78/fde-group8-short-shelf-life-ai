@@ -1,0 +1,101 @@
+{
+  "fresh": {
+    "api_rows_downloaded": 300,
+    "daily_rows_selected": 270,
+    "hourly_rows": 6480,
+    "selection": "API顺序前3条完整门店商品序列；未按异常或销量筛选；排除第四条不完整的30日",
+    "series": [
+      {
+        "store_id": 0,
+        "product_id": 38,
+        "days": 90
+      },
+      {
+        "store_id": 0,
+        "product_id": 834,
+        "days": 90
+      },
+      {
+        "store_id": 0,
+        "product_id": 411,
+        "days": 90
+      }
+    ],
+    "start": "2024-03-28",
+    "end": "2024-06-25",
+    "nulls": {
+      "city_id": 0,
+      "store_id": 0,
+      "management_group_id": 0,
+      "first_category_id": 0,
+      "second_category_id": 0,
+      "third_category_id": 0,
+      "product_id": 0,
+      "dt": 0,
+      "sale_amount": 0,
+      "hours_sale": 0,
+      "stock_hour6_22_cnt": 0,
+      "hours_stock_status": 0,
+      "discount": 0,
+      "holiday_flag": 0,
+      "activity_flag": 0,
+      "precpt": 0,
+      "avg_temperature": 0,
+      "avg_humidity": 0,
+      "avg_wind_level": 0
+    },
+    "duplicate_daily_keys": 0,
+    "stockout_hour_bins_6_22": 1429,
+    "lunch_days_with_stockout": 82,
+    "lunch_days_without_stockout_flag": 188,
+    "quality_exceptions": []
+  },
+  "green": {
+    "train_rows": 5142,
+    "stores": 9,
+    "train_start": "2021-08-02",
+    "train_end": "2023-11-30",
+    "rows_with_sales_ordered_unsold": 3226,
+    "missing_unsold": 1916,
+    "missing_ordered": 1916,
+    "nulls": {
+      "date": 0,
+      "store": 0,
+      "is_state_holiday": 0,
+      "is_school_holiday": 0,
+      "is_special_day": 0,
+      "temperature_max": 0,
+      "temperature_min": 0,
+      "temperature_mean": 0,
+      "sunshine_sum": 0,
+      "precipitation_sum": 0,
+      "sales": 0,
+      "unsold": 1916,
+      "ordered": 1916
+    },
+    "duplicate_store_date": 0,
+    "ordered_minus_sales_minus_unsold_nonzero_rows": 3226,
+    "residual_min": -5.175609236167711,
+    "residual_max": 1.19481257870773,
+    "interpretation": "不能假定三列共同尺度；不把差值解释为漏损或业务错误",
+    "test_rows": 1575,
+    "truth_rows": 1575,
+    "joined_one_to_one": true,
+    "test_start": "2023-12-01",
+    "test_end": "2024-05-31"
+  },
+  "case_count": 6,
+  "case_status": "真实记录与预期审核行为；未声称系统已实现或测试通过",
+  "not_collected": [
+    "真实15分钟销售流水",
+    "批次开工和出炉",
+    "10点有效库存数量",
+    "单品保鲜及温控SOP",
+    "单品食材成本和直接变动成本",
+    "13点后销售规则"
+  ],
+  "candidate_not_redistributed": {
+    "name": "French bakery daily sales",
+    "reason": "原始发布API元数据 licenseName 为 Data files © Original Authors，本包主数据采用许可明确的两套数据；候选原文件保留于本地下载目录，不在交付包分发"
+  }
+}

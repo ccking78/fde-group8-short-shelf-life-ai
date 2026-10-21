@@ -1,0 +1,25 @@
+# Local working output
+work/
+temp/
+.cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+data/d1/复算输出/
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# Office locks and editor / OS files
+~$*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

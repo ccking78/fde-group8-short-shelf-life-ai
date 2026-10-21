@@ -1,0 +1,140 @@
+[
+  {
+    "file": "fresh_readme.md",
+    "url": "https://huggingface.co/datasets/Dingdong-Inc/FreshRetailNet-50K/raw/main/README.md",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:38.622641+00:00",
+    "error": "Failed to perform, curl: (35) BoringSSL SSL_connect: Connection closed abruptly (SSL_ERROR_SYSCALL; error queue empty) in connection to huggingface.co:443. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+  },
+  {
+    "file": "fresh_repo_metadata.json",
+    "url": "https://huggingface.co/api/datasets/Dingdong-Inc/FreshRetailNet-50K",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:38.623086+00:00",
+    "status": 200,
+    "final_url": "https://huggingface.co/api/datasets/Dingdong-Inc/FreshRetailNet-50K",
+    "bytes": 1758,
+    "sha256": "9ae81c9d17bc364bcf3c9b1f355ec0ac3aae12fe231cb4e5d5722c706b100c13"
+  },
+  {
+    "file": "green_readme.md",
+    "url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/README.md",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:38.623410+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/README.md",
+    "bytes": 4046,
+    "sha256": "4970b6180674875bc50a360d0ffc041cb8db297336591a04364ab22da02d7e1c"
+  },
+  {
+    "file": "green_license.txt",
+    "url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/LICENSE",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:41.097824+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/LICENSE",
+    "bytes": 1081,
+    "sha256": "fc2f7d814b642aaf02db29699c408b654c29aa50a4cfa6d5aac0a2ef9378286a"
+  },
+  {
+    "file": "green_train.csv",
+    "url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/train.csv",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:42.478944+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/train.csv",
+    "bytes": 686709,
+    "sha256": "1038b1f20317e83b29cc9f9e847ba9cbdf4146d463ceefd1623ed41041d99efc"
+  },
+  {
+    "file": "green_test.csv",
+    "url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/test.csv",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:45.293892+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/test.csv",
+    "bytes": 145096,
+    "sha256": "ce4a387c1b346fa7d8616c3c96826f9f3c2d858bf7a976187076f5386c4da048"
+  },
+  {
+    "file": "green_truth.csv",
+    "url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/truth.csv",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:45.305747+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/main/truth.csv",
+    "bytes": 37970,
+    "sha256": "7e992a1899131b0fb780ec1e054f7fafda5272deeaa91d3a182c56ce636de4e3"
+  },
+  {
+    "file": "green_commit.json",
+    "url": "https://api.github.com/repos/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/commits/main",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:45.941656+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/Green-AI-Hub-Mittelstand/Reduce-Foodwaste-Dataset/commits/main",
+    "bytes": 46906,
+    "sha256": "6b57889c182e80ed3b16589ed893f099ba6482eb3c59f8667892b01f18b22e17"
+  },
+  {
+    "file": "kaggle_metadata.json",
+    "url": "https://www.kaggle.com/api/v1/datasets/view/matthieugimbert/french-bakery-daily-sales",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:45.970855+00:00",
+    "status": 200,
+    "final_url": "https://www.kaggle.com/api/v1/datasets/view/matthieugimbert/french-bakery-daily-sales",
+    "bytes": 5717,
+    "sha256": "8f0415e54b166ff52d4f6a197023523a494817585d15ffd14f369a7816a6b579"
+  },
+  {
+    "file": "french_bakery_original.zip",
+    "url": "https://www.kaggle.com/api/v1/datasets/download/matthieugimbert/french-bakery-daily-sales",
+    "method": "urllib_binary",
+    "retrieved_utc": "2026-10-21T01:51:47.260400+00:00",
+    "status": 200,
+    "final_url": "https://storage.googleapis.com:443/kaggle-data-sets/2609620/4457754/bundle/archive.zip",
+    "content_type": "application/zip",
+    "bytes": 2029946,
+    "sha256": "6e9b164018e9132457e9201eefb58bc6883f60eb54c231f90d4e83d98ae9b9e8"
+  },
+  {
+    "file": "fresh_baseline_loader.py",
+    "url": "https://raw.githubusercontent.com/Dingdong-Inc/frn-50k-baseline/main/latent_demand_recovery/exp/data/generate_data.py",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:47.404668+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Dingdong-Inc/frn-50k-baseline/main/latent_demand_recovery/exp/data/generate_data.py",
+    "bytes": 4234,
+    "sha256": "0ef44455b7932a585cf777cf10d8f66c9c0a1d701380986a916cbed9eea6000a"
+  },
+  {
+    "file": "fresh_rows_0.json",
+    "url": "https://datasets-server.huggingface.co/rows?dataset=Dingdong-Inc%2FFreshRetailNet-50K&config=default&split=train&offset=0&length=100",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:48.403439+00:00",
+    "status": 200,
+    "final_url": "https://datasets-server.huggingface.co/rows?dataset=Dingdong-Inc%2FFreshRetailNet-50K&config=default&split=train&offset=0&length=100",
+    "bytes": 56892,
+    "sha256": "827adaa3e24ae4c7f503b76cb70bcf91b7a582fec709a3a928610afdc7cc26ec"
+  },
+  {
+    "file": "fresh_rows_100.json",
+    "url": "https://datasets-server.huggingface.co/rows?dataset=Dingdong-Inc%2FFreshRetailNet-50K&config=default&split=train&offset=100&length=100",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:51.150963+00:00",
+    "status": 200,
+    "final_url": "https://datasets-server.huggingface.co/rows?dataset=Dingdong-Inc%2FFreshRetailNet-50K&config=default&split=train&offset=100&length=100",
+    "bytes": 57350,
+    "sha256": "bc8d6e15f9c9580babd1bf86820713140aa809cec003cb0da8042e6b5c3520d6"
+  },
+  {
+    "file": "fresh_rows_200.json",
+    "url": "https://datasets-server.huggingface.co/rows?dataset=Dingdong-Inc%2FFreshRetailNet-50K&config=default&split=train&offset=200&length=100",
+    "method": "scrapling",
+    "retrieved_utc": "2026-10-21T01:51:51.676546+00:00",
+    "status": 200,
+    "final_url": "https://datasets-server.huggingface.co/rows?dataset=Dingdong-Inc%2FFreshRetailNet-50K&config=default&split=train&offset=200&length=100",
+    "bytes": 57697,
+    "sha256": "0c91d7e969364721f18a8db7e721697d2cea118400b5c0e311369b21598c52ef"
+  }
+]

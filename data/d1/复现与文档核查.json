@@ -1,0 +1,8 @@
+{
+  "method": "用包内原始快照和可移植脚本在独立工作目录重建，再逐文件比较SHA256",
+  "csv_files": 7,
+  "all_csv_byte_identical": true,
+  "document_pages": 3,
+  "document_visual_review": "3页已逐页检查，标题、表格和分页正常",
+  "completed_utc": "2026-10-21T02:09:10.027201+00:00"
+}

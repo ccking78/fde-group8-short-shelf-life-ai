@@ -1,0 +1,451 @@
+{
+  "assumptions": {
+    "demand_10_11": 0,
+    "demand_11_12": 24,
+    "demand_12_13": 16,
+    "within_hour": "uniform fluid demand",
+    "batch_size": 12,
+    "processing_minutes": 45,
+    "available_at_equals_ready": true,
+    "sale_expiry_minutes_after_ready": 120,
+    "clearance_at": "13:00",
+    "residual_value": 0,
+    "costs_are_scenario_values": true
+  },
+  "uniform": [
+    {
+      "new_batches": 0,
+      "lunch_sales": 10.0,
+      "shortage": 30.0,
+      "existing_expired": 5.0,
+      "terminal_expired": 0.0,
+      "clearance_residual": 0.0,
+      "comparison_loss_yuan": 420.6,
+      "intervals": [
+        {
+          "from_min": 0,
+          "to_min": 15,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "5"
+        },
+        {
+          "from_min": 15,
+          "to_min": 60,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "15"
+        },
+        {
+          "from_min": 60,
+          "to_min": 105,
+          "demand": "18",
+          "sold": "10",
+          "shortage": "8",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 105,
+          "to_min": 120,
+          "demand": "6",
+          "sold": "0",
+          "shortage": "6",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 120,
+          "to_min": 135,
+          "demand": "4",
+          "sold": "0",
+          "shortage": "4",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 135,
+          "to_min": 150,
+          "demand": "4",
+          "sold": "0",
+          "shortage": "4",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 150,
+          "to_min": 180,
+          "demand": "8",
+          "sold": "0",
+          "shortage": "8",
+          "end_stock": "0"
+        }
+      ]
+    },
+    {
+      "new_batches": 1,
+      "lunch_sales": 22.0,
+      "shortage": 18.0,
+      "existing_expired": 5.0,
+      "terminal_expired": 0.0,
+      "clearance_residual": 0.0,
+      "comparison_loss_yuan": 252.36,
+      "intervals": [
+        {
+          "from_min": 0,
+          "to_min": 15,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "5"
+        },
+        {
+          "from_min": 15,
+          "to_min": 60,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "15"
+        },
+        {
+          "from_min": 60,
+          "to_min": 105,
+          "demand": "18",
+          "sold": "18",
+          "shortage": "0",
+          "end_stock": "4"
+        },
+        {
+          "from_min": 105,
+          "to_min": 120,
+          "demand": "6",
+          "sold": "4",
+          "shortage": "2",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 120,
+          "to_min": 135,
+          "demand": "4",
+          "sold": "0",
+          "shortage": "4",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 135,
+          "to_min": 150,
+          "demand": "4",
+          "sold": "0",
+          "shortage": "4",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 150,
+          "to_min": 180,
+          "demand": "8",
+          "sold": "0",
+          "shortage": "8",
+          "end_stock": "0"
+        }
+      ]
+    },
+    {
+      "new_batches": 2,
+      "lunch_sales": 34.0,
+      "shortage": 6.0,
+      "existing_expired": 5.0,
+      "terminal_expired": 0.0,
+      "clearance_residual": 0.0,
+      "comparison_loss_yuan": 84.12,
+      "intervals": [
+        {
+          "from_min": 0,
+          "to_min": 15,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "5"
+        },
+        {
+          "from_min": 15,
+          "to_min": 60,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "15"
+        },
+        {
+          "from_min": 60,
+          "to_min": 105,
+          "demand": "18",
+          "sold": "18",
+          "shortage": "0",
+          "end_stock": "4"
+        },
+        {
+          "from_min": 105,
+          "to_min": 120,
+          "demand": "6",
+          "sold": "6",
+          "shortage": "0",
+          "end_stock": "10"
+        },
+        {
+          "from_min": 120,
+          "to_min": 135,
+          "demand": "4",
+          "sold": "4",
+          "shortage": "0",
+          "end_stock": "6"
+        },
+        {
+          "from_min": 135,
+          "to_min": 150,
+          "demand": "4",
+          "sold": "4",
+          "shortage": "0",
+          "end_stock": "2"
+        },
+        {
+          "from_min": 150,
+          "to_min": 180,
+          "demand": "8",
+          "sold": "2",
+          "shortage": "6",
+          "end_stock": "0"
+        }
+      ]
+    },
+    {
+      "new_batches": 3,
+      "lunch_sales": 40.0,
+      "shortage": 0.0,
+      "existing_expired": 5.0,
+      "terminal_expired": 0.0,
+      "clearance_residual": 6.0,
+      "comparison_loss_yuan": 59.88,
+      "intervals": [
+        {
+          "from_min": 0,
+          "to_min": 15,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "5"
+        },
+        {
+          "from_min": 15,
+          "to_min": 60,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "15"
+        },
+        {
+          "from_min": 60,
+          "to_min": 105,
+          "demand": "18",
+          "sold": "18",
+          "shortage": "0",
+          "end_stock": "4"
+        },
+        {
+          "from_min": 105,
+          "to_min": 120,
+          "demand": "6",
+          "sold": "6",
+          "shortage": "0",
+          "end_stock": "10"
+        },
+        {
+          "from_min": 120,
+          "to_min": 135,
+          "demand": "4",
+          "sold": "4",
+          "shortage": "0",
+          "end_stock": "6"
+        },
+        {
+          "from_min": 135,
+          "to_min": 150,
+          "demand": "4",
+          "sold": "4",
+          "shortage": "0",
+          "end_stock": "2"
+        },
+        {
+          "from_min": 150,
+          "to_min": 180,
+          "demand": "8",
+          "sold": "8",
+          "shortage": "0",
+          "end_stock": "6"
+        }
+      ]
+    }
+  ],
+  "frontloaded_12_13_demand": [
+    {
+      "new_batches": 2,
+      "lunch_sales": 34.0,
+      "shortage": 6.0,
+      "existing_expired": 5.0,
+      "terminal_expired": 0.0,
+      "clearance_residual": 0.0,
+      "comparison_loss_yuan": 84.12,
+      "intervals": [
+        {
+          "from_min": 0,
+          "to_min": 15,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "5"
+        },
+        {
+          "from_min": 15,
+          "to_min": 60,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "15"
+        },
+        {
+          "from_min": 60,
+          "to_min": 105,
+          "demand": "18",
+          "sold": "18",
+          "shortage": "0",
+          "end_stock": "4"
+        },
+        {
+          "from_min": 105,
+          "to_min": 120,
+          "demand": "6",
+          "sold": "6",
+          "shortage": "0",
+          "end_stock": "10"
+        },
+        {
+          "from_min": 120,
+          "to_min": 135,
+          "demand": "8",
+          "sold": "8",
+          "shortage": "0",
+          "end_stock": "2"
+        },
+        {
+          "from_min": 135,
+          "to_min": 150,
+          "demand": "8",
+          "sold": "2",
+          "shortage": "6",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 150,
+          "to_min": 180,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "0"
+        }
+      ]
+    },
+    {
+      "new_batches": 3,
+      "lunch_sales": 34.0,
+      "shortage": 6.0,
+      "existing_expired": 5.0,
+      "terminal_expired": 0.0,
+      "clearance_residual": 12.0,
+      "comparison_loss_yuan": 203.88,
+      "intervals": [
+        {
+          "from_min": 0,
+          "to_min": 15,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "5"
+        },
+        {
+          "from_min": 15,
+          "to_min": 60,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "15"
+        },
+        {
+          "from_min": 60,
+          "to_min": 105,
+          "demand": "18",
+          "sold": "18",
+          "shortage": "0",
+          "end_stock": "4"
+        },
+        {
+          "from_min": 105,
+          "to_min": 120,
+          "demand": "6",
+          "sold": "6",
+          "shortage": "0",
+          "end_stock": "10"
+        },
+        {
+          "from_min": 120,
+          "to_min": 135,
+          "demand": "8",
+          "sold": "8",
+          "shortage": "0",
+          "end_stock": "2"
+        },
+        {
+          "from_min": 135,
+          "to_min": 150,
+          "demand": "8",
+          "sold": "2",
+          "shortage": "6",
+          "end_stock": "0"
+        },
+        {
+          "from_min": 150,
+          "to_min": 180,
+          "demand": "0",
+          "sold": "0",
+          "shortage": "0",
+          "end_stock": "12"
+        }
+      ]
+    }
+  ],
+  "independent_ledger": [
+    {
+      "interval": "11:00–11:45",
+      "demand": 18,
+      "two_end": 4,
+      "three_end": 4
+    },
+    {
+      "interval": "11:45–12:00",
+      "demand": 6,
+      "two_end": 10,
+      "three_end": 10
+    },
+    {
+      "interval": "12:00–12:30",
+      "demand": 8,
+      "two_end": 2,
+      "three_end": 2
+    },
+    {
+      "interval": "12:30–13:00",
+      "demand": 8,
+      "two_end": 0,
+      "two_short": 6,
+      "three_end": 6
+    }
+  ],
+  "quantity_conservation_checked": true,
+  "cost_precision": "exact Fraction; formatted to 0.01 yuan",
+  "scope": "material calculation only, no prototype or store performance test"
+}

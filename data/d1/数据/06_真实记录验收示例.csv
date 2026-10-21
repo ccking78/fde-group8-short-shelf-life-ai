@@ -1,0 +1,7 @@
+﻿case_id,case_type,source_record_id,store_id,product_id,date,hour_start,sales_normalized,stockout_flag,unsold_normalized,ordered_normalized,expected_review,case_selection
+CASE01,缺货标记且零销售,fresh:train:1,0,38,2024-03-29,21:00,0.0,1,,,提示销售受缺货影响；不能据零销售判需求为零,first_matching_record_in_delivered_order; illustrative_not_performance_sample
+CASE02,未标缺货且零销售,fresh:train:0,0,38,2024-03-28,06:00,0.0,0,,,保留零销售；不能仅凭销量自行添加缺货标签,first_matching_record_in_delivered_order; illustrative_not_performance_sample
+CASE03,午段存在缺货标记,fresh:train:3,0,38,2024-03-31,11:00,0.0,1,,,午段销量不能直接充当未受缺货影响的需求真值,first_matching_record_in_delivered_order; illustrative_not_performance_sample
+CASE04,小时缺货标记且仍有销售,fresh:train:67,0,38,2024-06-03,19:00,0.1,1,,,保留原销量和标记；小时标记不能改写成整小时完全无货,first_matching_record_in_delivered_order; illustrative_not_performance_sample
+CASE05,真实余货字段缺失,green:train:0,store_5,,2021-08-02,,1.4327476970685655,,,,显示余货未提供；缺失不填零，不能宣称没有余货,first_matching_record_in_delivered_order; illustrative_not_performance_sample
+CASE06,销售订货余货字段齐备,green:train:1675,store_7,,2022-07-05,,0.7751562909156009,,-0.9741337431121042,0.7319546738043231,保留各自缩放值；未确认共同尺度前不构造实物守恒和报损率,first_matching_record_in_delivered_order; illustrative_not_performance_sample

@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-21",
+  "scope": "D1 source deliverables copied unchanged; ZIP entries match expanded data/d1 byte for byte.",
+  "deliverables": [
+    {
+      "path": "docs/d1/20261021_第8组_D1选题定义卡_修订稿.docx",
+      "bytes": 32557,
+      "sha256": "6872486320269e49dba71fd43521f56b85c711fcf619d3e606757838d157082c"
+    },
+    {
+      "path": "docs/d1/20261021_第8组_李启顺_业务规则与验收材料_v3.docx",
+      "bytes": 47310,
+      "sha256": "3d31226f9521300a5db4cf5264391c95255db1fea691c86c100582fa2f59665b"
+    },
+    {
+      "path": "releases/d1/D1_真实数据交付包_20261021.zip",
+      "bytes": 504973,
+      "sha256": "a9d3d58e32e9eaad9a85f6fb35d9fc13cb0777e1d71c99f457886ed659c83659"
+    }
+  ],
+  "data_bundle_files": [
+    {
+      "path": "data/d1/D1真实数据采集与交接说明.docx",
+      "sha256": "b2231daf78fdab208d28854aa9e699efdc2945d74a8918787f9aeb5da8690ac5"
+    },
+    {
+      "path": "data/d1/交付文件校验.json",
+      "sha256": "6504d7370b3878bf59b2078c562c71b33ee93e16d8a7b54a6ef063ddb55d4a51"
+    },
+    {
+      "path": "data/d1/先读说明.md",
+      "sha256": "d534fd69423e9e8cb21e92a29a231a3dce9efa96c2c85f944535275cc11e4f5c"
+    },
+    {
+      "path": "data/d1/原始来源/collection_manifest_v1.json",
+      "sha256": "b8e0d94867a6f3f710c6e561f69ed20eea8efb1607a934ff7bcca49cb4004193"
+    },
+    {
+      "path": "data/d1/原始来源/fresh_official_card.md",
+      "sha256": "b6a32b84c36de1c6f67551d4145c39b6b52224604abb02d5eb8ad81844956cd7"
+    },
+    {
+      "path": "data/d1/原始来源/fresh_repo_metadata.json",
+      "sha256": "9ae81c9d17bc364bcf3c9b1f355ec0ac3aae12fe231cb4e5d5722c706b100c13"
+    },
+    {
+      "path": "data/d1/原始来源/fresh_rows_0.json",
+      "sha256": "827adaa3e24ae4c7f503b76cb70bcf91b7a582fec709a3a928610afdc7cc26ec"
+    },
+    {
+      "path": "data/d1/原始来源/fresh_rows_100.json",
+      "sha256": "bc8d6e15f9c9580babd1bf86820713140aa809cec003cb0da8042e6b5c3520d6"
+    },
+    {
+      "path": "data/d1/原始来源/fresh_rows_200.json",
+      "sha256": "0c91d7e969364721f18a8db7e721697d2cea118400b5c0e311369b21598c52ef"
+    },
+    {
+      "path": "data/d1/原始来源/Fresh_许可及出处.txt",
+      "sha256": "ed013555056a0dcce55338ce81248f109262401bbf0eaf068df932c877842e30"
+    },
+    {
+      "path": "data/d1/原始来源/green_license.txt",
+      "sha256": "fc2f7d814b642aaf02db29699c408b654c29aa50a4cfa6d5aac0a2ef9378286a"
+    },
+    {
+      "path": "data/d1/原始来源/green_readme.md",
+      "sha256": "4970b6180674875bc50a360d0ffc041cb8db297336591a04364ab22da02d7e1c"
+    },
+    {
+      "path": "data/d1/原始来源/green_test.csv",
+      "sha256": "ce4a387c1b346fa7d8616c3c96826f9f3c2d858bf7a976187076f5386c4da048"
+    },
+    {
+      "path": "data/d1/原始来源/green_train.csv",
+      "sha256": "1038b1f20317e83b29cc9f9e847ba9cbdf4146d463ceefd1623ed41041d99efc"
+    },
+    {
+      "path": "data/d1/原始来源/green_truth.csv",
+      "sha256": "7e992a1899131b0fb780ec1e054f7fafda5272deeaa91d3a182c56ce636de4e3"
+    },
+    {
+      "path": "data/d1/复现与文档核查.json",
+      "sha256": "a6eefb3e07a2727ea11cc2ee95944d832cdfd06f0f0133c6a93881c34fe2f1db"
+    },
+    {
+      "path": "data/d1/复现脚本/rebuild_data.py",
+      "sha256": "59f0165f7a4f24f56b053eec5cd80dfdf3b70a0cf5a130fb094b22b4f6f3eefa"
+    },
+    {
+      "path": "data/d1/数据/01_Fresh_门店商品日原字段_270条.csv",
+      "sha256": "456eaa60e5072b78f419c77fe539e6ccec371735236680efda8700d5db50c995"
+    },
+    {
+      "path": "data/d1/数据/02_Fresh_逐小时销量与缺货_6480条.csv",
+      "sha256": "2195165da62139a8ee4afea1bb576ac1eba906602d81611dce059addbccf945a"
+    },
+    {
+      "path": "data/d1/数据/03_Fresh_午段销量核对_270条.csv",
+      "sha256": "20bdd46513994ef34543e1e06c58d6134a1d56e2162abd4ff1c333ae38ed117e"
+    },
+    {
+      "path": "data/d1/数据/04_Green_连锁烘焙训练日记录_5142条.csv",
+      "sha256": "755060bb50a853a27ab1863214dd1eca6f1924d018e0a045a2397c6d36afff68"
+    },
+    {
+      "path": "data/d1/数据/05_Green_留后验证日记录_1575条.csv",
+      "sha256": "ad2259e9ea013874fad178d2ea6ff765af81aabe5ef55728ce97c917bc9d8ad9"
+    },
+    {
+      "path": "data/d1/数据/06_真实记录验收示例.csv",
+      "sha256": "df0e372a66ee8bec2c1d6558acd94557d9a55854295d4ed937fa2a2a80c8ba57"
+    },
+    {
+      "path": "data/d1/数据/07_字段字典与使用限制.csv",
+      "sha256": "f30c91ec85b4dd7ba9653507b9587ac30b30a927fb01e4ffca04a5b28a1d0676"
+    },
+    {
+      "path": "data/d1/数据质量核查.json",
+      "sha256": "4822f711099217e8251060477da3f0e9ef1d56ae12777c9220cee1c8a40c8358"
+    },
+    {
+      "path": "data/d1/采集来源与校验记录.json",
+      "sha256": "b8e0d94867a6f3f710c6e561f69ed20eea8efb1607a934ff7bcca49cb4004193"
+    }
+  ]
+}
