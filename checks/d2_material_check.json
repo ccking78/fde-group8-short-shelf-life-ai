@@ -1,0 +1,39 @@
+{
+  "version": "D2 v1.1",
+  "date": "2026-10-23",
+  "scope": "第1周D2：选题卡、Goal/Gate、三类问题清单",
+  "requirement_checked_at": "2026-10-23",
+  "pages": {
+    "选题定义卡": 2,
+    "Goal与Gate": 3,
+    "问题清单": 3
+  },
+  "checks": {
+    "three_documents_consistent": true,
+    "teacher_feedback_examples_defined": true,
+    "five_simulated_and_six_real_examples": true,
+    "data_substitutions_documented": true,
+    "all_eight_pages_visually_reviewed": true,
+    "no_ontology_or_prototype_work_added": true,
+    "prototype_execution_claimed": false,
+    "word_only_zip_verified": true
+  },
+  "files": {
+    "docs/d2/20261023_第8组_D2_Goal与Gate.docx": {
+      "bytes": 7967,
+      "sha256": "86dddb5e771932bd47187ed0d64f2b60495e3694ed66b09033c4337038fffe5d"
+    },
+    "docs/d2/20261023_第8组_D2_选题定义卡.docx": {
+      "bytes": 6300,
+      "sha256": "9b330f946d35311698b782d3f16660f37de1177f64c9540d0fa7e29a1e5bde87"
+    },
+    "docs/d2/20261023_第8组_D2_问题清单.docx": {
+      "bytes": 7923,
+      "sha256": "ae15288f993cebc5c0540b8f214facc3155a7cc1e4b1dc07d2455b88387a91a7"
+    },
+    "releases/d2/20261023_第8组_D2提交材料_三份Word_v1.1.zip": {
+      "bytes": 20542,
+      "sha256": "65d6754eeb7fb2ea0bc08a019032bfd656c116bb3b89302f3b78820d9205d207"
+    }
+  }
+}
