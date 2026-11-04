@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-11-04T09:44:25.681787Z",
+  "passed": true,
+  "live_model": true,
+  "run_status": "completed",
+  "model_requests": 3,
+  "business_tools": 4,
+  "recommendation": {
+    "additional_quantity": 0,
+    "checks": [
+      "制作岗位核实TASK-8现场进度，确认4分钟制作时长允许第8分钟完成。",
+      "核实第8分钟可用产能为8份，确认原任务数量8份、额外新增0份。",
+      "核实旧批可售截止第28分钟、新批可售30分钟的课堂规则；缺失或例外由店长确认。",
+      "制作岗位完成本轮人审并确认完成时间；实际完成后登记数量和时间，采纳不入库。"
+    ],
+    "confirmation_role": "制作岗位",
+    "evidence_refs": [
+      "fa4d55c8-T01",
+      "fa4d55c8-T02",
+      "fa4d55c8-T04"
+    ],
+    "explanation": "工具显示原计划第12分钟完成8份，模拟迟供1份；候选第8分钟完成8份，模拟迟供0份，且判定可采纳。库存、需用和规则均为课堂模拟，迟供不等于真实丢单，也不代表企业实测收益。本建议尚未执行，完成登记才改变账面量。",
+    "quantity": 8,
+    "ready_minute": 8,
+    "status": "adjust_existing",
+    "summary": "建议将TASK-8原任务调整为第8分钟完成8份，额外新增0份，待制作岗位本轮核实确认。",
+    "task_id": "TASK-8"
+  },
+  "error": null,
+  "human_review_performed": false,
+  "business_completion_recorded": false,
+  "note": "仅部署试跑；未采纳、未执行，不代表企业运行或用户新签审",
+  "verified_on": "制作电脑的Windows便携运行时；不是组员目标电脑",
+  "target_computer_verified": false,
+  "codex_cli_version_on_builder": "0.166.0-alpha.6",
+  "builder_original_run_sha256": "f1313362621f019402d6593270c8fc4cb8c93c3463d58a1008ec6211b80e8aa4",
+  "runtime_py_sha256": "b45c1cf39b470e8226f09de6e7cf3406e15e3004ad279b60ca70f59449b2903f"
+}

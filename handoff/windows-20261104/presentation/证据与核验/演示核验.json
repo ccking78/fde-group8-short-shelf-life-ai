@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "checks": [
+    "1366×768投影尺寸六页全部无需滚动，主线严格按老师五问",
+    "键盘左右/Home翻页与N逐页讲稿可用",
+    "延期触发即时计算1份迟供，未经核对不能采纳；采纳只改原8份，库存仍12",
+    "课堂完成8、已履约4后在手16、可分配11，剩余需用11；重复点击不重复入账",
+    "可以打开真实模型与工具证据，明确标识历史运行及本页课堂记录",
+    "缺制作时间保留已知1份迟供并隐藏可采纳动作",
+    "倒计时4分钟提示答疑，5分钟停止并提醒结束，可重置",
+    "390px手机阅读无横向溢出；全程断网可用，无页面脚本错误，无模型请求"
+  ],
+  "layouts": [
+    {
+      "page": 0,
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "slideBottom": 618.171875,
+      "footerTop": 622.171875
+    },
+    {
+      "page": 1,
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "slideBottom": 685.71875,
+      "footerTop": 689.71875
+    },
+    {
+      "page": 2,
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "slideBottom": 688.171875,
+      "footerTop": 692.171875
+    },
+    {
+      "page": 3,
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "slideBottom": 659.5625,
+      "footerTop": 663.5625
+    },
+    {
+      "page": 4,
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "slideBottom": 636.796875,
+      "footerTop": 640.796875
+    },
+    {
+      "page": 5,
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "slideBottom": 618.9375,
+      "footerTop": 622.9375
+    }
+  ],
+  "page_errors": [],
+  "offline": true,
+  "new_model_requests": 0,
+  "html": "E:\\FDE培训作业\\report-demo-20261104\\第8组_5分钟汇报_打开即演示.html"
+}

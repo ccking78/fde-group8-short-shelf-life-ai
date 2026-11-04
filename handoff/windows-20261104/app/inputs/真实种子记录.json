@@ -1,0 +1,72 @@
+{
+  "contract_version": "fde-classroom-contract-1.0.0",
+  "derived": {
+    "drive_thru": true,
+    "end_local_time": "12:15:00",
+    "is_return": false,
+    "quantity": 1,
+    "start_hour": 12,
+    "start_local_time": "12:14:00",
+    "weekday_iso": 3
+  },
+  "evidence_id": "E3:35741",
+  "menu": {
+    "category_id": "1",
+    "category_name": "SANDWICHES",
+    "item_name": "MINI TUNA",
+    "matched": true,
+    "subcategory_id": "24",
+    "subcategory_name": "MINIS"
+  },
+  "missing_reasons": {
+    "/unknown/actual_capacity_per_batch": {
+      "code": "not_in_source",
+      "reason": "源文件未提供班次和岗位产能。"
+    },
+    "/unknown/actual_on_hand": {
+      "code": "not_in_source",
+      "reason": "源文件未提供门店在手数量。"
+    },
+    "/unknown/actual_prep_minutes": {
+      "code": "not_in_source",
+      "reason": "源文件未提供制作时长。"
+    },
+    "/unknown/actual_sellable_minutes": {
+      "code": "not_in_source",
+      "reason": "源文件未提供适用于该商品批次的可售规则。"
+    },
+    "/unknown/kitchen_completed_at": {
+      "code": "not_in_source",
+      "reason": "源文件未提供厨房完成时刻，交易结束不能替代。"
+    },
+    "/unknown/service_due_at": {
+      "code": "not_in_source",
+      "reason": "源文件未提供顾客需用时刻，不能从收据时间推断。"
+    },
+    "/unknown/source_timezone": {
+      "code": "not_in_source",
+      "reason": "源文件未提供交易地点的时区，不能推断UTC时间。"
+    }
+  },
+  "observed": {
+    "date": "2011-03-23",
+    "drive_thru_raw": "True",
+    "end_time": "12:15",
+    "item_id": "1023",
+    "quantity_raw": "1",
+    "receipt_id": "8_03/23/2011_12:15_10078_0",
+    "return_raw": "False",
+    "start_time": "12:14:00",
+    "store_id": "8"
+  },
+  "record_id": "urn:fde:mendeley:9hntk3wbwc:1:E3:35741",
+  "unknown": {
+    "actual_capacity_per_batch": null,
+    "actual_on_hand": null,
+    "actual_prep_minutes": null,
+    "actual_sellable_minutes": null,
+    "kitchen_completed_at": null,
+    "service_due_at": null,
+    "source_timezone": null
+  }
+}

@@ -8,6 +8,7 @@
 
 | 内容 | 入口 | 使用方式 |
 | --- | --- | --- |
+| Windows组员交接 | [下载完整交接包](releases/week3/FDE_第8组_Windows汇报交接包_20261104.zip) · [AI部署指令](handoff/windows-20261104/docs/01_AI部署指令.md) | 随包Python与依赖，按02～06自检、本人登录、真实试跑和启动 |
 | 5分钟现场展示 | [离线HTML与讲稿](presentations/20261104/README_GITHUB.md) | 下载后双击HTML；4分钟讲述与操作，1分钟答疑 |
 | 实时智能体 v0.3 | [源码、启动与证据](prototype/agent-v0.3/README_GITHUB.md) | 本地Python、SimPy和已登录可用的Codex CLI；真实模型调用需网络 |
 | 三项课程作业 | [周六、周一、周二D1](coursework/week3-20261103/GitHub阅读入口.md) | PDF/Word与来源、数据规范、课堂人审记录 |

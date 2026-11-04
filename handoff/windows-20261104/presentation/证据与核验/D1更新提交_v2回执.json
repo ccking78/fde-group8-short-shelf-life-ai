@@ -1,0 +1,22 @@
+{
+  "platform": "https://ai-native-talent-academy.coolai.tech/",
+  "task": "第3周D1",
+  "version": "v2",
+  "receipt": "R261104151942-46852",
+  "previous_receipt": "R261104142046-0814A",
+  "platform_display_time_beijing": "2026-11-04 15:19",
+  "client_time_america_denver": "2026-11-04 00:19",
+  "verified_attachment_count": 5,
+  "work_url": null,
+  "github_status": "用户明确暂缓",
+  "attachments": [
+    "01_周六实操_一页六格说明.pdf",
+    "01b_周六实操_运行报告与展示说明.pdf",
+    "02_周一_AI任务边界.pdf",
+    "03_周二_D1任务清单与人工确认表.pdf",
+    "FDE_第8组_D1更新提交_v2_含实时智能体_20261104.zip"
+  ],
+  "updated_bundle_sha256": "d70700e7069c2c9ea817fc86226d0f569557b5ce3df4f6075715871be2d00e06",
+  "today_presentation_uploaded": false,
+  "proof_screenshot": "学习台_D1_已提交v2_20261104.jpg"
+}
