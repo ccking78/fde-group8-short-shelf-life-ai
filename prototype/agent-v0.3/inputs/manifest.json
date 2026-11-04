@@ -1,0 +1,12 @@
+{
+  "origin": "copy_of_submitted_v1_inputs",
+  "new_scraping_performed": false,
+  "external_increment_count": 1,
+  "files": {
+    "03_课堂基础快照.json": "252c8bf09c3b1c97c93d1c372b5dec75b87ff935136ffdafd6ea0ae65c1badcb",
+    "04_逐字段来源.jsonl": "8e7390729a706bc4db16323a48b8a9496b14b556bd2326374a868d04986ecbb1",
+    "05_唯一延期事件_CloudEvents.jsonl": "e5180e2ba4066ee932f1ede97ee7af0fa851e362d1c7fe804de19548dd29c8c2",
+    "来源许可与版本.json": "abf98f5847c7069070bd4262bb5a2e9b308ef2cb72f1a1bf4149ebd3a84d019f",
+    "真实种子记录.json": "843c19238dadf1f32d5355884833cce4e7c07403ebaa5895ae902b7d63688742"
+  }
+}

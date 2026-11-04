@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "input_sha256": "e16d3892bcded518fda89b4934105e027b10204d9cc603eca2f0830777e35c2e",
+  "result_sha256": "547f0de5e7535248f3060259019111b98473124b4958277f09cece717595115a",
+  "replay_byte_identical": true,
+  "unit_tests": 37,
+  "runtime_checks": 16,
+  "browser_checks": 8,
+  "manual_human_record_byte_unchanged": true,
+  "actual_completion_recorded": false,
+  "new_ai_blind_test_performed": false
+}

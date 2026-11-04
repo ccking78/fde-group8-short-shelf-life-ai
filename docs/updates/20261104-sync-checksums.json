@@ -1,0 +1,106 @@
+{
+  "prepared_at_utc": "2026-11-04T07:50:08.954441+00:00",
+  "repository": "https://github.com/ccking78/fde-group8-short-shelf-life-ai",
+  "branch": "coursework/week3-20261103",
+  "scope": [
+    "三项课程作业与来源数据",
+    "实时智能体v0.3源码和冻结运行证据",
+    "五分钟离线HTML、讲稿与核验证据",
+    "原字节交付ZIP"
+  ],
+  "course_manifest_verified_files": 140,
+  "agent_manifest_verified_files": 40,
+  "demo_manifest_verified_files": 20,
+  "snapshots": {
+    "prototype/agent-v0.3": {
+      ".gitignore": "982c03af78626d02bd6720c0ee32db610354cc9da4a0eac897fde6ed8ea7ddca",
+      "build_delivery.py": "ae6d9625e51a4ef8424d63e437492066d760e93ba8c90094e639f6a62e2ef1ad",
+      "contracts.py": "a1cf3644ec617baf9340b659102c1ee239f4382502bf3de7c881257f24a3a9b4",
+      "DESIGN.md": "d167cc6226534eca0fc24f464e89b8127c6b29713dfc03b4f9652851ae7dba97",
+      "domain.py": "a503ac27ca73dbede72709708b0457ee15a0c631fa4fba8bbd5540bd5ee4a1da",
+      "evidence/01_正常输入.png": "b2e89d628b20ca56a22d666f6efa305b755e6162438cfcad84a332a359042bd1",
+      "evidence/02_延期实时AI建议.png": "b47f26366014ba838710cff8f5c8cab3502e138b8bf6a0b0c716ebcecd4dab57",
+      "evidence/02_延期调查.json": "e870276530575b6b6d89f4d34579899fce91157d93bcf72a7934eb6a27c139c1",
+      "evidence/03_采纳未增加库存.png": "9ac7b1ce2514b39ca0060fc288028e74cd44eaabf6432fc3122500b787b3ddbd",
+      "evidence/04_完成后实时AI复评.png": "857a633279b432f38ebfb1804c6b97f237d6fd15f862e682e01e8df0578562ac",
+      "evidence/04_完成后的实时复评.json": "9128ad925c050b1a399931d9a3e2aa80a734165e8bd590804b9e9a4c04fc96a4",
+      "evidence/05_真实工具记录.png": "6951b6ae1bb7d020f8a6e8464fd1539f2168d2a3fbce620d51f8e0a302452c4f",
+      "evidence/06_手机界面.png": "e500ee41ab67bc2aa6f13672ec3c3d2ecc03786a71670975386aef0af95f2d97",
+      "evidence/07_缺制作规则停止数量建议.png": "68a1a02591d7c8e857345636c19faa0eb651dd676fd28b9238d0744531d7b25b",
+      "evidence/07_缺规则实时调查.json": "cd17144a8306a94211d28918a27e8a6933533e0e5730e14ae19719c480ce0588",
+      "evidence/browser_verification.json": "6b75e35bc3b6f5d0fc2dc067463df08d008e2a918d4b0d8546f269b8307ab36d",
+      "evidence/学习台_D1_已提交v1.jpg": "d6072318ee16f3b6d7b4532c602a1b5d33cab675195ab56a3be15d1a932127d1",
+      "evidence/学习台提交回执.json": "b491bfd8add39b56b00fbb66a1d8f88609b3d9a2d001fc239312652a8218fe82",
+      "evidence/导出的本次完整记录.json": "42f657b332a4b7aee7fb5bbd1414e16ae291678b30b59f233ef4a7361de2f677",
+      "evidence/真实模型运行摘要.json": "45cd993fb5f9911bbf7f1e0ae789467490ed298185f593cd9706264819e3725d",
+      "evidence/边界验证记录.json": "c2f64d91b1c3eeaede754371f4a12be2df02d8cf3c511ba17267e38ec51f4c81",
+      "inputs/03_课堂基础快照.json": "252c8bf09c3b1c97c93d1c372b5dec75b87ff935136ffdafd6ea0ae65c1badcb",
+      "inputs/04_逐字段来源.jsonl": "8e7390729a706bc4db16323a48b8a9496b14b556bd2326374a868d04986ecbb1",
+      "inputs/05_唯一延期事件_CloudEvents.jsonl": "e5180e2ba4066ee932f1ede97ee7af0fa851e362d1c7fe804de19548dd29c8c2",
+      "inputs/manifest.json": "22c7de4c2678193d091dbdf8690525a3f54b237fd1400b38e74e87cc088633e3",
+      "inputs/来源许可与版本.json": "abf98f5847c7069070bd4262bb5a2e9b308ef2cb72f1a1bf4149ebd3a84d019f",
+      "inputs/真实种子记录.json": "843c19238dadf1f32d5355884833cce4e7c07403ebaa5895ae902b7d63688742",
+      "projection.py": "6d4e759c27cf5afd1f2dbc7bb970a661fcf2b813ab728570f9f28b77e2786586",
+      "README.md": "90d3c9b8797eccd43c8c2d2e52b02d852757316e0141b68e5ba77612c855f179",
+      "requirements.lock": "5a4586e2d6e3772d2da1334d48f44323afee1cf582201c8af6d0aeb5dd766de9",
+      "runtime.py": "384caad516707d1a9782e2e9ab12eb30e88970183066c8f3ab46ce129d76e026",
+      "server.py": "9836e3eb455013176a04f50a0285ed257e3b5fa7a79f7cddbcca580fc1ec1066",
+      "test_boundaries.py": "bbd8e9723849a503eb3ae71f0198807f61ac4dd094701b101943ac1b0a19c253",
+      "verify_browser.py": "aa515b5636bb373242aba804e167b43daeb536b634619209bfbc897c57801bc7",
+      "verify_live.py": "12353ff0690862a3e4da4d5ce2c12d01553ea2feaaeaf607426b34f2ea890900",
+      "web/app.js": "704a163003e425fd1245bc5d28478c9631c77c168cbc0089913e116e3ead680d",
+      "web/index.html": "e530d9b0b82d8e36f31dd798b58d0b881cd2b0c93ea7fc67dbb46c0774310ef8",
+      "web/style.css": "4fa3c079822a36d961baba1f0285c544b71251558aa83ed55fc2d9caa558fd20",
+      "交付校验清单.json": "12d60f190817baf21c45cdc1b45e333f6964ed8de2a3d8f8bb524a78319c6b90",
+      "启动本地助手.cmd": "98581956119699100ff412ea8ebb7b1ed360b2bf8529b1e45b84e12c75584a00",
+      "运行验收报告.md": "36c87a162268196e8dc034d9f129fde1e010b6a7d32a71cf1260fe43cfa4c0cb"
+    },
+    "presentations/20261104": {
+      "00_打开5分钟汇报.html": "dcdf74b81cec42351337aebfd0d620ee751fbaeb28b71c5e977e903f35255e72",
+      "01_逐页讲稿与答疑备答.md": "8892a9cf327c7f25808d0832f99778e69b9c1126edf61aac6a723e1b5be2986a",
+      "02_使用说明.md": "bfc2f6aad5477b2b144f38b611e429da24f7f8154bb2cdf3e16f3f901108f15f",
+      "可编辑源文件/build_presentation.py": "6634feb9954fce02d387f5bea4008e9e88e332aa2c6e5a65fe78eb92df350ed4",
+      "可编辑源文件/notes.json": "ed6b647b5115518486f6fa37df08c24d63f76029b36671166e15a6363d8f2c32",
+      "可编辑源文件/presentation_template.html": "19374e151be34367a5f6690adbc662d6dbd6dfb201cbd870c736f3e8cbdf3619",
+      "可编辑源文件/verify_presentation.py": "58dbd13eb42839adc6b539e78e7796107abbc99ac6bc83506c152481f0c5c1a4",
+      "可编辑源文件/演示设计与时间安排.md": "639d4e68142e7b6d674daa61d20e6819feac637fb4423348a04d6798fe8dde21",
+      "文件校验.json": "9848c4d7c350f88fca52bce9538d359550546c5e61943611605dedea1d9fa32a",
+      "证据与核验/01_投影_帮谁.png": "3b2e5116d4d49ed918591c82822b6e6804184b20b4f3d743db063c090dadc5fc",
+      "证据与核验/02_投影_用哪张表.png": "62c835efda962c07e8e955f991a8ab99fd18fa70ce557585e4ae026cd3c5f267",
+      "证据与核验/03_投影_按什么规则.png": "cd6572526e2868f23cd92ff0f2ecc518f8f56a0517f8269ca9d38aac9e6b50d4",
+      "证据与核验/04_投影_产出什么.png": "3350996a2296847d13712b0682e72615b88043b2066a1542aa404209c357ca7a",
+      "证据与核验/05_投影_由谁拍板.png": "2cc8e8181f490cd2e24b8efe740d5f0ec71bead53eba69b6a16e096aa37d7b11",
+      "证据与核验/06_投影_答疑.png": "e8223f237c625bfd9074e0180aaba570420c83993897fcc178af1329662d9945",
+      "证据与核验/07_课堂采纳_库存未增加.png": "a44f66aae56d29a05152c5d77848bc16ad067d8bcf3dbf7a6eb64cc9e6d44eda",
+      "证据与核验/08_缺规则_无可采纳数量.png": "9b67a57017b5acbdde36bf8ee6ccdf81e8f14def277afaebc3a8b7d1ab7acd46",
+      "证据与核验/09_手机查看.png": "2517d18578761b920dbc88202fdbc3b9c479334bb9d787f4e6d7a6d99c4f1bc6",
+      "证据与核验/D1更新提交_v2回执.json": "78685bc52f7077adcc6779612a718f1353af50105e13092af44a7a8a81e37c72",
+      "证据与核验/学习台_D1_已提交v2_20261104.jpg": "ead6e89a37ddb0d1eda9a15c3b7c48499ec81bd67de63ffd99a6581e5fd88f02",
+      "证据与核验/演示核验.json": "ea326796baf27a618755a51642051458c13eee313df315077042273ca57791a7"
+    }
+  },
+  "archives": {
+    "FDE_第8组_三项任务提交准备版_20261103.zip": {
+      "sha256": "da55d0cf63c8a2c4ea89cb005f1b379032476907bcef2aebdf303c44e4673b6b",
+      "bytes": 6895614,
+      "members": 141
+    },
+    "FDE_第8组_D1更新提交_v2_含实时智能体_20261104.zip": {
+      "sha256": "d70700e7069c2c9ea817fc86226d0f569557b5ce3df4f6075715871be2d00e06",
+      "bytes": 7968312,
+      "members": 183
+    },
+    "FDE_第8组_最小AI运行闭环_v0.3_20261103.zip": {
+      "sha256": "1a22eb9abfebedb6ccc0ae2d89fa5edf8ec9178da3442fdeb4420f24fa867156",
+      "bytes": 1063459,
+      "members": 41
+    },
+    "FDE_第8组_5分钟汇报与演示_20261104.zip": {
+      "sha256": "c3e90b9ce145a86fb49e760ad18104f4d1a264fb95984d588feb39d44e29820e",
+      "bytes": 951334,
+      "members": 21
+    }
+  },
+  "unrelated_planning_file_preserved_sha256": "b456c231272f2930109c5d111e02717b3b27ff60067bf4ab5cd905908e5fce5c",
+  "new_model_requests_during_sync": 0
+}

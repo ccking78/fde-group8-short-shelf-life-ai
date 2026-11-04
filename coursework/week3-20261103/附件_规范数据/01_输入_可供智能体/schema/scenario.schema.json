@@ -1,0 +1,210 @@
+{
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": "fde-classroom-contract-1.0.0"
+    },
+    "seed_record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "const": "classroom_assumption"
+    },
+    "time_unit": {
+      "const": "minute"
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "display_sku": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_item_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "store_id": {
+          "const": "SIM-01"
+        },
+        "window_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440
+        },
+        "on_hand": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "reserved": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "blocked": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "old_sellable_until": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440
+        },
+        "new_hold_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440
+        },
+        "prep_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440
+        },
+        "plan": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "TASK-8"
+            },
+            "quantity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "status": {
+              "enum": [
+                "not_started",
+                "in_progress"
+              ]
+            },
+            "ready_minute": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1440
+            },
+            "alternative_ready_minute": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1440
+            },
+            "alternative_capacity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            }
+          },
+          "required": [
+            "id",
+            "quantity",
+            "status",
+            "ready_minute",
+            "alternative_ready_minute",
+            "alternative_capacity"
+          ],
+          "additionalProperties": false
+        },
+        "demand_due": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "properties": {
+              "minute": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1440
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 10000
+              }
+            },
+            "required": [
+              "minute",
+              "quantity"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "actual_discard_recorded": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "as_of_minute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1440
+        },
+        "id": {
+          "const": "PILOT-01"
+        }
+      },
+      "required": [
+        "display_sku",
+        "source_item_id",
+        "store_id",
+        "window_minutes",
+        "on_hand",
+        "reserved",
+        "blocked",
+        "old_sellable_until",
+        "new_hold_minutes",
+        "prep_minutes",
+        "plan",
+        "demand_due",
+        "actual_discard_recorded",
+        "as_of_minute",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "field_origins": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {},
+          "kind": {
+            "enum": [
+              "classroom_assumption",
+              "source_reference"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "field",
+          "value",
+          "kind",
+          "basis"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "contract_version",
+    "seed_record_id",
+    "origin",
+    "time_unit",
+    "state",
+    "field_origins"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fde:schema:scenario:1.0.0"
+}

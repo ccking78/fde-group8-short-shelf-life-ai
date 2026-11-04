@@ -1,0 +1,63 @@
+{
+  "status": "blocked",
+  "product": {
+    "product_id": "B01",
+    "product_name": "经典牛肉堡"
+  },
+  "action": "请求店长补齐并核实制作耗时；补齐事实后重新调用工具形成新计划，再交制作岗位确认。当前不提供可采纳数量，亦未建议维持为零。",
+  "quantity": null,
+  "evidence": [
+    {
+      "type": "observation",
+      "source": "input.csv/S1；p1_missing-T01 inspect；sim-rule-1",
+      "detail": "课堂模拟快照在手12个、已预留5个、不可分配0个；inspect实际返回可分配量7个。0是有效数值；已接订单已全部预留，不重复计入新增需求。工具只使用S1字段，无后备配置。"
+    },
+    {
+      "type": "missing_condition",
+      "source": "input.csv/S1；p1_missing-T01 inspect",
+      "detail": "prep_minutes为空；inspect返回status=blocked、missing_fields=[prep_minutes]、invalid_fields=[]，核实角色为店长。sellable_minutes=30、batch_age_minutes=2、window_minutes=20不能替代制作耗时，不能确认新供给能否在需求前完成且届时可售。"
+    },
+    {
+      "type": "forecast",
+      "source": "input.csv/H1-H5；p1_missing-T02 forecast",
+      "detail": "历史数量为13、14、15、16、17个；工具实际计算(13+14+15+16+17)/5=15，预测未来20分钟尚未发生的新增需求为15个。预测大于可分配量，提示潜在供给不足，但不足以确定加做量。"
+    },
+    {
+      "type": "assumption",
+      "source": "p1_missing-T02 forecast/arrival_assumption",
+      "detail": "工具将新增需求安排在第5、10、15、20分钟，分别为4、4、4、3个；这是情景假设，不是已观察的订单或未来真实销量。"
+    },
+    {
+      "type": "blocked_comparison",
+      "source": "p1_missing-T03 simulate quantity=0；p1_missing-T04 simulate quantity=8",
+      "detail": "维持候选0和加做探索候选8均实际返回status=blocked、candidate_qty=null，原因为关键条件不完整。8仅是测试参数，不能采纳；两个候选均未获得有效模拟结果，不提供预计满足量、缺口或浪费量。工具进程均成功执行，没有工具执行失败；阻断来自缺失数据。"
+    }
+  ],
+  "missing_fields": [
+    {
+      "field": "prep_minutes",
+      "label": "制作耗时，分钟",
+      "source": "input.csv/S1；p1_missing-T01、p1_missing-T03、p1_missing-T04",
+      "problem": "未提供",
+      "responsible_role": "店长提供并核实适用于本商品、本次情景的耗时；制作岗位核对现场适用性",
+      "recovery_condition": "将有来源、当前有效、无冲突且合法的耗时补入输入后，重新运行inspect、forecast、simulate。关键条件全部有效且候选通过到达时点与可售约束，才能形成新建议。人员批准不能代替缺失证据。"
+    }
+  ],
+  "confirmation": "未获得店长或制作岗位的人工确认。当前只请求补齐事实；制作岗位还需核实现场数量，新计划形成后交制作岗位确认。人员采纳只建立待办，实际完成才增加成品，不自行批准或写经营账。当前受影响商品B01的状态仍为阻断。",
+  "limitations": [
+    "全部来源为classroom_simulation，不连接真实门店，不代表真实库存。",
+    "历史预测和到达时点是假设；情景比较不构成真实销量或食品安全承诺。",
+    "因制作耗时缺失，尚不能判定可执行的加做或维持方案。"
+  ],
+  "tools_used": [
+    {"call_id": "p1_missing-T01", "tool": "inspect", "arguments": {}, "success": true, "business_status": "blocked"},
+    {"call_id": "p1_missing-T02", "tool": "forecast", "arguments": {}, "success": true, "forecast_qty": 15},
+    {"call_id": "p1_missing-T03", "tool": "simulate", "arguments": {"quantity": 0}, "success": true, "business_status": "blocked"},
+    {"call_id": "p1_missing-T04", "tool": "simulate", "arguments": {"quantity": 8}, "success": true, "business_status": "blocked"}
+  ],
+  "tool_provenance": {
+    "tool_version": "course-tools-1.0",
+    "input_sha256": "62b08de45d00f042b867e4775d9234800eef14e1f92a323e287adaf6a29a86f2",
+    "record_file": "tool_trace.jsonl"
+  }
+}

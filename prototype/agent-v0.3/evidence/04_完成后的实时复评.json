@@ -1,0 +1,2569 @@
+{
+  "runs": [
+    {
+      "error": null,
+      "finished_at_utc": "2026-11-04T06:46:02.945500Z",
+      "id": "feb9f32da39043668598dcc543e4d52a",
+      "model_calls": [
+        {
+          "adapter": "codex-cli-live",
+          "authentication": "existing_local_configuration",
+          "cli_tools_enabled": false,
+          "duration_seconds": 13.23,
+          "model_selection": "existing_configured_model_no_override",
+          "request_context": {
+            "history": [],
+            "remaining_rounds": 5,
+            "scope": "1店1商品课堂模拟；只可读工具；写操作须人审",
+            "snapshot_version": 1,
+            "trigger": "eta_changed"
+          },
+          "request_sha256": "0e6693823d88b810d68b10fc0803237adadc6528b531321a7b9cd6b72dd86f0e",
+          "returned": {
+            "kind": "tools",
+            "reason": "先读取冻结快照、任务排程和制作规则，核对延期影响、可行时点与产能。",
+            "recommendation": null,
+            "tool_calls": [
+              {
+                "arguments": {
+                  "quantity": null,
+                  "ready_minute": null,
+                  "topic": null
+                },
+                "name": "get_snapshot"
+              },
+              {
+                "arguments": {
+                  "quantity": null,
+                  "ready_minute": null,
+                  "topic": "all"
+                },
+                "name": "get_evidence"
+              }
+            ]
+          },
+          "round": 1,
+          "schema_sha256": "290d39cc611c6d8056ae7d61fe5f59ae8f8102a2c79f5b581a85dc4526bbbac7",
+          "system_prompt_sha256": "901a05dc0db597d5b0cebcc077f80aeb33f66257109b01b987209bdbd12b3b92",
+          "thread_id": "01a1a54d-cee4-7d70-9aea-6e176e7f1936",
+          "usage": {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 10986,
+            "output_tokens": 304,
+            "reasoning_output_tokens": 204
+          }
+        },
+        {
+          "adapter": "codex-cli-live",
+          "authentication": "existing_local_configuration",
+          "cli_tools_enabled": false,
+          "duration_seconds": 17.91,
+          "model_selection": "existing_configured_model_no_override",
+          "request_context": {
+            "history": [
+              {
+                "model": {
+                  "kind": "tools",
+                  "reason": "先读取冻结快照、任务排程和制作规则，核对延期影响、可行时点与产能。",
+                  "recommendation": null,
+                  "tool_calls": [
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "get_snapshot"
+                    },
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": "all"
+                      },
+                      "name": "get_evidence"
+                    }
+                  ]
+                },
+                "tool_results": [
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:45:15.242608Z",
+                    "call_id": "feb9f32d-T01",
+                    "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+                    "name": "get_snapshot",
+                    "output": {
+                      "as_of_minute": 1,
+                      "blocked": 0,
+                      "demand_due": [
+                        {
+                          "minute": 5,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 10,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 15,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 20,
+                          "quantity": 3
+                        }
+                      ],
+                      "display_sku": "迷你三明治 A",
+                      "on_hand": 12,
+                      "plan": {
+                        "alternative_capacity": 8,
+                        "alternative_ready_minute": 8,
+                        "id": "TASK-8",
+                        "quantity": 8,
+                        "ready_minute": 12,
+                        "status": "not_started"
+                      },
+                      "prep_minutes": 4,
+                      "reserved": 5,
+                      "source_item_id": "1023",
+                      "store_id": "SIM-01",
+                      "unreconciled_past_quantity": 0,
+                      "version": 1
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 1
+                  },
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": "all"
+                    },
+                    "at_utc": "2026-11-04T06:45:15.244643Z",
+                    "call_id": "feb9f32d-T02",
+                    "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+                    "name": "get_evidence",
+                    "output": {
+                      "batch_rules": {
+                        "actual_batches": [],
+                        "new_hold_minutes": 30,
+                        "not_general_safety_standard": true,
+                        "old_sellable_until": 28,
+                        "origin": "classroom_assumption"
+                      },
+                      "source_lineage": {
+                        "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+                        "license": "CC BY 4.0",
+                        "limitations": [
+                          "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+                          "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+                          "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+                          "交易起止时间不是厨房完成时间或顾客等待时间。",
+                          "到可售截止的排除量不等于实际已报废量。"
+                        ],
+                        "new_scraping_performed": false,
+                        "seed_receipt_row": 3836,
+                        "seed_source_item_row": 35741,
+                        "source_item_id": "1023",
+                        "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1"
+                      },
+                      "task_schedule": {
+                        "confirmation": "制作岗位核实现场进度、可调整产能；店长确认缺失规则",
+                        "origin": "classroom_assumption",
+                        "plan": {
+                          "alternative_capacity": 8,
+                          "alternative_ready_minute": 8,
+                          "id": "TASK-8",
+                          "quantity": 8,
+                          "ready_minute": 12,
+                          "status": "not_started"
+                        },
+                        "prep_minutes": 4
+                      }
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 1
+                  }
+                ]
+              }
+            ],
+            "remaining_rounds": 4,
+            "scope": "1店1商品课堂模拟；只可读工具；写操作须人审",
+            "snapshot_version": 1,
+            "trigger": "eta_changed"
+          },
+          "request_sha256": "a90c5a2ddc1db0294ebe75dfc4d81727913def1cb25e945ae4a4c58eb2f90976",
+          "returned": {
+            "kind": "tools",
+            "reason": "已取得同版本快照、排程和规则；用证据给出的数量8及替代完成时点8比较原任务调整方案，核实覆盖改善与产能约束。",
+            "recommendation": null,
+            "tool_calls": [
+              {
+                "arguments": {
+                  "quantity": 8,
+                  "ready_minute": 8,
+                  "topic": null
+                },
+                "name": "compare_plans"
+              }
+            ]
+          },
+          "round": 2,
+          "schema_sha256": "290d39cc611c6d8056ae7d61fe5f59ae8f8102a2c79f5b581a85dc4526bbbac7",
+          "system_prompt_sha256": "901a05dc0db597d5b0cebcc077f80aeb33f66257109b01b987209bdbd12b3b92",
+          "thread_id": "01a1a54e-027b-7ac3-a2c0-b88caa7de4d2",
+          "usage": {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 11752,
+            "output_tokens": 414,
+            "reasoning_output_tokens": 320
+          }
+        },
+        {
+          "adapter": "codex-cli-live",
+          "authentication": "existing_local_configuration",
+          "cli_tools_enabled": false,
+          "duration_seconds": 29.75,
+          "model_selection": "existing_configured_model_no_override",
+          "request_context": {
+            "history": [
+              {
+                "model": {
+                  "kind": "tools",
+                  "reason": "先读取冻结快照、任务排程和制作规则，核对延期影响、可行时点与产能。",
+                  "recommendation": null,
+                  "tool_calls": [
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "get_snapshot"
+                    },
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": "all"
+                      },
+                      "name": "get_evidence"
+                    }
+                  ]
+                },
+                "tool_results": [
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:45:15.242608Z",
+                    "call_id": "feb9f32d-T01",
+                    "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+                    "name": "get_snapshot",
+                    "output": {
+                      "as_of_minute": 1,
+                      "blocked": 0,
+                      "demand_due": [
+                        {
+                          "minute": 5,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 10,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 15,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 20,
+                          "quantity": 3
+                        }
+                      ],
+                      "display_sku": "迷你三明治 A",
+                      "on_hand": 12,
+                      "plan": {
+                        "alternative_capacity": 8,
+                        "alternative_ready_minute": 8,
+                        "id": "TASK-8",
+                        "quantity": 8,
+                        "ready_minute": 12,
+                        "status": "not_started"
+                      },
+                      "prep_minutes": 4,
+                      "reserved": 5,
+                      "source_item_id": "1023",
+                      "store_id": "SIM-01",
+                      "unreconciled_past_quantity": 0,
+                      "version": 1
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 1
+                  },
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": "all"
+                    },
+                    "at_utc": "2026-11-04T06:45:15.244643Z",
+                    "call_id": "feb9f32d-T02",
+                    "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+                    "name": "get_evidence",
+                    "output": {
+                      "batch_rules": {
+                        "actual_batches": [],
+                        "new_hold_minutes": 30,
+                        "not_general_safety_standard": true,
+                        "old_sellable_until": 28,
+                        "origin": "classroom_assumption"
+                      },
+                      "source_lineage": {
+                        "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+                        "license": "CC BY 4.0",
+                        "limitations": [
+                          "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+                          "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+                          "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+                          "交易起止时间不是厨房完成时间或顾客等待时间。",
+                          "到可售截止的排除量不等于实际已报废量。"
+                        ],
+                        "new_scraping_performed": false,
+                        "seed_receipt_row": 3836,
+                        "seed_source_item_row": 35741,
+                        "source_item_id": "1023",
+                        "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1"
+                      },
+                      "task_schedule": {
+                        "confirmation": "制作岗位核实现场进度、可调整产能；店长确认缺失规则",
+                        "origin": "classroom_assumption",
+                        "plan": {
+                          "alternative_capacity": 8,
+                          "alternative_ready_minute": 8,
+                          "id": "TASK-8",
+                          "quantity": 8,
+                          "ready_minute": 12,
+                          "status": "not_started"
+                        },
+                        "prep_minutes": 4
+                      }
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 1
+                  }
+                ]
+              },
+              {
+                "model": {
+                  "kind": "tools",
+                  "reason": "已取得同版本快照、排程和规则；用证据给出的数量8及替代完成时点8比较原任务调整方案，核实覆盖改善与产能约束。",
+                  "recommendation": null,
+                  "tool_calls": [
+                    {
+                      "arguments": {
+                        "quantity": 8,
+                        "ready_minute": 8,
+                        "topic": null
+                      },
+                      "name": "compare_plans"
+                    }
+                  ]
+                },
+                "tool_results": [
+                  {
+                    "arguments": {
+                      "quantity": 8,
+                      "ready_minute": 8,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:45:33.172232Z",
+                    "call_id": "feb9f32d-T03",
+                    "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+                    "name": "compare_plans",
+                    "output": {
+                      "action_adoptable": true,
+                      "additional_quantity": 0,
+                      "baseline": {
+                        "available_initial": 7,
+                        "backlog_end": 0,
+                        "conservation_pass": true,
+                        "delay_unit_minutes": 2,
+                        "engine": "SimPy 4.1.2",
+                        "expired_unavailable": 0,
+                        "first_late_minute": 10,
+                        "forecast_quantity": 15,
+                        "kind": "classroom_hypothetical",
+                        "late_units": 1,
+                        "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                        "quantity": 8,
+                        "ready_minute": 12,
+                        "remaining_available": 0,
+                        "served_by_horizon": 15,
+                        "status": "projected",
+                        "trace": [
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 5,
+                            "projected_available": 3,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 10,
+                            "projected_available": 0,
+                            "projected_backlog": 1,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "projected_supply",
+                            "minute": 12,
+                            "projected_available": 7,
+                            "projected_backlog": 0,
+                            "quantity": 8
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 15,
+                            "projected_available": 3,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 20,
+                            "projected_available": 0,
+                            "projected_backlog": 0,
+                            "quantity": 3
+                          }
+                        ]
+                      },
+                      "candidate": {
+                        "available_initial": 7,
+                        "backlog_end": 0,
+                        "conservation_pass": true,
+                        "delay_unit_minutes": 0,
+                        "engine": "SimPy 4.1.2",
+                        "expired_unavailable": 0,
+                        "first_late_minute": null,
+                        "forecast_quantity": 15,
+                        "kind": "classroom_hypothetical",
+                        "late_units": 0,
+                        "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                        "quantity": 8,
+                        "ready_minute": 8,
+                        "remaining_available": 0,
+                        "served_by_horizon": 15,
+                        "status": "projected",
+                        "trace": [
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 5,
+                            "projected_available": 3,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "projected_supply",
+                            "minute": 8,
+                            "projected_available": 11,
+                            "projected_backlog": 0,
+                            "quantity": 8
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 10,
+                            "projected_available": 7,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 15,
+                            "projected_available": 3,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 20,
+                            "projected_available": 0,
+                            "projected_backlog": 0,
+                            "quantity": 3
+                          }
+                        ]
+                      },
+                      "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+                      "quantity": 8,
+                      "ready_minute": 8,
+                      "requires_human_confirmation": true,
+                      "unreconciled_past_quantity": 0
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 1
+                  }
+                ]
+              }
+            ],
+            "remaining_rounds": 3,
+            "scope": "1店1商品课堂模拟；只可读工具；写操作须人审",
+            "snapshot_version": 1,
+            "trigger": "eta_changed"
+          },
+          "request_sha256": "b71b4023ce6804902ddebcb14ea265b10f1d8fbee047bfdb043739601aa338d3",
+          "returned": {
+            "kind": "final",
+            "reason": "同版本快照、排程和规则齐备；比较结果确认候选可行且改善模拟迟供。",
+            "recommendation": {
+              "additional_quantity": 0,
+              "checks": [
+                "核实TASK-8现场进度仍允许调整，并能在第8分钟完成。",
+                "核实替代时点产能为8，满足4分钟制作时长。",
+                "核实制作数量8及课堂可售规则：新批次30分钟、旧批次至第28分钟。",
+                "由制作岗位确认数量与完成时间；实际完成后登记，采纳本身不入库。"
+              ],
+              "confirmation_role": "制作岗位",
+              "evidence_refs": [
+                "feb9f32d-T01",
+                "feb9f32d-T02",
+                "feb9f32d-T03"
+              ],
+              "explanation": "工具比较显示，原计划模拟迟供1件、延迟2件分钟；候选均降至0，且通过数量守恒检查。建议尚未执行，须本轮人审；模拟迟供不等于真实丢单。",
+              "quantity": 8,
+              "ready_minute": 8,
+              "status": "adjust_existing",
+              "summary": "建议将TASK-8完成时点由第12分钟提前至第8分钟，数量维持8，额外新增为0。",
+              "task_id": "TASK-8"
+            },
+            "tool_calls": []
+          },
+          "round": 3,
+          "schema_sha256": "290d39cc611c6d8056ae7d61fe5f59ae8f8102a2c79f5b581a85dc4526bbbac7",
+          "system_prompt_sha256": "901a05dc0db597d5b0cebcc077f80aeb33f66257109b01b987209bdbd12b3b92",
+          "thread_id": "01a1a54e-4881-71a0-81f2-374da5c3f425",
+          "usage": {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 12538,
+            "output_tokens": 944,
+            "reasoning_output_tokens": 648
+          }
+        }
+      ],
+      "recommendation": {
+        "additional_quantity": 0,
+        "checks": [
+          "核实TASK-8现场进度仍允许调整，并能在第8分钟完成。",
+          "核实替代时点产能为8，满足4分钟制作时长。",
+          "核实制作数量8及课堂可售规则：新批次30分钟、旧批次至第28分钟。",
+          "由制作岗位确认数量与完成时间；实际完成后登记，采纳本身不入库。"
+        ],
+        "confirmation_role": "制作岗位",
+        "evidence_refs": [
+          "feb9f32d-T01",
+          "feb9f32d-T02",
+          "feb9f32d-T03"
+        ],
+        "explanation": "工具比较显示，原计划模拟迟供1件、延迟2件分钟；候选均降至0，且通过数量守恒检查。建议尚未执行，须本轮人审；模拟迟供不等于真实丢单。",
+        "quantity": 8,
+        "ready_minute": 8,
+        "status": "adjust_existing",
+        "summary": "建议将TASK-8完成时点由第12分钟提前至第8分钟，数量维持8，额外新增为0。",
+        "task_id": "TASK-8"
+      },
+      "session_id": "c41377f3dc0a4a7687e55aebb061df47",
+      "snapshot": {
+        "actual_batches": [],
+        "actual_discard_recorded": 0,
+        "as_of_minute": 1,
+        "blocked": 0,
+        "demand_due": [
+          {
+            "minute": 5,
+            "quantity": 4
+          },
+          {
+            "minute": 10,
+            "quantity": 4
+          },
+          {
+            "minute": 15,
+            "quantity": 4
+          },
+          {
+            "minute": 20,
+            "quantity": 3
+          }
+        ],
+        "display_sku": "迷你三明治 A",
+        "events": [
+          {
+            "data": {
+              "after": 12,
+              "before": 4,
+              "changed_field": "plan.ready_minute",
+              "contract_version": "fde-classroom-contract-1.0.0",
+              "event_minute": 1,
+              "new_version": 1,
+              "origin": "simulated_increment",
+              "previous_version": 0,
+              "recorded_minute": 1,
+              "scenario_id": "PILOT-01",
+              "sku_id": "1023",
+              "store_id": "SIM-01",
+              "task_id": "TASK-8"
+            },
+            "datacontenttype": "application/json",
+            "id": "SIM-INC-01",
+            "recorded_at_utc": "2026-11-04T06:45:01.959965Z",
+            "source": "urn:fde:group8:classroom:PILOT-01",
+            "specversion": "1.0",
+            "subject": "SIM-01/TASK-8",
+            "type": "cn.fde.group8.task.eta.changed.v1"
+          }
+        ],
+        "execution": [],
+        "human_reviews": [],
+        "id": "PILOT-01",
+        "new_hold_minutes": 30,
+        "old_sellable_until": 28,
+        "on_hand": 12,
+        "plan": {
+          "alternative_capacity": 8,
+          "alternative_ready_minute": 8,
+          "id": "TASK-8",
+          "quantity": 8,
+          "ready_minute": 12,
+          "status": "not_started"
+        },
+        "prep_minutes": 4,
+        "reserved": 5,
+        "session_id": "c41377f3dc0a4a7687e55aebb061df47",
+        "source_item_id": "1023",
+        "store_id": "SIM-01",
+        "unreconciled_past_quantity": 0,
+        "variant": "normal",
+        "version": 1,
+        "window_minutes": 20
+      },
+      "snapshot_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+      "snapshot_version": 1,
+      "source": "live_model_not_replay",
+      "started_at_utc": "2026-11-04T06:45:01.969486Z",
+      "status": "completed",
+      "trace": [
+        {
+          "arguments": {
+            "quantity": null,
+            "ready_minute": null,
+            "topic": null
+          },
+          "at_utc": "2026-11-04T06:45:15.242608Z",
+          "call_id": "feb9f32d-T01",
+          "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+          "name": "get_snapshot",
+          "output": {
+            "as_of_minute": 1,
+            "blocked": 0,
+            "demand_due": [
+              {
+                "minute": 5,
+                "quantity": 4
+              },
+              {
+                "minute": 10,
+                "quantity": 4
+              },
+              {
+                "minute": 15,
+                "quantity": 4
+              },
+              {
+                "minute": 20,
+                "quantity": 3
+              }
+            ],
+            "display_sku": "迷你三明治 A",
+            "on_hand": 12,
+            "plan": {
+              "alternative_capacity": 8,
+              "alternative_ready_minute": 8,
+              "id": "TASK-8",
+              "quantity": 8,
+              "ready_minute": 12,
+              "status": "not_started"
+            },
+            "prep_minutes": 4,
+            "reserved": 5,
+            "source_item_id": "1023",
+            "store_id": "SIM-01",
+            "unreconciled_past_quantity": 0,
+            "version": 1
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 1
+        },
+        {
+          "arguments": {
+            "quantity": null,
+            "ready_minute": null,
+            "topic": "all"
+          },
+          "at_utc": "2026-11-04T06:45:15.244643Z",
+          "call_id": "feb9f32d-T02",
+          "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+          "name": "get_evidence",
+          "output": {
+            "batch_rules": {
+              "actual_batches": [],
+              "new_hold_minutes": 30,
+              "not_general_safety_standard": true,
+              "old_sellable_until": 28,
+              "origin": "classroom_assumption"
+            },
+            "source_lineage": {
+              "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+              "license": "CC BY 4.0",
+              "limitations": [
+                "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+                "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+                "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+                "交易起止时间不是厨房完成时间或顾客等待时间。",
+                "到可售截止的排除量不等于实际已报废量。"
+              ],
+              "new_scraping_performed": false,
+              "seed_receipt_row": 3836,
+              "seed_source_item_row": 35741,
+              "source_item_id": "1023",
+              "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1"
+            },
+            "task_schedule": {
+              "confirmation": "制作岗位核实现场进度、可调整产能；店长确认缺失规则",
+              "origin": "classroom_assumption",
+              "plan": {
+                "alternative_capacity": 8,
+                "alternative_ready_minute": 8,
+                "id": "TASK-8",
+                "quantity": 8,
+                "ready_minute": 12,
+                "status": "not_started"
+              },
+              "prep_minutes": 4
+            }
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 1
+        },
+        {
+          "arguments": {
+            "quantity": 8,
+            "ready_minute": 8,
+            "topic": null
+          },
+          "at_utc": "2026-11-04T06:45:33.172232Z",
+          "call_id": "feb9f32d-T03",
+          "input_sha256": "38e1f536c1037bd7565eee2f5aeb72ef4636334845b305ca31ce3058fe909880",
+          "name": "compare_plans",
+          "output": {
+            "action_adoptable": true,
+            "additional_quantity": 0,
+            "baseline": {
+              "available_initial": 7,
+              "backlog_end": 0,
+              "conservation_pass": true,
+              "delay_unit_minutes": 2,
+              "engine": "SimPy 4.1.2",
+              "expired_unavailable": 0,
+              "first_late_minute": 10,
+              "forecast_quantity": 15,
+              "kind": "classroom_hypothetical",
+              "late_units": 1,
+              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+              "quantity": 8,
+              "ready_minute": 12,
+              "remaining_available": 0,
+              "served_by_horizon": 15,
+              "status": "projected",
+              "trace": [
+                {
+                  "event": "simulated_need_due",
+                  "minute": 5,
+                  "projected_available": 3,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 10,
+                  "projected_available": 0,
+                  "projected_backlog": 1,
+                  "quantity": 4
+                },
+                {
+                  "event": "projected_supply",
+                  "minute": 12,
+                  "projected_available": 7,
+                  "projected_backlog": 0,
+                  "quantity": 8
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 15,
+                  "projected_available": 3,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 20,
+                  "projected_available": 0,
+                  "projected_backlog": 0,
+                  "quantity": 3
+                }
+              ]
+            },
+            "candidate": {
+              "available_initial": 7,
+              "backlog_end": 0,
+              "conservation_pass": true,
+              "delay_unit_minutes": 0,
+              "engine": "SimPy 4.1.2",
+              "expired_unavailable": 0,
+              "first_late_minute": null,
+              "forecast_quantity": 15,
+              "kind": "classroom_hypothetical",
+              "late_units": 0,
+              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+              "quantity": 8,
+              "ready_minute": 8,
+              "remaining_available": 0,
+              "served_by_horizon": 15,
+              "status": "projected",
+              "trace": [
+                {
+                  "event": "simulated_need_due",
+                  "minute": 5,
+                  "projected_available": 3,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "projected_supply",
+                  "minute": 8,
+                  "projected_available": 11,
+                  "projected_backlog": 0,
+                  "quantity": 8
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 10,
+                  "projected_available": 7,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 15,
+                  "projected_available": 3,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 20,
+                  "projected_available": 0,
+                  "projected_backlog": 0,
+                  "quantity": 3
+                }
+              ]
+            },
+            "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+            "quantity": 8,
+            "ready_minute": 8,
+            "requires_human_confirmation": true,
+            "unreconciled_past_quantity": 0
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 1
+        }
+      ],
+      "trigger": "eta_changed"
+    },
+    {
+      "error": null,
+      "finished_at_utc": "2026-11-04T06:47:51.739317Z",
+      "id": "fc893754dd964840ab8dc2a3a2707bcf",
+      "model_calls": [
+        {
+          "adapter": "codex-cli-live",
+          "authentication": "existing_local_configuration",
+          "cli_tools_enabled": false,
+          "duration_seconds": 15.81,
+          "model_selection": "existing_configured_model_no_override",
+          "request_context": {
+            "history": [],
+            "remaining_rounds": 5,
+            "scope": "1店1商品课堂模拟；只可读工具；写操作须人审",
+            "snapshot_version": 3,
+            "trigger": "completion_recorded"
+          },
+          "request_sha256": "e6171df8318f19ebd948edbd8ae49c66a6293a7aa3158593751e99d565fdb047",
+          "returned": {
+            "kind": "tools",
+            "reason": "先读取快照、任务与规则证据；本轮为完成登记触发，同时核对实际完成及履约登记，再比较计划。",
+            "recommendation": null,
+            "tool_calls": [
+              {
+                "arguments": {
+                  "quantity": null,
+                  "ready_minute": null,
+                  "topic": null
+                },
+                "name": "get_snapshot"
+              },
+              {
+                "arguments": {
+                  "quantity": null,
+                  "ready_minute": null,
+                  "topic": "all"
+                },
+                "name": "get_evidence"
+              },
+              {
+                "arguments": {
+                  "quantity": null,
+                  "ready_minute": null,
+                  "topic": null
+                },
+                "name": "get_execution"
+              }
+            ]
+          },
+          "round": 1,
+          "schema_sha256": "290d39cc611c6d8056ae7d61fe5f59ae8f8102a2c79f5b581a85dc4526bbbac7",
+          "system_prompt_sha256": "901a05dc0db597d5b0cebcc077f80aeb33f66257109b01b987209bdbd12b3b92",
+          "thread_id": "01a1a54f-6d4e-7e91-9953-96976b7e9897",
+          "usage": {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 10987,
+            "output_tokens": 348,
+            "reasoning_output_tokens": 222
+          }
+        },
+        {
+          "adapter": "codex-cli-live",
+          "authentication": "existing_local_configuration",
+          "cli_tools_enabled": false,
+          "duration_seconds": 16.78,
+          "model_selection": "existing_configured_model_no_override",
+          "request_context": {
+            "history": [
+              {
+                "model": {
+                  "kind": "tools",
+                  "reason": "先读取快照、任务与规则证据；本轮为完成登记触发，同时核对实际完成及履约登记，再比较计划。",
+                  "recommendation": null,
+                  "tool_calls": [
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "get_snapshot"
+                    },
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": "all"
+                      },
+                      "name": "get_evidence"
+                    },
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "get_execution"
+                    }
+                  ]
+                },
+                "tool_results": [
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:47:03.997226Z",
+                    "call_id": "fc893754-T01",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "get_snapshot",
+                    "output": {
+                      "as_of_minute": 8,
+                      "blocked": 0,
+                      "demand_due": [
+                        {
+                          "minute": 10,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 15,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 20,
+                          "quantity": 3
+                        }
+                      ],
+                      "display_sku": "迷你三明治 A",
+                      "on_hand": 16,
+                      "plan": {
+                        "alternative_capacity": 8,
+                        "alternative_ready_minute": 8,
+                        "id": "TASK-8",
+                        "quantity": 0,
+                        "ready_minute": null,
+                        "status": "completed"
+                      },
+                      "prep_minutes": 4,
+                      "reserved": 5,
+                      "source_item_id": "1023",
+                      "store_id": "SIM-01",
+                      "unreconciled_past_quantity": 0,
+                      "version": 3
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  },
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": "all"
+                    },
+                    "at_utc": "2026-11-04T06:47:04.000778Z",
+                    "call_id": "fc893754-T02",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "get_evidence",
+                    "output": {
+                      "batch_rules": {
+                        "actual_batches": [
+                          {
+                            "deadline": 38,
+                            "id": "BATCH-TASK-8",
+                            "quantity": 8
+                          }
+                        ],
+                        "new_hold_minutes": 30,
+                        "not_general_safety_standard": true,
+                        "old_sellable_until": 28,
+                        "origin": "classroom_assumption"
+                      },
+                      "source_lineage": {
+                        "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+                        "license": "CC BY 4.0",
+                        "limitations": [
+                          "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+                          "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+                          "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+                          "交易起止时间不是厨房完成时间或顾客等待时间。",
+                          "到可售截止的排除量不等于实际已报废量。"
+                        ],
+                        "new_scraping_performed": false,
+                        "seed_receipt_row": 3836,
+                        "seed_source_item_row": 35741,
+                        "source_item_id": "1023",
+                        "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1"
+                      },
+                      "task_schedule": {
+                        "confirmation": "制作岗位核实现场进度、可调整产能；店长确认缺失规则",
+                        "origin": "classroom_assumption",
+                        "plan": {
+                          "alternative_capacity": 8,
+                          "alternative_ready_minute": 8,
+                          "id": "TASK-8",
+                          "quantity": 0,
+                          "ready_minute": null,
+                          "status": "completed"
+                        },
+                        "prep_minutes": 4
+                      }
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  },
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:47:04.000778Z",
+                    "call_id": "fc893754-T03",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "get_execution",
+                    "output": {
+                      "execution": [
+                        {
+                          "actor": "浏览器验收测试操作者",
+                          "at_utc": "2026-11-04T06:46:48.136926Z",
+                          "completed_minute": 8,
+                          "completed_quantity": 8,
+                          "cumulative_unreserved_fulfilled": 4,
+                          "note": "课堂模拟登记，不是用户新确认或真实企业执行；未知履约不自动扣账",
+                          "on_hand_after": 16,
+                          "on_hand_before": 12,
+                          "origin": "classroom_operator_record",
+                          "past_forecast_quantity": 4,
+                          "remaining_task_quantity": 0,
+                          "role": "制作岗位",
+                          "task_id": "TASK-8",
+                          "type": "classroom_completion_and_reconciliation"
+                        }
+                      ],
+                      "human_reviews": [
+                        {
+                          "actor": "浏览器验收测试操作者",
+                          "at_utc": "2026-11-04T06:46:47.990098Z",
+                          "decision": "adopt",
+                          "note": "课堂自动化验收：核对预设进度、规则、产能、数量和时点；不代表用户新确认或真实门店核实。",
+                          "origin": "classroom_operator_record",
+                          "quantity": 8,
+                          "ready_minute": 8,
+                          "revalidation": {
+                            "action_adoptable": true,
+                            "additional_quantity": 0,
+                            "baseline": {
+                              "available_initial": 7,
+                              "backlog_end": 0,
+                              "conservation_pass": true,
+                              "delay_unit_minutes": 2,
+                              "engine": "SimPy 4.1.2",
+                              "expired_unavailable": 0,
+                              "first_late_minute": 10,
+                              "forecast_quantity": 15,
+                              "kind": "classroom_hypothetical",
+                              "late_units": 1,
+                              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                              "quantity": 8,
+                              "ready_minute": 12,
+                              "remaining_available": 0,
+                              "served_by_horizon": 15,
+                              "status": "projected",
+                              "trace": [
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 5,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 10,
+                                  "projected_available": 0,
+                                  "projected_backlog": 1,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "projected_supply",
+                                  "minute": 12,
+                                  "projected_available": 7,
+                                  "projected_backlog": 0,
+                                  "quantity": 8
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 15,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 20,
+                                  "projected_available": 0,
+                                  "projected_backlog": 0,
+                                  "quantity": 3
+                                }
+                              ]
+                            },
+                            "candidate": {
+                              "available_initial": 7,
+                              "backlog_end": 0,
+                              "conservation_pass": true,
+                              "delay_unit_minutes": 0,
+                              "engine": "SimPy 4.1.2",
+                              "expired_unavailable": 0,
+                              "first_late_minute": null,
+                              "forecast_quantity": 15,
+                              "kind": "classroom_hypothetical",
+                              "late_units": 0,
+                              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                              "quantity": 8,
+                              "ready_minute": 8,
+                              "remaining_available": 0,
+                              "served_by_horizon": 15,
+                              "status": "projected",
+                              "trace": [
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 5,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "projected_supply",
+                                  "minute": 8,
+                                  "projected_available": 11,
+                                  "projected_backlog": 0,
+                                  "quantity": 8
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 10,
+                                  "projected_available": 7,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 15,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 20,
+                                  "projected_available": 0,
+                                  "projected_backlog": 0,
+                                  "quantity": 3
+                                }
+                              ]
+                            },
+                            "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+                            "quantity": 8,
+                            "ready_minute": 8,
+                            "requires_human_confirmation": true,
+                            "unreconciled_past_quantity": 0
+                          },
+                          "reviewed_version": 1,
+                          "role": "制作岗位",
+                          "run_id": "feb9f32da39043668598dcc543e4d52a",
+                          "site_verified": true
+                        }
+                      ],
+                      "unreconciled_past_quantity": 0,
+                      "warning": "均为本次课堂操作者记录，不是企业实测或用户历史人审的新签名"
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  }
+                ]
+              }
+            ],
+            "remaining_rounds": 4,
+            "scope": "1店1商品课堂模拟；只可读工具；写操作须人审",
+            "snapshot_version": 3,
+            "trigger": "completion_recorded"
+          },
+          "request_sha256": "e4f9e6c742c4e4af5378fbce9d536b9cd1a4f5c0a688b919d3e7764e3539d5fe",
+          "returned": {
+            "kind": "tools",
+            "reason": "版本3的快照、任务规则及完成登记已齐备，现比较完成后的现有计划能否及时覆盖剩余需用。",
+            "recommendation": null,
+            "tool_calls": [
+              {
+                "arguments": {
+                  "quantity": null,
+                  "ready_minute": null,
+                  "topic": null
+                },
+                "name": "compare_plans"
+              }
+            ]
+          },
+          "round": 2,
+          "schema_sha256": "290d39cc611c6d8056ae7d61fe5f59ae8f8102a2c79f5b581a85dc4526bbbac7",
+          "system_prompt_sha256": "901a05dc0db597d5b0cebcc077f80aeb33f66257109b01b987209bdbd12b3b92",
+          "thread_id": "01a1a54f-ab3a-7f71-a793-92e0a45bf2a4",
+          "usage": {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 12794,
+            "output_tokens": 292,
+            "reasoning_output_tokens": 209
+          }
+        },
+        {
+          "adapter": "codex-cli-live",
+          "authentication": "existing_local_configuration",
+          "cli_tools_enabled": false,
+          "duration_seconds": 30.88,
+          "model_selection": "existing_configured_model_no_override",
+          "request_context": {
+            "history": [
+              {
+                "model": {
+                  "kind": "tools",
+                  "reason": "先读取快照、任务与规则证据；本轮为完成登记触发，同时核对实际完成及履约登记，再比较计划。",
+                  "recommendation": null,
+                  "tool_calls": [
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "get_snapshot"
+                    },
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": "all"
+                      },
+                      "name": "get_evidence"
+                    },
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "get_execution"
+                    }
+                  ]
+                },
+                "tool_results": [
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:47:03.997226Z",
+                    "call_id": "fc893754-T01",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "get_snapshot",
+                    "output": {
+                      "as_of_minute": 8,
+                      "blocked": 0,
+                      "demand_due": [
+                        {
+                          "minute": 10,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 15,
+                          "quantity": 4
+                        },
+                        {
+                          "minute": 20,
+                          "quantity": 3
+                        }
+                      ],
+                      "display_sku": "迷你三明治 A",
+                      "on_hand": 16,
+                      "plan": {
+                        "alternative_capacity": 8,
+                        "alternative_ready_minute": 8,
+                        "id": "TASK-8",
+                        "quantity": 0,
+                        "ready_minute": null,
+                        "status": "completed"
+                      },
+                      "prep_minutes": 4,
+                      "reserved": 5,
+                      "source_item_id": "1023",
+                      "store_id": "SIM-01",
+                      "unreconciled_past_quantity": 0,
+                      "version": 3
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  },
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": "all"
+                    },
+                    "at_utc": "2026-11-04T06:47:04.000778Z",
+                    "call_id": "fc893754-T02",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "get_evidence",
+                    "output": {
+                      "batch_rules": {
+                        "actual_batches": [
+                          {
+                            "deadline": 38,
+                            "id": "BATCH-TASK-8",
+                            "quantity": 8
+                          }
+                        ],
+                        "new_hold_minutes": 30,
+                        "not_general_safety_standard": true,
+                        "old_sellable_until": 28,
+                        "origin": "classroom_assumption"
+                      },
+                      "source_lineage": {
+                        "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+                        "license": "CC BY 4.0",
+                        "limitations": [
+                          "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+                          "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+                          "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+                          "交易起止时间不是厨房完成时间或顾客等待时间。",
+                          "到可售截止的排除量不等于实际已报废量。"
+                        ],
+                        "new_scraping_performed": false,
+                        "seed_receipt_row": 3836,
+                        "seed_source_item_row": 35741,
+                        "source_item_id": "1023",
+                        "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1"
+                      },
+                      "task_schedule": {
+                        "confirmation": "制作岗位核实现场进度、可调整产能；店长确认缺失规则",
+                        "origin": "classroom_assumption",
+                        "plan": {
+                          "alternative_capacity": 8,
+                          "alternative_ready_minute": 8,
+                          "id": "TASK-8",
+                          "quantity": 0,
+                          "ready_minute": null,
+                          "status": "completed"
+                        },
+                        "prep_minutes": 4
+                      }
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  },
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:47:04.000778Z",
+                    "call_id": "fc893754-T03",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "get_execution",
+                    "output": {
+                      "execution": [
+                        {
+                          "actor": "浏览器验收测试操作者",
+                          "at_utc": "2026-11-04T06:46:48.136926Z",
+                          "completed_minute": 8,
+                          "completed_quantity": 8,
+                          "cumulative_unreserved_fulfilled": 4,
+                          "note": "课堂模拟登记，不是用户新确认或真实企业执行；未知履约不自动扣账",
+                          "on_hand_after": 16,
+                          "on_hand_before": 12,
+                          "origin": "classroom_operator_record",
+                          "past_forecast_quantity": 4,
+                          "remaining_task_quantity": 0,
+                          "role": "制作岗位",
+                          "task_id": "TASK-8",
+                          "type": "classroom_completion_and_reconciliation"
+                        }
+                      ],
+                      "human_reviews": [
+                        {
+                          "actor": "浏览器验收测试操作者",
+                          "at_utc": "2026-11-04T06:46:47.990098Z",
+                          "decision": "adopt",
+                          "note": "课堂自动化验收：核对预设进度、规则、产能、数量和时点；不代表用户新确认或真实门店核实。",
+                          "origin": "classroom_operator_record",
+                          "quantity": 8,
+                          "ready_minute": 8,
+                          "revalidation": {
+                            "action_adoptable": true,
+                            "additional_quantity": 0,
+                            "baseline": {
+                              "available_initial": 7,
+                              "backlog_end": 0,
+                              "conservation_pass": true,
+                              "delay_unit_minutes": 2,
+                              "engine": "SimPy 4.1.2",
+                              "expired_unavailable": 0,
+                              "first_late_minute": 10,
+                              "forecast_quantity": 15,
+                              "kind": "classroom_hypothetical",
+                              "late_units": 1,
+                              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                              "quantity": 8,
+                              "ready_minute": 12,
+                              "remaining_available": 0,
+                              "served_by_horizon": 15,
+                              "status": "projected",
+                              "trace": [
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 5,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 10,
+                                  "projected_available": 0,
+                                  "projected_backlog": 1,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "projected_supply",
+                                  "minute": 12,
+                                  "projected_available": 7,
+                                  "projected_backlog": 0,
+                                  "quantity": 8
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 15,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 20,
+                                  "projected_available": 0,
+                                  "projected_backlog": 0,
+                                  "quantity": 3
+                                }
+                              ]
+                            },
+                            "candidate": {
+                              "available_initial": 7,
+                              "backlog_end": 0,
+                              "conservation_pass": true,
+                              "delay_unit_minutes": 0,
+                              "engine": "SimPy 4.1.2",
+                              "expired_unavailable": 0,
+                              "first_late_minute": null,
+                              "forecast_quantity": 15,
+                              "kind": "classroom_hypothetical",
+                              "late_units": 0,
+                              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                              "quantity": 8,
+                              "ready_minute": 8,
+                              "remaining_available": 0,
+                              "served_by_horizon": 15,
+                              "status": "projected",
+                              "trace": [
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 5,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "projected_supply",
+                                  "minute": 8,
+                                  "projected_available": 11,
+                                  "projected_backlog": 0,
+                                  "quantity": 8
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 10,
+                                  "projected_available": 7,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 15,
+                                  "projected_available": 3,
+                                  "projected_backlog": 0,
+                                  "quantity": 4
+                                },
+                                {
+                                  "event": "simulated_need_due",
+                                  "minute": 20,
+                                  "projected_available": 0,
+                                  "projected_backlog": 0,
+                                  "quantity": 3
+                                }
+                              ]
+                            },
+                            "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+                            "quantity": 8,
+                            "ready_minute": 8,
+                            "requires_human_confirmation": true,
+                            "unreconciled_past_quantity": 0
+                          },
+                          "reviewed_version": 1,
+                          "role": "制作岗位",
+                          "run_id": "feb9f32da39043668598dcc543e4d52a",
+                          "site_verified": true
+                        }
+                      ],
+                      "unreconciled_past_quantity": 0,
+                      "warning": "均为本次课堂操作者记录，不是企业实测或用户历史人审的新签名"
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  }
+                ]
+              },
+              {
+                "model": {
+                  "kind": "tools",
+                  "reason": "版本3的快照、任务规则及完成登记已齐备，现比较完成后的现有计划能否及时覆盖剩余需用。",
+                  "recommendation": null,
+                  "tool_calls": [
+                    {
+                      "arguments": {
+                        "quantity": null,
+                        "ready_minute": null,
+                        "topic": null
+                      },
+                      "name": "compare_plans"
+                    }
+                  ]
+                },
+                "tool_results": [
+                  {
+                    "arguments": {
+                      "quantity": null,
+                      "ready_minute": null,
+                      "topic": null
+                    },
+                    "at_utc": "2026-11-04T06:47:20.809035Z",
+                    "call_id": "fc893754-T04",
+                    "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+                    "name": "compare_plans",
+                    "output": {
+                      "action_adoptable": false,
+                      "baseline": {
+                        "available_initial": 11,
+                        "backlog_end": 0,
+                        "conservation_pass": true,
+                        "delay_unit_minutes": 0,
+                        "engine": "SimPy 4.1.2",
+                        "expired_unavailable": 0,
+                        "first_late_minute": null,
+                        "forecast_quantity": 11,
+                        "kind": "classroom_hypothetical",
+                        "late_units": 0,
+                        "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                        "quantity": 0,
+                        "ready_minute": null,
+                        "remaining_available": 0,
+                        "served_by_horizon": 11,
+                        "status": "projected",
+                        "trace": [
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 10,
+                            "projected_available": 7,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 15,
+                            "projected_available": 3,
+                            "projected_backlog": 0,
+                            "quantity": 4
+                          },
+                          {
+                            "event": "simulated_need_due",
+                            "minute": 20,
+                            "projected_available": 0,
+                            "projected_backlog": 0,
+                            "quantity": 3
+                          }
+                        ]
+                      },
+                      "candidate": null,
+                      "unreconciled_past_quantity": 0
+                    },
+                    "selected_by": "live_model",
+                    "snapshot_version": 3
+                  }
+                ]
+              }
+            ],
+            "remaining_rounds": 3,
+            "scope": "1店1商品课堂模拟；只可读工具；写操作须人审",
+            "snapshot_version": 3,
+            "trigger": "completion_recorded"
+          },
+          "request_sha256": "81b72a43540a82dc911f29c65b1ef36121bd66fe6ed4be1431eb1c279b13285d",
+          "returned": {
+            "kind": "final",
+            "reason": "本轮版本3的快照、任务规则、完成登记及计划比较已齐备，可形成建议。",
+            "recommendation": {
+              "additional_quantity": null,
+              "checks": [
+                "制作岗位核对第8分钟完成8份的现场情况与登记，确认没有重复入库。",
+                "制作岗位复核账面库存16份、预留5份及履约登记，确认过去需用已核清。",
+                "制作岗位复核批次第38分钟可售截止及后续需用；若规则缺失，交店长确认。"
+              ],
+              "confirmation_role": "制作岗位",
+              "evidence_refs": [
+                "fc893754-T01",
+                "fc893754-T02",
+                "fc893754-T03",
+                "fc893754-T04"
+              ],
+              "explanation": "比较结果显示可用量11份可及时覆盖剩余模拟需用11份，模拟迟供量及过去需用待核对量均为0。TASK-8已完成，无需增加任务。以上均为课堂模拟，历史课堂确认不替代本轮人审。",
+              "quantity": null,
+              "ready_minute": null,
+              "status": "observe",
+              "summary": "完成登记后，现有计划可及时覆盖剩余需用，维持观察。",
+              "task_id": "TASK-8"
+            },
+            "tool_calls": []
+          },
+          "round": 3,
+          "schema_sha256": "290d39cc611c6d8056ae7d61fe5f59ae8f8102a2c79f5b581a85dc4526bbbac7",
+          "system_prompt_sha256": "901a05dc0db597d5b0cebcc077f80aeb33f66257109b01b987209bdbd12b3b92",
+          "thread_id": "01a1a54f-ed14-76c1-b2af-65c635c318e7",
+          "usage": {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 13210,
+            "output_tokens": 1019,
+            "reasoning_output_tokens": 736
+          }
+        }
+      ],
+      "recommendation": {
+        "additional_quantity": null,
+        "checks": [
+          "制作岗位核对第8分钟完成8份的现场情况与登记，确认没有重复入库。",
+          "制作岗位复核账面库存16份、预留5份及履约登记，确认过去需用已核清。",
+          "制作岗位复核批次第38分钟可售截止及后续需用；若规则缺失，交店长确认。"
+        ],
+        "confirmation_role": "制作岗位",
+        "evidence_refs": [
+          "fc893754-T01",
+          "fc893754-T02",
+          "fc893754-T03",
+          "fc893754-T04"
+        ],
+        "explanation": "比较结果显示可用量11份可及时覆盖剩余模拟需用11份，模拟迟供量及过去需用待核对量均为0。TASK-8已完成，无需增加任务。以上均为课堂模拟，历史课堂确认不替代本轮人审。",
+        "quantity": null,
+        "ready_minute": null,
+        "status": "observe",
+        "summary": "完成登记后，现有计划可及时覆盖剩余需用，维持观察。",
+        "task_id": "TASK-8"
+      },
+      "session_id": "c41377f3dc0a4a7687e55aebb061df47",
+      "snapshot": {
+        "actual_batches": [
+          {
+            "deadline": 38,
+            "id": "BATCH-TASK-8",
+            "quantity": 8
+          }
+        ],
+        "actual_discard_recorded": 0,
+        "as_of_minute": 8,
+        "blocked": 0,
+        "demand_due": [
+          {
+            "minute": 10,
+            "quantity": 4
+          },
+          {
+            "minute": 15,
+            "quantity": 4
+          },
+          {
+            "minute": 20,
+            "quantity": 3
+          }
+        ],
+        "display_sku": "迷你三明治 A",
+        "events": [
+          {
+            "data": {
+              "after": 12,
+              "before": 4,
+              "changed_field": "plan.ready_minute",
+              "contract_version": "fde-classroom-contract-1.0.0",
+              "event_minute": 1,
+              "new_version": 1,
+              "origin": "simulated_increment",
+              "previous_version": 0,
+              "recorded_minute": 1,
+              "scenario_id": "PILOT-01",
+              "sku_id": "1023",
+              "store_id": "SIM-01",
+              "task_id": "TASK-8"
+            },
+            "datacontenttype": "application/json",
+            "id": "SIM-INC-01",
+            "recorded_at_utc": "2026-11-04T06:45:01.959965Z",
+            "source": "urn:fde:group8:classroom:PILOT-01",
+            "specversion": "1.0",
+            "subject": "SIM-01/TASK-8",
+            "type": "cn.fde.group8.task.eta.changed.v1"
+          }
+        ],
+        "execution": [
+          {
+            "actor": "浏览器验收测试操作者",
+            "at_utc": "2026-11-04T06:46:48.136926Z",
+            "completed_minute": 8,
+            "completed_quantity": 8,
+            "cumulative_unreserved_fulfilled": 4,
+            "note": "课堂模拟登记，不是用户新确认或真实企业执行；未知履约不自动扣账",
+            "on_hand_after": 16,
+            "on_hand_before": 12,
+            "origin": "classroom_operator_record",
+            "past_forecast_quantity": 4,
+            "remaining_task_quantity": 0,
+            "role": "制作岗位",
+            "task_id": "TASK-8",
+            "type": "classroom_completion_and_reconciliation"
+          }
+        ],
+        "human_reviews": [
+          {
+            "actor": "浏览器验收测试操作者",
+            "at_utc": "2026-11-04T06:46:47.990098Z",
+            "decision": "adopt",
+            "note": "课堂自动化验收：核对预设进度、规则、产能、数量和时点；不代表用户新确认或真实门店核实。",
+            "origin": "classroom_operator_record",
+            "quantity": 8,
+            "ready_minute": 8,
+            "revalidation": {
+              "action_adoptable": true,
+              "additional_quantity": 0,
+              "baseline": {
+                "available_initial": 7,
+                "backlog_end": 0,
+                "conservation_pass": true,
+                "delay_unit_minutes": 2,
+                "engine": "SimPy 4.1.2",
+                "expired_unavailable": 0,
+                "first_late_minute": 10,
+                "forecast_quantity": 15,
+                "kind": "classroom_hypothetical",
+                "late_units": 1,
+                "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                "quantity": 8,
+                "ready_minute": 12,
+                "remaining_available": 0,
+                "served_by_horizon": 15,
+                "status": "projected",
+                "trace": [
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 5,
+                    "projected_available": 3,
+                    "projected_backlog": 0,
+                    "quantity": 4
+                  },
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 10,
+                    "projected_available": 0,
+                    "projected_backlog": 1,
+                    "quantity": 4
+                  },
+                  {
+                    "event": "projected_supply",
+                    "minute": 12,
+                    "projected_available": 7,
+                    "projected_backlog": 0,
+                    "quantity": 8
+                  },
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 15,
+                    "projected_available": 3,
+                    "projected_backlog": 0,
+                    "quantity": 4
+                  },
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 20,
+                    "projected_available": 0,
+                    "projected_backlog": 0,
+                    "quantity": 3
+                  }
+                ]
+              },
+              "candidate": {
+                "available_initial": 7,
+                "backlog_end": 0,
+                "conservation_pass": true,
+                "delay_unit_minutes": 0,
+                "engine": "SimPy 4.1.2",
+                "expired_unavailable": 0,
+                "first_late_minute": null,
+                "forecast_quantity": 15,
+                "kind": "classroom_hypothetical",
+                "late_units": 0,
+                "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                "quantity": 8,
+                "ready_minute": 8,
+                "remaining_available": 0,
+                "served_by_horizon": 15,
+                "status": "projected",
+                "trace": [
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 5,
+                    "projected_available": 3,
+                    "projected_backlog": 0,
+                    "quantity": 4
+                  },
+                  {
+                    "event": "projected_supply",
+                    "minute": 8,
+                    "projected_available": 11,
+                    "projected_backlog": 0,
+                    "quantity": 8
+                  },
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 10,
+                    "projected_available": 7,
+                    "projected_backlog": 0,
+                    "quantity": 4
+                  },
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 15,
+                    "projected_available": 3,
+                    "projected_backlog": 0,
+                    "quantity": 4
+                  },
+                  {
+                    "event": "simulated_need_due",
+                    "minute": 20,
+                    "projected_available": 0,
+                    "projected_backlog": 0,
+                    "quantity": 3
+                  }
+                ]
+              },
+              "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+              "quantity": 8,
+              "ready_minute": 8,
+              "requires_human_confirmation": true,
+              "unreconciled_past_quantity": 0
+            },
+            "reviewed_version": 1,
+            "role": "制作岗位",
+            "run_id": "feb9f32da39043668598dcc543e4d52a",
+            "site_verified": true
+          }
+        ],
+        "id": "PILOT-01",
+        "new_hold_minutes": 30,
+        "old_sellable_until": 28,
+        "on_hand": 16,
+        "plan": {
+          "alternative_capacity": 8,
+          "alternative_ready_minute": 8,
+          "id": "TASK-8",
+          "quantity": 0,
+          "ready_minute": null,
+          "status": "completed"
+        },
+        "prep_minutes": 4,
+        "reserved": 5,
+        "session_id": "c41377f3dc0a4a7687e55aebb061df47",
+        "source_item_id": "1023",
+        "store_id": "SIM-01",
+        "unreconciled_past_quantity": 0,
+        "variant": "normal",
+        "version": 3,
+        "window_minutes": 20
+      },
+      "snapshot_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+      "snapshot_version": 3,
+      "source": "live_model_not_replay",
+      "started_at_utc": "2026-11-04T06:46:48.145531Z",
+      "status": "completed",
+      "trace": [
+        {
+          "arguments": {
+            "quantity": null,
+            "ready_minute": null,
+            "topic": null
+          },
+          "at_utc": "2026-11-04T06:47:03.997226Z",
+          "call_id": "fc893754-T01",
+          "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+          "name": "get_snapshot",
+          "output": {
+            "as_of_minute": 8,
+            "blocked": 0,
+            "demand_due": [
+              {
+                "minute": 10,
+                "quantity": 4
+              },
+              {
+                "minute": 15,
+                "quantity": 4
+              },
+              {
+                "minute": 20,
+                "quantity": 3
+              }
+            ],
+            "display_sku": "迷你三明治 A",
+            "on_hand": 16,
+            "plan": {
+              "alternative_capacity": 8,
+              "alternative_ready_minute": 8,
+              "id": "TASK-8",
+              "quantity": 0,
+              "ready_minute": null,
+              "status": "completed"
+            },
+            "prep_minutes": 4,
+            "reserved": 5,
+            "source_item_id": "1023",
+            "store_id": "SIM-01",
+            "unreconciled_past_quantity": 0,
+            "version": 3
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 3
+        },
+        {
+          "arguments": {
+            "quantity": null,
+            "ready_minute": null,
+            "topic": "all"
+          },
+          "at_utc": "2026-11-04T06:47:04.000778Z",
+          "call_id": "fc893754-T02",
+          "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+          "name": "get_evidence",
+          "output": {
+            "batch_rules": {
+              "actual_batches": [
+                {
+                  "deadline": 38,
+                  "id": "BATCH-TASK-8",
+                  "quantity": 8
+                }
+              ],
+              "new_hold_minutes": 30,
+              "not_general_safety_standard": true,
+              "old_sellable_until": 28,
+              "origin": "classroom_assumption"
+            },
+            "source_lineage": {
+              "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+              "license": "CC BY 4.0",
+              "limitations": [
+                "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+                "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+                "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+                "交易起止时间不是厨房完成时间或顾客等待时间。",
+                "到可售截止的排除量不等于实际已报废量。"
+              ],
+              "new_scraping_performed": false,
+              "seed_receipt_row": 3836,
+              "seed_source_item_row": 35741,
+              "source_item_id": "1023",
+              "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1"
+            },
+            "task_schedule": {
+              "confirmation": "制作岗位核实现场进度、可调整产能；店长确认缺失规则",
+              "origin": "classroom_assumption",
+              "plan": {
+                "alternative_capacity": 8,
+                "alternative_ready_minute": 8,
+                "id": "TASK-8",
+                "quantity": 0,
+                "ready_minute": null,
+                "status": "completed"
+              },
+              "prep_minutes": 4
+            }
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 3
+        },
+        {
+          "arguments": {
+            "quantity": null,
+            "ready_minute": null,
+            "topic": null
+          },
+          "at_utc": "2026-11-04T06:47:04.000778Z",
+          "call_id": "fc893754-T03",
+          "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+          "name": "get_execution",
+          "output": {
+            "execution": [
+              {
+                "actor": "浏览器验收测试操作者",
+                "at_utc": "2026-11-04T06:46:48.136926Z",
+                "completed_minute": 8,
+                "completed_quantity": 8,
+                "cumulative_unreserved_fulfilled": 4,
+                "note": "课堂模拟登记，不是用户新确认或真实企业执行；未知履约不自动扣账",
+                "on_hand_after": 16,
+                "on_hand_before": 12,
+                "origin": "classroom_operator_record",
+                "past_forecast_quantity": 4,
+                "remaining_task_quantity": 0,
+                "role": "制作岗位",
+                "task_id": "TASK-8",
+                "type": "classroom_completion_and_reconciliation"
+              }
+            ],
+            "human_reviews": [
+              {
+                "actor": "浏览器验收测试操作者",
+                "at_utc": "2026-11-04T06:46:47.990098Z",
+                "decision": "adopt",
+                "note": "课堂自动化验收：核对预设进度、规则、产能、数量和时点；不代表用户新确认或真实门店核实。",
+                "origin": "classroom_operator_record",
+                "quantity": 8,
+                "ready_minute": 8,
+                "revalidation": {
+                  "action_adoptable": true,
+                  "additional_quantity": 0,
+                  "baseline": {
+                    "available_initial": 7,
+                    "backlog_end": 0,
+                    "conservation_pass": true,
+                    "delay_unit_minutes": 2,
+                    "engine": "SimPy 4.1.2",
+                    "expired_unavailable": 0,
+                    "first_late_minute": 10,
+                    "forecast_quantity": 15,
+                    "kind": "classroom_hypothetical",
+                    "late_units": 1,
+                    "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                    "quantity": 8,
+                    "ready_minute": 12,
+                    "remaining_available": 0,
+                    "served_by_horizon": 15,
+                    "status": "projected",
+                    "trace": [
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 5,
+                        "projected_available": 3,
+                        "projected_backlog": 0,
+                        "quantity": 4
+                      },
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 10,
+                        "projected_available": 0,
+                        "projected_backlog": 1,
+                        "quantity": 4
+                      },
+                      {
+                        "event": "projected_supply",
+                        "minute": 12,
+                        "projected_available": 7,
+                        "projected_backlog": 0,
+                        "quantity": 8
+                      },
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 15,
+                        "projected_available": 3,
+                        "projected_backlog": 0,
+                        "quantity": 4
+                      },
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 20,
+                        "projected_available": 0,
+                        "projected_backlog": 0,
+                        "quantity": 3
+                      }
+                    ]
+                  },
+                  "candidate": {
+                    "available_initial": 7,
+                    "backlog_end": 0,
+                    "conservation_pass": true,
+                    "delay_unit_minutes": 0,
+                    "engine": "SimPy 4.1.2",
+                    "expired_unavailable": 0,
+                    "first_late_minute": null,
+                    "forecast_quantity": 15,
+                    "kind": "classroom_hypothetical",
+                    "late_units": 0,
+                    "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+                    "quantity": 8,
+                    "ready_minute": 8,
+                    "remaining_available": 0,
+                    "served_by_horizon": 15,
+                    "status": "projected",
+                    "trace": [
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 5,
+                        "projected_available": 3,
+                        "projected_backlog": 0,
+                        "quantity": 4
+                      },
+                      {
+                        "event": "projected_supply",
+                        "minute": 8,
+                        "projected_available": 11,
+                        "projected_backlog": 0,
+                        "quantity": 8
+                      },
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 10,
+                        "projected_available": 7,
+                        "projected_backlog": 0,
+                        "quantity": 4
+                      },
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 15,
+                        "projected_available": 3,
+                        "projected_backlog": 0,
+                        "quantity": 4
+                      },
+                      {
+                        "event": "simulated_need_due",
+                        "minute": 20,
+                        "projected_available": 0,
+                        "projected_backlog": 0,
+                        "quantity": 3
+                      }
+                    ]
+                  },
+                  "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+                  "quantity": 8,
+                  "ready_minute": 8,
+                  "requires_human_confirmation": true,
+                  "unreconciled_past_quantity": 0
+                },
+                "reviewed_version": 1,
+                "role": "制作岗位",
+                "run_id": "feb9f32da39043668598dcc543e4d52a",
+                "site_verified": true
+              }
+            ],
+            "unreconciled_past_quantity": 0,
+            "warning": "均为本次课堂操作者记录，不是企业实测或用户历史人审的新签名"
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 3
+        },
+        {
+          "arguments": {
+            "quantity": null,
+            "ready_minute": null,
+            "topic": null
+          },
+          "at_utc": "2026-11-04T06:47:20.809035Z",
+          "call_id": "fc893754-T04",
+          "input_sha256": "ec709903c0c9e65294b5e9fb873c2fecf2b3205ea8154f66505a09c5430112b2",
+          "name": "compare_plans",
+          "output": {
+            "action_adoptable": false,
+            "baseline": {
+              "available_initial": 11,
+              "backlog_end": 0,
+              "conservation_pass": true,
+              "delay_unit_minutes": 0,
+              "engine": "SimPy 4.1.2",
+              "expired_unavailable": 0,
+              "first_late_minute": null,
+              "forecast_quantity": 11,
+              "kind": "classroom_hypothetical",
+              "late_units": 0,
+              "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+              "quantity": 0,
+              "ready_minute": null,
+              "remaining_available": 0,
+              "served_by_horizon": 11,
+              "status": "projected",
+              "trace": [
+                {
+                  "event": "simulated_need_due",
+                  "minute": 10,
+                  "projected_available": 7,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 15,
+                  "projected_available": 3,
+                  "projected_backlog": 0,
+                  "quantity": 4
+                },
+                {
+                  "event": "simulated_need_due",
+                  "minute": 20,
+                  "projected_available": 0,
+                  "projected_backlog": 0,
+                  "quantity": 3
+                }
+              ]
+            },
+            "candidate": null,
+            "unreconciled_past_quantity": 0
+          },
+          "selected_by": "live_model",
+          "snapshot_version": 3
+        }
+      ],
+      "trigger": "completion_recorded"
+    }
+  ],
+  "state": {
+    "actual_batches": [
+      {
+        "deadline": 38,
+        "id": "BATCH-TASK-8",
+        "quantity": 8
+      }
+    ],
+    "actual_discard_recorded": 0,
+    "as_of_minute": 8,
+    "blocked": 0,
+    "demand_due": [
+      {
+        "minute": 10,
+        "quantity": 4
+      },
+      {
+        "minute": 15,
+        "quantity": 4
+      },
+      {
+        "minute": 20,
+        "quantity": 3
+      }
+    ],
+    "display_sku": "迷你三明治 A",
+    "events": [
+      {
+        "data": {
+          "after": 12,
+          "before": 4,
+          "changed_field": "plan.ready_minute",
+          "contract_version": "fde-classroom-contract-1.0.0",
+          "event_minute": 1,
+          "new_version": 1,
+          "origin": "simulated_increment",
+          "previous_version": 0,
+          "recorded_minute": 1,
+          "scenario_id": "PILOT-01",
+          "sku_id": "1023",
+          "store_id": "SIM-01",
+          "task_id": "TASK-8"
+        },
+        "datacontenttype": "application/json",
+        "id": "SIM-INC-01",
+        "recorded_at_utc": "2026-11-04T06:45:01.959965Z",
+        "source": "urn:fde:group8:classroom:PILOT-01",
+        "specversion": "1.0",
+        "subject": "SIM-01/TASK-8",
+        "type": "cn.fde.group8.task.eta.changed.v1"
+      }
+    ],
+    "execution": [
+      {
+        "actor": "浏览器验收测试操作者",
+        "at_utc": "2026-11-04T06:46:48.136926Z",
+        "completed_minute": 8,
+        "completed_quantity": 8,
+        "cumulative_unreserved_fulfilled": 4,
+        "note": "课堂模拟登记，不是用户新确认或真实企业执行；未知履约不自动扣账",
+        "on_hand_after": 16,
+        "on_hand_before": 12,
+        "origin": "classroom_operator_record",
+        "past_forecast_quantity": 4,
+        "remaining_task_quantity": 0,
+        "role": "制作岗位",
+        "task_id": "TASK-8",
+        "type": "classroom_completion_and_reconciliation"
+      }
+    ],
+    "human_reviews": [
+      {
+        "actor": "浏览器验收测试操作者",
+        "at_utc": "2026-11-04T06:46:47.990098Z",
+        "decision": "adopt",
+        "note": "课堂自动化验收：核对预设进度、规则、产能、数量和时点；不代表用户新确认或真实门店核实。",
+        "origin": "classroom_operator_record",
+        "quantity": 8,
+        "ready_minute": 8,
+        "revalidation": {
+          "action_adoptable": true,
+          "additional_quantity": 0,
+          "baseline": {
+            "available_initial": 7,
+            "backlog_end": 0,
+            "conservation_pass": true,
+            "delay_unit_minutes": 2,
+            "engine": "SimPy 4.1.2",
+            "expired_unavailable": 0,
+            "first_late_minute": 10,
+            "forecast_quantity": 15,
+            "kind": "classroom_hypothetical",
+            "late_units": 1,
+            "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+            "quantity": 8,
+            "ready_minute": 12,
+            "remaining_available": 0,
+            "served_by_horizon": 15,
+            "status": "projected",
+            "trace": [
+              {
+                "event": "simulated_need_due",
+                "minute": 5,
+                "projected_available": 3,
+                "projected_backlog": 0,
+                "quantity": 4
+              },
+              {
+                "event": "simulated_need_due",
+                "minute": 10,
+                "projected_available": 0,
+                "projected_backlog": 1,
+                "quantity": 4
+              },
+              {
+                "event": "projected_supply",
+                "minute": 12,
+                "projected_available": 7,
+                "projected_backlog": 0,
+                "quantity": 8
+              },
+              {
+                "event": "simulated_need_due",
+                "minute": 15,
+                "projected_available": 3,
+                "projected_backlog": 0,
+                "quantity": 4
+              },
+              {
+                "event": "simulated_need_due",
+                "minute": 20,
+                "projected_available": 0,
+                "projected_backlog": 0,
+                "quantity": 3
+              }
+            ]
+          },
+          "candidate": {
+            "available_initial": 7,
+            "backlog_end": 0,
+            "conservation_pass": true,
+            "delay_unit_minutes": 0,
+            "engine": "SimPy 4.1.2",
+            "expired_unavailable": 0,
+            "first_late_minute": null,
+            "forecast_quantity": 15,
+            "kind": "classroom_hypothetical",
+            "late_units": 0,
+            "meaning": "模拟需用时点未覆盖量，不等于真实丢单、报废或企业收益",
+            "quantity": 8,
+            "ready_minute": 8,
+            "remaining_available": 0,
+            "served_by_horizon": 15,
+            "status": "projected",
+            "trace": [
+              {
+                "event": "simulated_need_due",
+                "minute": 5,
+                "projected_available": 3,
+                "projected_backlog": 0,
+                "quantity": 4
+              },
+              {
+                "event": "projected_supply",
+                "minute": 8,
+                "projected_available": 11,
+                "projected_backlog": 0,
+                "quantity": 8
+              },
+              {
+                "event": "simulated_need_due",
+                "minute": 10,
+                "projected_available": 7,
+                "projected_backlog": 0,
+                "quantity": 4
+              },
+              {
+                "event": "simulated_need_due",
+                "minute": 15,
+                "projected_available": 3,
+                "projected_backlog": 0,
+                "quantity": 4
+              },
+              {
+                "event": "simulated_need_due",
+                "minute": 20,
+                "projected_available": 0,
+                "projected_backlog": 0,
+                "quantity": 3
+              }
+            ]
+          },
+          "note": "仅为模拟可行候选；制作岗位仍须核实现场进度、产能和规则",
+          "quantity": 8,
+          "ready_minute": 8,
+          "requires_human_confirmation": true,
+          "unreconciled_past_quantity": 0
+        },
+        "reviewed_version": 1,
+        "role": "制作岗位",
+        "run_id": "feb9f32da39043668598dcc543e4d52a",
+        "site_verified": true
+      }
+    ],
+    "id": "PILOT-01",
+    "new_hold_minutes": 30,
+    "old_sellable_until": 28,
+    "on_hand": 16,
+    "plan": {
+      "alternative_capacity": 8,
+      "alternative_ready_minute": 8,
+      "id": "TASK-8",
+      "quantity": 0,
+      "ready_minute": null,
+      "status": "completed"
+    },
+    "prep_minutes": 4,
+    "reserved": 5,
+    "session_id": "c41377f3dc0a4a7687e55aebb061df47",
+    "source_item_id": "1023",
+    "store_id": "SIM-01",
+    "unreconciled_past_quantity": 0,
+    "variant": "normal",
+    "version": 3,
+    "window_minutes": 20
+  }
+}

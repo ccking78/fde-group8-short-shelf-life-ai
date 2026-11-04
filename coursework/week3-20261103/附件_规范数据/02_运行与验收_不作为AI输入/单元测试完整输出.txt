@@ -1,0 +1,42 @@
+test_all_records_reconstruct (test_data_completion.CompletionTests.test_all_records_reconstruct) ... ok
+test_before_value_conflict_is_atomic (test_data_completion.CompletionTests.test_before_value_conflict_is_atomic) ... ok
+test_derived_weekday_cannot_be_fabricated (test_data_completion.CompletionTests.test_derived_weekday_cannot_be_fabricated) ... ok
+test_duplicate_record_is_not_silently_overwritten (test_data_completion.CompletionTests.test_duplicate_record_is_not_silently_overwritten) ... ok
+test_event_minute_cannot_follow_recording_minute (test_data_completion.CompletionTests.test_event_minute_cannot_follow_recording_minute) ... ok
+test_invalid_calendar_date_rejected (test_data_completion.CompletionTests.test_invalid_calendar_date_rejected) ... ok
+test_invalid_normalized_time_rejected (test_data_completion.CompletionTests.test_invalid_normalized_time_rejected) ... ok
+test_lineage_type_cannot_relabel_assumption_as_fact (test_data_completion.CompletionTests.test_lineage_type_cannot_relabel_assumption_as_fact) ... ok
+test_missing_overlay_does_not_restore_rule (test_data_completion.CompletionTests.test_missing_overlay_does_not_restore_rule) ... ok
+test_missing_reason_cannot_be_removed (test_data_completion.CompletionTests.test_missing_reason_cannot_be_removed) ... ok
+test_relative_event_does_not_invent_absolute_time (test_data_completion.CompletionTests.test_relative_event_does_not_invent_absolute_time) ... ok
+test_replay_does_not_repeat_transition (test_data_completion.CompletionTests.test_replay_does_not_repeat_transition) ... ok
+test_required_property_cannot_be_deleted (test_data_completion.CompletionTests.test_required_property_cannot_be_deleted) ... ok
+test_same_identity_changed_content_is_rejected (test_data_completion.CompletionTests.test_same_identity_changed_content_is_rejected) ... ok
+test_source_inventory_cannot_be_filled_with_scenario (test_data_completion.CompletionTests.test_source_inventory_cannot_be_filled_with_scenario) ... ok
+test_source_plus_id_is_event_identity (test_data_completion.CompletionTests.test_source_plus_id_is_event_identity) ... ok
+test_system_utc_rejects_timezone_absent (test_data_completion.CompletionTests.test_system_utc_rejects_timezone_absent) ... ok
+test_unknown_is_not_zero (test_data_completion.CompletionTests.test_unknown_is_not_zero) ... ok
+test_unmatched_retained_as_unknown (test_data_completion.CompletionTests.test_unmatched_retained_as_unknown) ... ok
+test_version_conflict_is_atomic (test_data_completion.CompletionTests.test_version_conflict_is_atomic) ... ok
+test_adjusting_existing_task_removes_lateness_without_extra_batch (test_data_pipeline.PilotTests.test_adjusting_existing_task_removes_lateness_without_extra_batch) ... ok
+test_before_value_must_match_snapshot (test_data_pipeline.PilotTests.test_before_value_must_match_snapshot) ... ok
+test_capacity_blocks_infeasible_adjustment (test_data_pipeline.PilotTests.test_capacity_blocks_infeasible_adjustment) ... ok
+test_delayed_plan_misses_one_need_but_fulfills_it_later (test_data_pipeline.PilotTests.test_delayed_plan_misses_one_need_but_fulfills_it_later) ... ok
+test_deterministic_replay_has_identical_digest (test_data_pipeline.PilotTests.test_deterministic_replay_has_identical_digest) ... ok
+test_eta_before_current_time_is_rejected_atomically (test_data_pipeline.PilotTests.test_eta_before_current_time_is_rejected_atomically) ... ok
+test_expiry_at_need_time_excludes_supply_first (test_data_pipeline.PilotTests.test_expiry_at_need_time_excludes_supply_first) ... ok
+test_known_eta_retains_risk_when_prep_rule_is_missing (test_data_pipeline.PilotTests.test_known_eta_retains_risk_when_prep_rule_is_missing) ... ok
+test_normal_plan_covers_all_fifteen_units (test_data_pipeline.PilotTests.test_normal_plan_covers_all_fifteen_units) ... ok
+test_numeric_bool_is_rejected (test_data_pipeline.PilotTests.test_numeric_bool_is_rejected) ... ok
+test_projection_does_not_change_stock_or_input (test_data_pipeline.PilotTests.test_projection_does_not_change_stock_or_input) ... ok
+test_reservation_cannot_exceed_stock (test_data_pipeline.PilotTests.test_reservation_cannot_exceed_stock) ... ok
+test_same_event_is_idempotent (test_data_pipeline.PilotTests.test_same_event_is_idempotent) ... ok
+test_same_id_with_different_payload_is_rejected (test_data_pipeline.PilotTests.test_same_id_with_different_payload_is_rejected) ... ok
+test_stale_version_is_rejected_without_mutation (test_data_pipeline.PilotTests.test_stale_version_is_rejected_without_mutation) ... ok
+test_supply_and_demand_at_horizon_are_included (test_data_pipeline.PilotTests.test_supply_and_demand_at_horizon_are_included) ... ok
+test_wrong_sku_reference_is_rejected (test_data_pipeline.PilotTests.test_wrong_sku_reference_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 1.952s
+
+OK

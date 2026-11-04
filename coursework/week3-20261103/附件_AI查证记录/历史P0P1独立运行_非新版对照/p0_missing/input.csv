@@ -1,0 +1,7 @@
+﻿record_id,record_type,business_date,product_id,product_name,window_minutes,demand_qty,on_hand_qty,reserved_qty,blocked_qty,prep_minutes,sellable_minutes,batch_age_minutes,source_kind
+H1,history,2026-10-26,B01,经典牛肉堡,20,13,,,,,,,classroom_simulation
+H2,history,2026-10-27,B01,经典牛肉堡,20,14,,,,,,,classroom_simulation
+H3,history,2026-10-28,B01,经典牛肉堡,20,15,,,,,,,classroom_simulation
+H4,history,2026-10-29,B01,经典牛肉堡,20,16,,,,,,,classroom_simulation
+H5,history,2026-10-30,B01,经典牛肉堡,20,17,,,,,,,classroom_simulation
+S1,snapshot,2026-11-03,B01,经典牛肉堡,20,,12,5,0,,30,2,classroom_simulation

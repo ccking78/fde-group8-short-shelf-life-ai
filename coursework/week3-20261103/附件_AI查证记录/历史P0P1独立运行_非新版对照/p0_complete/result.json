@@ -1,0 +1,54 @@
+{
+  "status": "待人工确认",
+  "product": "经典牛肉堡（B01）",
+  "action": "建议现在加做，交制作岗位确认后建立待办。",
+  "quantity": 8,
+  "evidence": [
+    {
+      "type": "观察事实（课堂数据）",
+      "source": "input.csv / S1",
+      "tool_records": ["p0_complete-T01"],
+      "detail": "在手12个、已预留5个、不可分配0个，可分配量为7个。已接订单已全部预留，不再加入新增需求。"
+    },
+    {
+      "type": "观察事实（课堂规则字段）",
+      "source": "input.csv / S1",
+      "tool_records": ["p0_complete-T01"],
+      "detail": "制作耗时4分钟，可售时长30分钟，现有批次已存放2分钟。规则版本为sim-rule-1，来源仅为S1字段。"
+    },
+    {
+      "type": "预测",
+      "source": "input.csv / H1—H5",
+      "tool_records": ["p0_complete-T02"],
+      "detail": "五个可比的20分钟历史窗口需求为13、14、15、16、17个，均值为15个；工具预测未来20分钟新增需求为15个。"
+    },
+    {
+      "type": "模拟假设",
+      "source": "forecast和simulate输出",
+      "tool_records": ["p0_complete-T02", "p0_complete-T03", "p0_complete-T04"],
+      "detail": "假设第5、10、15、20分钟分别新增需求4、4、4、3个。加做批次第4分钟完成，早于首批假设需求；现有批次可售截止第28分钟，新批次截止第34分钟，均覆盖本次窗口。"
+    },
+    {
+      "type": "维持现状候选",
+      "source": "simulate --quantity 0",
+      "tool_records": ["p0_complete-T03"],
+      "detail": "模拟满足7个，未满足8个，窗口结束剩余可分配量0个，过期量0个。"
+    },
+    {
+      "type": "加做候选",
+      "source": "simulate --quantity 8",
+      "tool_records": ["p0_complete-T04"],
+      "detail": "模拟满足15个，未满足0个，窗口结束剩余可分配量0个，过期量0个。按上述假设，加做8个能覆盖预测缺口。"
+    }
+  ],
+  "missing_fields": [],
+  "missing_fields_note": "无计算必需字段缺失；inspect返回missing_fields=[]、invalid_fields=[]。不可分配量0是有效值。真实未来需求尚未发生，使用预测表示。",
+  "confirmation": "尚未获得人工确认。请制作岗位核实现场在手、预留、不可分配数量及制作可行性，并确认是否采纳加做8个；请店长核实制作耗时和可售规则。人员采纳仅建立待办，实际完成才增加成品。此回答没有自行批准制作或写入经营账。",
+  "limitations": "本次仅使用课堂模拟数据。历史均值是预测，需求到达时点和即时开始制作是假设；模拟结果不代表真实未来销量，也不是食品安全承诺。若现场数量、需求到达、制作完成时间或可售规则变化，应核实后重新比较。",
+  "tools_used": [
+    {"call_id": "p0_complete-T01", "tool": "inspect", "arguments": {}, "success": true, "tool_version": "course-tools-1.0"},
+    {"call_id": "p0_complete-T02", "tool": "forecast", "arguments": {}, "success": true, "tool_version": "course-tools-1.0"},
+    {"call_id": "p0_complete-T03", "tool": "simulate", "arguments": {"quantity": 0}, "success": true, "tool_version": "course-tools-1.0"},
+    {"call_id": "p0_complete-T04", "tool": "simulate", "arguments": {"quantity": 8}, "success": true, "tool_version": "course-tools-1.0"}
+  ]
+}

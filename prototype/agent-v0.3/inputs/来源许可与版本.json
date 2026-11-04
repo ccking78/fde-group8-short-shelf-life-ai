@@ -1,0 +1,118 @@
+{
+  "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1",
+  "doi": "10.17632/9hntk3wbwc.1",
+  "license": "CC BY 4.0",
+  "attribution": "Cazier, Joseph; Spaulding, Trent; Hassler, Edgar (2025), Sandwich Analytics, Mendeley Data V1",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "limitations": [
+    "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+    "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+    "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+    "交易起止时间不是厨房完成时间或顾客等待时间。",
+    "到可售截止的排除量不等于实际已报废量。"
+  ],
+  "source_files": [
+    {
+      "file": "E1_Receipts_prefix_4MiB.csv",
+      "sha256": "95894d965e07f3d4d132a034d87045d4678f2feb6c3a20175e75ff95d4277570",
+      "verified": true,
+      "acquisition": "Scrapling Fetcher.get",
+      "fetched_at_utc": "2026-11-04T02:13:39.847462+00:00"
+    },
+    {
+      "file": "E3_Item_on_Receipt_prefix_4MiB.csv",
+      "sha256": "eb9b39fed22651c4d30700d201acc9a3f96df5cd0cbfe797d02c26c19412fdd4",
+      "verified": true,
+      "acquisition": "Scrapling Fetcher.get",
+      "fetched_at_utc": "2026-11-04T02:13:43.973524+00:00"
+    },
+    {
+      "file": "E4_Menu_Items.csv",
+      "sha256": "e959d5dea0bb82a2d3d491f1f44b4c1e1917e978a85c7ef27cc2eef492ec3ba6",
+      "verified": true,
+      "acquisition": "Scrapling Fetcher.get",
+      "fetched_at_utc": "2026-11-04T02:13:36.007196+00:00"
+    }
+  ],
+  "contract_version": "fde-classroom-contract-1.0.0",
+  "prepared_at_utc": "2026-11-04T04:02:44.489833Z",
+  "new_scraping_performed": false,
+  "acquisition_method": "仅复用Scrapling已采集文件",
+  "source_rows": {
+    "receipts": 27817,
+    "items": 68592,
+    "menu": 560
+  },
+  "selected_positive_nonreturn_rows": 119,
+  "menu_matched": 52,
+  "menu_unmatched_retained": 67,
+  "seed_record_id": "urn:fde:mendeley:9hntk3wbwc:1:E3:35741",
+  "sample_contiguous": false,
+  "event_limit": 1,
+  "simulated_new_order_count": 0,
+  "source_identity": "urn:fde:group8:classroom:PILOT-01",
+  "source_line_numbering": "1起算的数据记录序号，不含表头；E1与E3丢弃前缀的截断尾行",
+  "standards": [
+    {
+      "id": "W3C-DWBP",
+      "title": "W3C Data on the Web Best Practices",
+      "url": "https://www.w3.org/TR/dwbp/",
+      "clauses": "BP4至8、22、28、31、34至35",
+      "implementation": "许可、逐字段来源、质量报告、版本与修改历史、缺失原因、覆盖限制和衍生规则。"
+    },
+    {
+      "id": "JSON-SCHEMA",
+      "title": "JSON Schema Validation Draft 2020-12",
+      "url": "https://json-schema.org/draft/2020-12/json-schema-validation",
+      "clauses": "type、required、const、additionalProperties及format的应用校验",
+      "implementation": "使用Draft202012Validator；显式启用本契约的日期、当地时间及UTC登记时间检查。"
+    },
+    {
+      "id": "RFC3339",
+      "title": "RFC 3339 Internet Timestamps",
+      "url": "https://www.rfc-editor.org/rfc/rfc3339",
+      "clauses": "4.4、5.6、5.7",
+      "implementation": "系统登记时间用带Z的UTC格式；原交易只有当地钟表时间，保留原值且时区为空。"
+    },
+    {
+      "id": "CLOUDEVENTS",
+      "title": "CloudEvents Specification v1.0.2",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md",
+      "clauses": "Required Attributes及time",
+      "implementation": "事件携带id、source、specversion=1.0和type；source与id组合去重；只有相对分钟时省略time。"
+    },
+    {
+      "id": "JSONSCHEMA-IMPL",
+      "title": "python-jsonschema 4.25.1 validation documentation",
+      "url": "https://python-jsonschema.readthedocs.io/en/v4.25.1/validate/",
+      "clauses": "Draft202012Validator及format_checker",
+      "implementation": "固定依赖版本；本地schema检查和离线重放，不联网解析远程schema。"
+    }
+  ],
+  "rules": {
+    "version": "pilot-rules-0.1",
+    "time_unit": "minute",
+    "horizon_inclusive": true,
+    "same_time_order": [
+      "expiry",
+      "projected_supply",
+      "simulated_need_due"
+    ],
+    "max_business_events": 32,
+    "max_scheduler_steps": 256,
+    "randomness": {
+      "enabled": false,
+      "seed_reserved": 20261103
+    },
+    "scope": "1店1SKU；沿用既有情景；唯一外部增量为预计完成时间4改12"
+  },
+  "contract_status": "本课堂切片v1.0.0；生产增量字段、批量订单及新情景仍待后续指挥",
+  "version_history": [
+    {
+      "from": "classroom-data-pilot-0.1",
+      "to": "fde-classroom-contract-1.0.0",
+      "changes": "扩展真实关联选列至119条；补菜单与确定性派生；缺失显式化；事件改用CloudEvents封装；业务假设与人工记录不变"
+    }
+  ],
+  "ai_input_boundary": "本目录提供输入；本目录以外的运行结果和验收答案不得作为智能体输入"
+}

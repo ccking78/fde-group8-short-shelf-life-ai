@@ -1,0 +1,15 @@
+{
+  "state": "confirmed",
+  "reviewer": "傅浩诚",
+  "source": "用户在本次对话中对人工核对问题的直接答复",
+  "received_date_local": "2026-11-03",
+  "local_timezone": "America/Denver",
+  "recorded_at_utc": "2026-11-04T01:42:33Z",
+  "answer_verbatim": "核对无误，课堂模拟采纳8份",
+  "scope": ["在手12减预留5减不可分配0等于可分配7", "历史13、14、15、16、17的均值为15", "静态差额8", "完整输入AI建议加做8份", "缺制作时间时不给可采纳数量"],
+  "decision": "课堂模拟采纳8份",
+  "quantity": 8,
+  "real_business_effect": false,
+  "raw_outputs_individually_reviewed": false,
+  "text": "傅浩诚已核对本例算式和缺信息边界，回复“核对无误，课堂模拟采纳8份”。确认范围为提问中的结果摘要，未逐项签审四份原始输出。"
+}

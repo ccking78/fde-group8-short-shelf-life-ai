@@ -1,0 +1,78 @@
+{
+  "prepared_at_utc": "2026-11-04T05:33:58.357582Z",
+  "contract_version": "fde-classroom-contract-1.0.0",
+  "documents": [
+    {
+      "file": "01_周六实操_一页六格说明.pdf",
+      "pages": 1,
+      "visual_review": "passed 全部页面逐页检查 无裁切 重叠或空白页"
+    },
+    {
+      "file": "01b_周六实操_运行报告与展示说明.pdf",
+      "pages": 3,
+      "visual_review": "passed 全部页面逐页检查 无裁切 重叠或空白页"
+    },
+    {
+      "file": "02_周一_AI任务边界.pdf",
+      "pages": 2,
+      "visual_review": "passed 全部页面逐页检查 无裁切 重叠或空白页"
+    },
+    {
+      "file": "03_周二_D1任务清单与人工确认表.pdf",
+      "pages": 4,
+      "visual_review": "passed 全部页面逐页检查 无裁切 重叠或空白页"
+    },
+    {
+      "file": "04_数据补全规范与核验说明.pdf",
+      "pages": 2,
+      "visual_review": "passed 全部页面逐页检查 无裁切 重叠或空白页"
+    }
+  ],
+  "total_pdf_pages": 12,
+  "rendering": "render_docx.py缺少LibreOffice；隐藏本机Word导出PDF，Poppler120dpi渲染，逐页检查",
+  "coverage": {
+    "real_records": 119,
+    "menu_matched": 52,
+    "menu_unmatched_retained": 67,
+    "null_cells_explained": 1168,
+    "lineage_fields": 6144,
+    "source_records_used_in_simulation": 1,
+    "simulated_increments": 1,
+    "new_simulated_orders": 0
+  },
+  "checks": {
+    "passed": true,
+    "input_sha256": "e16d3892bcded518fda89b4934105e027b10204d9cc603eca2f0830777e35c2e",
+    "result_sha256": "547f0de5e7535248f3060259019111b98473124b4958277f09cece717595115a",
+    "replay_byte_identical": true,
+    "unit_tests": 37,
+    "runtime_checks": 16,
+    "browser_checks": 8,
+    "manual_human_record_byte_unchanged": true,
+    "actual_completion_recorded": false,
+    "new_ai_blind_test_performed": false
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "真实记录119、菜单匹配52、未匹配67，默认种子MINI TUNA",
+      "未匹配记录保留空值、原ID和明确缺失原因",
+      "菜单补全没有填入虚构制作时长",
+      "页面展示16项实际核验与5条规范依据",
+      "演示延期迟供1份；未核实不能采纳；采纳仅改原任务、库存不变",
+      "演示缺制作时长仍阻断调整",
+      "经营演示可直接打开本次数据补全报告",
+      "390px页面无整体水平溢出，宽表可在容器内查看"
+    ],
+    "page_errors": [],
+    "scope": "真实本地浏览器；本轮未新录视频；旧录屏作历史证据保留"
+  },
+  "submission_state": "ready_not_uploaded",
+  "learning_platform": "https://ai-native-talent-academy.coolai.tech/",
+  "task": "第3周D1；周六材料随D1提交，周一内容并入D1",
+  "attachment_plan": "4份主要PDF加完整ZIP，共5项，每项小于20MB",
+  "group_division_basis": "用户授权按成果模块合理安排；AI辅助整理与核验，见完成情况草稿",
+  "enterprise_effect_validated": false,
+  "deployed": false,
+  "uploaded": false
+}

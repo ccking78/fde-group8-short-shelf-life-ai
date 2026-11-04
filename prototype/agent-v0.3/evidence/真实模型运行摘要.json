@@ -1,0 +1,93 @@
+[
+  {
+    "id": "feb9f32da39043668598dcc543e4d52a",
+    "trigger": "eta_changed",
+    "version": 1,
+    "model_requests": 3,
+    "tool_calls": 3,
+    "duration_seconds": 60.89,
+    "recommendation": {
+      "additional_quantity": 0,
+      "checks": [
+        "核实TASK-8现场进度仍允许调整，并能在第8分钟完成。",
+        "核实替代时点产能为8，满足4分钟制作时长。",
+        "核实制作数量8及课堂可售规则：新批次30分钟、旧批次至第28分钟。",
+        "由制作岗位确认数量与完成时间；实际完成后登记，采纳本身不入库。"
+      ],
+      "confirmation_role": "制作岗位",
+      "evidence_refs": [
+        "feb9f32d-T01",
+        "feb9f32d-T02",
+        "feb9f32d-T03"
+      ],
+      "explanation": "工具比较显示，原计划模拟迟供1件、延迟2件分钟；候选均降至0，且通过数量守恒检查。建议尚未执行，须本轮人审；模拟迟供不等于真实丢单。",
+      "quantity": 8,
+      "ready_minute": 8,
+      "status": "adjust_existing",
+      "summary": "建议将TASK-8完成时点由第12分钟提前至第8分钟，数量维持8，额外新增为0。",
+      "task_id": "TASK-8"
+    },
+    "request_hashes_verified": true
+  },
+  {
+    "id": "fc893754dd964840ab8dc2a3a2707bcf",
+    "trigger": "completion_recorded",
+    "version": 3,
+    "model_requests": 3,
+    "tool_calls": 4,
+    "duration_seconds": 63.47,
+    "recommendation": {
+      "additional_quantity": null,
+      "checks": [
+        "制作岗位核对第8分钟完成8份的现场情况与登记，确认没有重复入库。",
+        "制作岗位复核账面库存16份、预留5份及履约登记，确认过去需用已核清。",
+        "制作岗位复核批次第38分钟可售截止及后续需用；若规则缺失，交店长确认。"
+      ],
+      "confirmation_role": "制作岗位",
+      "evidence_refs": [
+        "fc893754-T01",
+        "fc893754-T02",
+        "fc893754-T03",
+        "fc893754-T04"
+      ],
+      "explanation": "比较结果显示可用量11份可及时覆盖剩余模拟需用11份，模拟迟供量及过去需用待核对量均为0。TASK-8已完成，无需增加任务。以上均为课堂模拟，历史课堂确认不替代本轮人审。",
+      "quantity": null,
+      "ready_minute": null,
+      "status": "observe",
+      "summary": "完成登记后，现有计划可及时覆盖剩余需用，维持观察。",
+      "task_id": "TASK-8"
+    },
+    "request_hashes_verified": true
+  },
+  {
+    "id": "9d76d81b215c486abdd78a3f85815b4a",
+    "trigger": "eta_changed",
+    "version": 1,
+    "model_requests": 3,
+    "tool_calls": 4,
+    "duration_seconds": 79.48,
+    "recommendation": {
+      "additional_quantity": null,
+      "checks": [
+        "店长补齐并确认制作时长规则及适用条件。",
+        "制作岗位核实TASK-8现场进度、剩余制作时间及可调整产能。",
+        "制作岗位核实8份能否在第8分钟完成，确认制作规则、数量和完成时间后重新比较。",
+        "实际完成后登记数量与完成时间；采纳建议本身不入库。"
+      ],
+      "confirmation_role": "制作岗位",
+      "evidence_refs": [
+        "9d76d81b-T01",
+        "9d76d81b-T02",
+        "9d76d81b-T03",
+        "9d76d81b-T04"
+      ],
+      "explanation": "现有计划模拟有1份迟供；候选因制作时长缺失未生成，工具判定不可采纳。须补齐规则并重新比较后再决定调整。所有经营数据均为课堂模拟，模拟迟供不等于真实丢单；完成登记才改变账面量。",
+      "quantity": null,
+      "ready_minute": null,
+      "status": "needs_verification",
+      "summary": "TASK-8需补齐制作时长规则并核实现场可行性。",
+      "task_id": "TASK-8"
+    },
+    "request_hashes_verified": true
+  }
+]

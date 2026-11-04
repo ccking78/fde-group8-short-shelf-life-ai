@@ -1,0 +1,211 @@
+{
+  "contract_version": "fde-classroom-contract-1.0.0",
+  "seed_record_id": "urn:fde:mendeley:9hntk3wbwc:1:E3:35741",
+  "origin": "classroom_assumption",
+  "time_unit": "minute",
+  "state": {
+    "display_sku": "迷你三明治 A",
+    "source_item_id": "1023",
+    "store_id": "SIM-01",
+    "window_minutes": 20,
+    "on_hand": 12,
+    "reserved": 5,
+    "blocked": 0,
+    "old_sellable_until": 28,
+    "new_hold_minutes": 30,
+    "prep_minutes": 4,
+    "plan": {
+      "id": "TASK-8",
+      "quantity": 8,
+      "status": "not_started",
+      "ready_minute": 4,
+      "alternative_ready_minute": 8,
+      "alternative_capacity": 8
+    },
+    "demand_due": [
+      {
+        "minute": 5,
+        "quantity": 4
+      },
+      {
+        "minute": 10,
+        "quantity": 4
+      },
+      {
+        "minute": 15,
+        "quantity": 4
+      },
+      {
+        "minute": 20,
+        "quantity": 3
+      }
+    ],
+    "actual_discard_recorded": 0,
+    "as_of_minute": 0,
+    "id": "PILOT-01"
+  },
+  "field_origins": [
+    {
+      "field": "/display_sku",
+      "value": "迷你三明治 A",
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/source_item_id",
+      "value": "1023",
+      "kind": "source_reference",
+      "basis": "引用真实源商品ID；本案例状态仍为课堂模拟"
+    },
+    {
+      "field": "/store_id",
+      "value": "SIM-01",
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/window_minutes",
+      "value": 20,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/on_hand",
+      "value": 12,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/reserved",
+      "value": 5,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/blocked",
+      "value": 0,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/old_sellable_until",
+      "value": 28,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/new_hold_minutes",
+      "value": 30,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/prep_minutes",
+      "value": 4,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/plan/id",
+      "value": "TASK-8",
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/plan/quantity",
+      "value": 8,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/plan/status",
+      "value": "not_started",
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/plan/ready_minute",
+      "value": 4,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/plan/alternative_ready_minute",
+      "value": 8,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/plan/alternative_capacity",
+      "value": 8,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/0/minute",
+      "value": 5,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/0/quantity",
+      "value": 4,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/1/minute",
+      "value": 10,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/1/quantity",
+      "value": 4,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/2/minute",
+      "value": 15,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/2/quantity",
+      "value": 4,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/3/minute",
+      "value": 20,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/demand_due/3/quantity",
+      "value": 3,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/actual_discard_recorded",
+      "value": 0,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/as_of_minute",
+      "value": 0,
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    },
+    {
+      "field": "/id",
+      "value": "PILOT-01",
+      "kind": "classroom_assumption",
+      "basis": "沿用已确认课堂切片；不是实测门店数据或通用安全标准"
+    }
+  ]
+}

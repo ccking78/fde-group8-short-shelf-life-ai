@@ -1,0 +1,58 @@
+{
+  "dependencies": [
+    {
+      "name": "simpy",
+      "version": "4.1.2",
+      "wheel": "simpy-4.1.2-py3-none-any.whl",
+      "sha256": "43071f84b6512c9b4fcb33ef057f240ccb1d1f3b263f9b4f9229d072e310b372"
+    },
+    {
+      "name": "attrs",
+      "version": "25.3.0",
+      "wheel": "attrs-25.3.0-py3-none-any.whl",
+      "sha256": "427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.25.1",
+      "wheel": "jsonschema-4.25.1-py3-none-any.whl",
+      "sha256": "3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63"
+    },
+    {
+      "name": "jsonschema_specifications",
+      "version": "2025.4.1",
+      "wheel": "jsonschema_specifications-2025.4.1-py3-none-any.whl",
+      "sha256": "4653bffbd6584f7de83a67e0d620ef16900b390ddc7939d56684d6c81e33f1af"
+    },
+    {
+      "name": "referencing",
+      "version": "0.36.2",
+      "wheel": "referencing-0.36.2-py3-none-any.whl",
+      "sha256": "e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0"
+    },
+    {
+      "name": "rpds_py",
+      "version": "0.27.1",
+      "wheel": "rpds_py-0.27.1-cp312-cp312-win_amd64.whl",
+      "sha256": "d9199717881f13c32c4046a15f024971a3b78ad4ea029e8da6b86e5aa9cf4594"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.14.1",
+      "wheel": "typing_extensions-4.14.1-py3-none-any.whl",
+      "sha256": "d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"
+    }
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "simpy": "4.1.2",
+    "jsonschema": "4.25.1"
+  },
+  "skills": [
+    "scrapling-official",
+    "data-quality-frameworks",
+    "simpy"
+  ],
+  "new_skill_installations_this_round": 0,
+  "quality_engine": "jsonschema and local domain constraints"
+}

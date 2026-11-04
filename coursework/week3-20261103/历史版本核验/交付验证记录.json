@@ -1,0 +1,47 @@
+{
+  "verified_at_utc": "2026-11-04T02:43:56.953664+00:00",
+  "documents": [
+    {
+      "file": "01_周六实操_一页六格说明.pdf",
+      "pages": 1,
+      "visual_review": "passed_current_ai_viewed_every_page"
+    },
+    {
+      "file": "01b_周六实操_运行报告与展示说明.pdf",
+      "pages": 3,
+      "visual_review": "passed_current_ai_viewed_every_page"
+    },
+    {
+      "file": "02_周一_AI任务边界.pdf",
+      "pages": 2,
+      "visual_review": "passed_current_ai_viewed_every_page"
+    },
+    {
+      "file": "03_周二_D1任务清单与人工确认表.pdf",
+      "pages": 4,
+      "visual_review": "passed_current_ai_viewed_every_page"
+    }
+  ],
+  "total_pdf_pages": 10,
+  "rendering": "render_docx.py缺LibreOffice；隐藏原生Word导出PDF，再Poppler 120dpi逐页PNG检查",
+  "ui_checks": [
+    "正常计划不发起新增制作",
+    "JS与Python在三个输入上的迟供、补供、余量和截止口径一致",
+    "未核事实与理由时不能采纳",
+    "改量后未覆盖需用须单独核对风险",
+    "采纳调整原待办，新增0；在手仍12；重复采纳不加库存",
+    "先回放2分钟5份和5分钟4份履约，再入库8；重复完成无重复入库；20分钟全部覆盖",
+    "实际只完成6时保留剩余2与待核实状态，不关闭风险",
+    "缺制作时间保留已知风险且阻断调整；演示店长补规则后不自动采纳",
+    "留痕JSON可实际下载，操作者记录与用户真实核对分开",
+    "390px宽度无水平溢出"
+  ],
+  "ui_page_errors": [],
+  "simulation_scope": "1店1SKU；正常、延迟两个对照；缺制作时间为延迟输入的删字段副本",
+  "simulated_increment_rows": 1,
+  "human_review": "用户真实课堂核对已保存；实际完成未登记；自动化操作另列",
+  "ai": "15次当前对话真实工具调用；非独立盲测；P2未在运行前冻结",
+  "learning_platform_submission": false,
+  "deployment": false,
+  "enterprise_effect_validated": false
+}

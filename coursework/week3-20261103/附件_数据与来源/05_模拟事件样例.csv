@@ -1,0 +1,2 @@
+﻿example_id,simulated_store,simulated_sku,minute,task_id,field,before,after,origin,schema_status,note
+INC-01,SIM-01,迷你三明治 A,1,TASK-8,ready_minute,4,12,simulated_increment,课堂临时样例 待用户指导正式增量规范,只注入这一条制作延迟事件，不生成批量订单

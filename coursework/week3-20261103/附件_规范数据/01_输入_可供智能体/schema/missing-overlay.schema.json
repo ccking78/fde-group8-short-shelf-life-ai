@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": "fde-classroom-contract-1.0.0"
+    },
+    "origin": {
+      "const": "intentional_missing_test"
+    },
+    "applies_after_version": {
+      "const": 1
+    },
+    "override": {
+      "type": "object",
+      "properties": {
+        "prep_minutes": {
+          "const": null
+        }
+      },
+      "required": [
+        "prep_minutes"
+      ],
+      "additionalProperties": false
+    },
+    "missing_reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "contract_version",
+    "origin",
+    "applies_after_version",
+    "override",
+    "missing_reason"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fde:schema:missing-overlay:1.0.0"
+}

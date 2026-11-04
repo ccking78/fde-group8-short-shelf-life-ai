@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "properties": {
+    "specversion": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^urn:fde:[A-Za-z0-9:._-]+$"
+    },
+    "type": {
+      "const": "cn.fde.group8.task.eta.changed.v1"
+    },
+    "subject": {
+      "const": "SIM-01/TASK-8"
+    },
+    "datacontenttype": {
+      "const": "application/json"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "fde-classroom-contract-1.0.0"
+        },
+        "origin": {
+          "const": "simulated_increment"
+        },
+        "scenario_id": {
+          "const": "PILOT-01"
+        },
+        "store_id": {
+          "const": "SIM-01"
+        },
+        "sku_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "const": "TASK-8"
+        },
+        "event_minute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "recorded_minute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "previous_version": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "new_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1
+        },
+        "changed_field": {
+          "const": "plan.ready_minute"
+        },
+        "before": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1440
+        },
+        "after": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1440
+        }
+      },
+      "required": [
+        "contract_version",
+        "origin",
+        "scenario_id",
+        "store_id",
+        "sku_id",
+        "task_id",
+        "event_minute",
+        "recorded_minute",
+        "previous_version",
+        "new_version",
+        "changed_field",
+        "before",
+        "after"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "specversion",
+    "id",
+    "source",
+    "type",
+    "subject",
+    "datacontenttype",
+    "data"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fde:schema:event:1.0.0"
+}

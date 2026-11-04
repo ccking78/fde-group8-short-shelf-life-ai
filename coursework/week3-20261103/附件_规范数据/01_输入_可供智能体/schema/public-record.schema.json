@@ -1,0 +1,241 @@
+{
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": "fde-classroom-contract-1.0.0"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed": {
+      "type": "object",
+      "properties": {
+        "receipt_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "store_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "start_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "end_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "item_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quantity_raw": {
+          "type": "string",
+          "minLength": 1
+        },
+        "return_raw": {
+          "type": "string",
+          "minLength": 1
+        },
+        "drive_thru_raw": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "receipt_id",
+        "store_id",
+        "date",
+        "start_time",
+        "end_time",
+        "item_id",
+        "quantity_raw",
+        "return_raw",
+        "drive_thru_raw"
+      ],
+      "additionalProperties": false
+    },
+    "menu": {
+      "type": "object",
+      "properties": {
+        "matched": {
+          "type": "boolean"
+        },
+        "item_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "category_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "category_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "subcategory_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "subcategory_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "matched",
+        "item_name",
+        "category_id",
+        "category_name",
+        "subcategory_id",
+        "subcategory_name"
+      ],
+      "additionalProperties": false
+    },
+    "derived": {
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 10000
+        },
+        "is_return": {
+          "const": false
+        },
+        "drive_thru": {
+          "type": "boolean"
+        },
+        "start_local_time": {
+          "type": "string",
+          "minLength": 1,
+          "format": "local-time"
+        },
+        "end_local_time": {
+          "type": "string",
+          "minLength": 1,
+          "format": "local-time"
+        },
+        "start_hour": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "weekday_iso": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        }
+      },
+      "required": [
+        "quantity",
+        "is_return",
+        "drive_thru",
+        "start_local_time",
+        "end_local_time",
+        "start_hour",
+        "weekday_iso"
+      ],
+      "additionalProperties": false
+    },
+    "unknown": {
+      "type": "object",
+      "properties": {
+        "source_timezone": {
+          "const": null
+        },
+        "kitchen_completed_at": {
+          "const": null
+        },
+        "service_due_at": {
+          "const": null
+        },
+        "actual_on_hand": {
+          "const": null
+        },
+        "actual_prep_minutes": {
+          "const": null
+        },
+        "actual_capacity_per_batch": {
+          "const": null
+        },
+        "actual_sellable_minutes": {
+          "const": null
+        }
+      },
+      "required": [
+        "source_timezone",
+        "kitchen_completed_at",
+        "service_due_at",
+        "actual_on_hand",
+        "actual_prep_minutes",
+        "actual_capacity_per_batch",
+        "actual_sellable_minutes"
+      ],
+      "additionalProperties": false
+    },
+    "missing_reasons": {
+      "type": "object",
+      "minProperties": 7,
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "not_in_source",
+              "no_menu_match"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "code",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "contract_version",
+    "record_id",
+    "evidence_id",
+    "observed",
+    "menu",
+    "derived",
+    "unknown",
+    "missing_reasons"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fde:schema:public-record:1.0.0"
+}
