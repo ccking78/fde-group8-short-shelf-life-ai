@@ -1,0 +1,23 @@
+{
+  "state": "confirmed_classroom_simulation",
+  "reviewer": "傅浩诚",
+  "role": "课程项目参与者 人工核对",
+  "user_exact_text": "核对无误，课堂模拟采纳调整原待办",
+  "received_in_current_conversation": true,
+  "recorded_at_utc": "2026-11-04T02:28:41.119231+00:00",
+  "scope": "核对问句所列模拟数字与处理摘要，不表示逐条审阅原始工具输出或真实门店审批",
+  "decision": {
+    "task_id": "TASK-8",
+    "action": "adjust_existing_task",
+    "task_quantity": 8,
+    "additional_quantity": 0,
+    "expected_ready_minute": 8
+  },
+  "premise": "课堂假设制作岗位已核实尚未开工且可调整至第8分钟完成",
+  "inventory_at_acceptance": {
+    "on_hand": 12,
+    "reserved": 5,
+    "available": 7
+  },
+  "actual_completion_recorded": false
+}

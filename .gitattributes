@@ -4,3 +4,7 @@
 *.md text eol=lf
 data/d1/** -text
 docs/planning/** -text
+coursework/week3-20261103/** -text
+prototype/agent-v0.3/** -text
+presentations/20261104/** -text
+handoff/windows-20261104/** -text

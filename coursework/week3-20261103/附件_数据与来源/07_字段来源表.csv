@@ -1,0 +1,16 @@
+﻿field,origin,rule
+source_item_id / source_item_name,爬取事实,E4原字段；不改为目标门店事实
+source_count / receipt_id,爬取事实,E3原字段；保留源记录序号
+source_store / date / start / end,爬取事实,仅保留E1可精确关联行；交易起止不当等待或制作时间
+menu_match / joined_record,派生,按原始Receipt_ID和Inv_Num精确关联；缺失不猜配
+display_sku / SIM-01,模拟映射,源商品映射为课堂SKU；不是原门店现状
+history_quantities,模拟,固定13、14、15、16、17；不当作真实历史销量
+forecast_qty,派生自模拟,五个模拟窗口均值15；不是由公开样本估计的真实预测
+demand_due / minute,模拟假设,四个预设需用时点，不生成批量增量订单
+INC-01 ready_minute,模拟增量,唯一事件为4改12；字段仅为课堂临时样例，正式规范待用户指导
+on_hand / reserved / blocked,模拟,12、5、0；程序派生可分配7
+plan / quantity / ready / alternative,模拟,预设8份待办和可调整产能；事实须由制作岗位核实
+prep_minutes / hold / sellable_until,模拟规则,仅用于课堂校验；不构成真实门店规则或食品安全标准
+late_units / unit_minutes / remaining,派生自模拟,按供给与需用时点模拟；不是实测等待、损耗或收益
+expired_unavailable,派生自模拟,到截止排除；实际报废另记
+human decision / actual completion,课堂操作,浏览器操作者的演示记录；不冒充真实经营审批

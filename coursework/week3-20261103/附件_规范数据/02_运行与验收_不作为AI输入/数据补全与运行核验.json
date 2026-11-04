@@ -1,0 +1,612 @@
+{
+  "contract_version": "fde-classroom-contract-1.0.0",
+  "input_sha256": "e16d3892bcded518fda89b4934105e027b10204d9cc603eca2f0830777e35c2e",
+  "checks": [
+    {
+      "name": "结构和格式校验",
+      "passed": true,
+      "detail": "119条真实记录及课堂快照、事件、缺规则覆写通过Draft202012Validator及本地format检查"
+    },
+    {
+      "name": "真实来源与字段来源覆盖",
+      "passed": true,
+      "detail": "每个真实选列与衍生值均能从必要选列证据重算；原始大文件哈希在构建时核验"
+    },
+    {
+      "name": "未知字段保留空值与原因",
+      "passed": true,
+      "detail": "每个null均有缺失原因；未填0、未用课堂假设替代真实观测"
+    },
+    {
+      "name": "样本覆盖如实登记",
+      "passed": true,
+      "detail": "119条正数量非退货；52匹配菜单，67未匹配保留；不是连续交易"
+    },
+    {
+      "name": "事件组合身份去重",
+      "passed": true,
+      "detail": "相同source和id同内容重放忽略；修改前值及版本原子校验"
+    },
+    {
+      "name": "normal数量守恒",
+      "passed": true,
+      "detail": "逐事件核对期初可分配+投影供给=履约+剩余+截止排除"
+    },
+    {
+      "name": "delay数量守恒",
+      "passed": true,
+      "detail": "逐事件核对期初可分配+投影供给=履约+剩余+截止排除"
+    },
+    {
+      "name": "missing数量守恒",
+      "passed": true,
+      "detail": "逐事件核对期初可分配+投影供给=履约+剩余+截止排除"
+    },
+    {
+      "name": "正常不重复制作",
+      "passed": true,
+      "detail": "已有8份第4分钟完成"
+    },
+    {
+      "name": "延迟时点风险",
+      "passed": true,
+      "detail": "第10分钟迟供1份，第12分钟补供；不是损失销量"
+    },
+    {
+      "name": "缺规则阻断行动",
+      "passed": true,
+      "detail": "保留由ETA支持的风险；不生成可采纳调整量"
+    },
+    {
+      "name": "预设调整可行性",
+      "passed": true,
+      "detail": "课堂产能假设下原8份第8分钟完成；不新增审批或实际完成记录"
+    },
+    {
+      "name": "快照不受投影写入影响",
+      "passed": true,
+      "detail": "模拟供给不是实际入库"
+    },
+    {
+      "name": "normal与既有算法核对",
+      "passed": true,
+      "detail": [
+        "late_units",
+        "first_late_minute",
+        "backlog_end",
+        "delay_unit_minutes",
+        "served_by_horizon",
+        "remaining_available",
+        "expired_unavailable"
+      ]
+    },
+    {
+      "name": "delay与既有算法核对",
+      "passed": true,
+      "detail": [
+        "late_units",
+        "first_late_minute",
+        "backlog_end",
+        "delay_unit_minutes",
+        "served_by_horizon",
+        "remaining_available",
+        "expired_unavailable"
+      ]
+    },
+    {
+      "name": "missing与既有算法核对",
+      "passed": true,
+      "detail": [
+        "late_units",
+        "first_late_minute",
+        "backlog_end",
+        "delay_unit_minutes",
+        "served_by_horizon",
+        "remaining_available",
+        "expired_unavailable"
+      ]
+    }
+  ],
+  "passed": true,
+  "coverage": {
+    "real_records": 119,
+    "menu_matched": 52,
+    "menu_unmatched_retained": 67,
+    "null_cells_explained": 1168,
+    "lineage_fields": 6144,
+    "source_records_used_in_simulation": 1,
+    "simulated_increments": 1,
+    "new_simulated_orders": 0
+  },
+  "seed": {
+    "contract_version": "fde-classroom-contract-1.0.0",
+    "derived": {
+      "drive_thru": true,
+      "end_local_time": "12:15:00",
+      "is_return": false,
+      "quantity": 1,
+      "start_hour": 12,
+      "start_local_time": "12:14:00",
+      "weekday_iso": 3
+    },
+    "evidence_id": "E3:35741",
+    "menu": {
+      "category_id": "1",
+      "category_name": "SANDWICHES",
+      "item_name": "MINI TUNA",
+      "matched": true,
+      "subcategory_id": "24",
+      "subcategory_name": "MINIS"
+    },
+    "missing_reasons": {
+      "/unknown/actual_capacity_per_batch": {
+        "code": "not_in_source",
+        "reason": "源文件未提供班次和岗位产能。"
+      },
+      "/unknown/actual_on_hand": {
+        "code": "not_in_source",
+        "reason": "源文件未提供门店在手数量。"
+      },
+      "/unknown/actual_prep_minutes": {
+        "code": "not_in_source",
+        "reason": "源文件未提供制作时长。"
+      },
+      "/unknown/actual_sellable_minutes": {
+        "code": "not_in_source",
+        "reason": "源文件未提供适用于该商品批次的可售规则。"
+      },
+      "/unknown/kitchen_completed_at": {
+        "code": "not_in_source",
+        "reason": "源文件未提供厨房完成时刻，交易结束不能替代。"
+      },
+      "/unknown/service_due_at": {
+        "code": "not_in_source",
+        "reason": "源文件未提供顾客需用时刻，不能从收据时间推断。"
+      },
+      "/unknown/source_timezone": {
+        "code": "not_in_source",
+        "reason": "源文件未提供交易地点的时区，不能推断UTC时间。"
+      }
+    },
+    "observed": {
+      "date": "2011-03-23",
+      "drive_thru_raw": "True",
+      "end_time": "12:15",
+      "item_id": "1023",
+      "quantity_raw": "1",
+      "receipt_id": "8_03/23/2011_12:15_10078_0",
+      "return_raw": "False",
+      "start_time": "12:14:00",
+      "store_id": "8"
+    },
+    "record_id": "urn:fde:mendeley:9hntk3wbwc:1:E3:35741",
+    "unknown": {
+      "actual_capacity_per_batch": null,
+      "actual_on_hand": null,
+      "actual_prep_minutes": null,
+      "actual_sellable_minutes": null,
+      "kitchen_completed_at": null,
+      "service_due_at": null,
+      "source_timezone": null
+    }
+  },
+  "results": {
+    "normal": {
+      "projection": {
+        "kind": "hypothetical_projection",
+        "engine": "SimPy",
+        "simpy_version": "4.1.2",
+        "available_initial": 7,
+        "quantity": 8,
+        "ready_minute": 4,
+        "forecast_quantity": 15,
+        "late_units": 0,
+        "first_late_minute": null,
+        "backlog_end": 0,
+        "delay_unit_minutes": 0,
+        "served_by_horizon": 15,
+        "remaining_available": 0,
+        "expired_unavailable": 0,
+        "actual_discard_recorded": 0,
+        "missing_action_rules": [],
+        "conservation_pass": true,
+        "scheduler_steps": 6,
+        "trace": [
+          {
+            "minute": 0,
+            "event": "projection_start",
+            "quantity": 0,
+            "projected_available": 7,
+            "projected_backlog": 0,
+            "projected_supplied": 0,
+            "projected_served": 0,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 4,
+            "event": "projected_supply",
+            "quantity": 8,
+            "projected_available": 15,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 0,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 5,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 11,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 4,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 10,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 7,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 8,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 15,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 3,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 12,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 20,
+            "event": "simulated_need_due",
+            "quantity": 3,
+            "projected_available": 0,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 15,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          }
+        ],
+        "meaning": "需用时点未覆盖量；后续可以补供；不等于损失销量或实测经营收益"
+      },
+      "adjustment_check": {
+        "not_requested": true,
+        "reason": "已有计划及时覆盖，维持计划"
+      }
+    },
+    "delay": {
+      "projection": {
+        "kind": "hypothetical_projection",
+        "engine": "SimPy",
+        "simpy_version": "4.1.2",
+        "available_initial": 7,
+        "quantity": 8,
+        "ready_minute": 12,
+        "forecast_quantity": 15,
+        "late_units": 1,
+        "first_late_minute": 10,
+        "backlog_end": 0,
+        "delay_unit_minutes": 2,
+        "served_by_horizon": 15,
+        "remaining_available": 0,
+        "expired_unavailable": 0,
+        "actual_discard_recorded": 0,
+        "missing_action_rules": [],
+        "conservation_pass": true,
+        "scheduler_steps": 6,
+        "trace": [
+          {
+            "minute": 1,
+            "event": "projection_start",
+            "quantity": 0,
+            "projected_available": 7,
+            "projected_backlog": 0,
+            "projected_supplied": 0,
+            "projected_served": 0,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 5,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 3,
+            "projected_backlog": 0,
+            "projected_supplied": 0,
+            "projected_served": 4,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 10,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 0,
+            "projected_backlog": 1,
+            "projected_supplied": 0,
+            "projected_served": 7,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          },
+          {
+            "minute": 12,
+            "event": "projected_supply",
+            "quantity": 8,
+            "projected_available": 7,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 8,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          },
+          {
+            "minute": 15,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 3,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 12,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          },
+          {
+            "minute": 20,
+            "event": "simulated_need_due",
+            "quantity": 3,
+            "projected_available": 0,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 15,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          }
+        ],
+        "meaning": "需用时点未覆盖量；后续可以补供；不等于损失销量或实测经营收益"
+      },
+      "adjustment_check": {
+        "action_adoptable": true,
+        "requires_human_confirmation": true,
+        "candidate_feasibility_only": true,
+        "quantity": 8,
+        "ready_minute": 8,
+        "additional_quantity": 0,
+        "projection": {
+          "kind": "hypothetical_projection",
+          "engine": "SimPy",
+          "simpy_version": "4.1.2",
+          "available_initial": 7,
+          "quantity": 8,
+          "ready_minute": 8,
+          "forecast_quantity": 15,
+          "late_units": 0,
+          "first_late_minute": null,
+          "backlog_end": 0,
+          "delay_unit_minutes": 0,
+          "served_by_horizon": 15,
+          "remaining_available": 0,
+          "expired_unavailable": 0,
+          "actual_discard_recorded": 0,
+          "missing_action_rules": [],
+          "conservation_pass": true,
+          "scheduler_steps": 6,
+          "trace": [
+            {
+              "minute": 1,
+              "event": "projection_start",
+              "quantity": 0,
+              "projected_available": 7,
+              "projected_backlog": 0,
+              "projected_supplied": 0,
+              "projected_served": 0,
+              "late_units_so_far": 0,
+              "conservation_pass": true
+            },
+            {
+              "minute": 5,
+              "event": "simulated_need_due",
+              "quantity": 4,
+              "projected_available": 3,
+              "projected_backlog": 0,
+              "projected_supplied": 0,
+              "projected_served": 4,
+              "late_units_so_far": 0,
+              "conservation_pass": true
+            },
+            {
+              "minute": 8,
+              "event": "projected_supply",
+              "quantity": 8,
+              "projected_available": 11,
+              "projected_backlog": 0,
+              "projected_supplied": 8,
+              "projected_served": 4,
+              "late_units_so_far": 0,
+              "conservation_pass": true
+            },
+            {
+              "minute": 10,
+              "event": "simulated_need_due",
+              "quantity": 4,
+              "projected_available": 7,
+              "projected_backlog": 0,
+              "projected_supplied": 8,
+              "projected_served": 8,
+              "late_units_so_far": 0,
+              "conservation_pass": true
+            },
+            {
+              "minute": 15,
+              "event": "simulated_need_due",
+              "quantity": 4,
+              "projected_available": 3,
+              "projected_backlog": 0,
+              "projected_supplied": 8,
+              "projected_served": 12,
+              "late_units_so_far": 0,
+              "conservation_pass": true
+            },
+            {
+              "minute": 20,
+              "event": "simulated_need_due",
+              "quantity": 3,
+              "projected_available": 0,
+              "projected_backlog": 0,
+              "projected_supplied": 8,
+              "projected_served": 15,
+              "late_units_so_far": 0,
+              "conservation_pass": true
+            }
+          ],
+          "meaning": "需用时点未覆盖量；后续可以补供；不等于损失销量或实测经营收益"
+        }
+      }
+    },
+    "missing": {
+      "projection": {
+        "kind": "hypothetical_projection",
+        "engine": "SimPy",
+        "simpy_version": "4.1.2",
+        "available_initial": 7,
+        "quantity": 8,
+        "ready_minute": 12,
+        "forecast_quantity": 15,
+        "late_units": 1,
+        "first_late_minute": 10,
+        "backlog_end": 0,
+        "delay_unit_minutes": 2,
+        "served_by_horizon": 15,
+        "remaining_available": 0,
+        "expired_unavailable": 0,
+        "actual_discard_recorded": 0,
+        "missing_action_rules": [
+          "prep_minutes"
+        ],
+        "conservation_pass": true,
+        "scheduler_steps": 6,
+        "trace": [
+          {
+            "minute": 1,
+            "event": "projection_start",
+            "quantity": 0,
+            "projected_available": 7,
+            "projected_backlog": 0,
+            "projected_supplied": 0,
+            "projected_served": 0,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 5,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 3,
+            "projected_backlog": 0,
+            "projected_supplied": 0,
+            "projected_served": 4,
+            "late_units_so_far": 0,
+            "conservation_pass": true
+          },
+          {
+            "minute": 10,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 0,
+            "projected_backlog": 1,
+            "projected_supplied": 0,
+            "projected_served": 7,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          },
+          {
+            "minute": 12,
+            "event": "projected_supply",
+            "quantity": 8,
+            "projected_available": 7,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 8,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          },
+          {
+            "minute": 15,
+            "event": "simulated_need_due",
+            "quantity": 4,
+            "projected_available": 3,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 12,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          },
+          {
+            "minute": 20,
+            "event": "simulated_need_due",
+            "quantity": 3,
+            "projected_available": 0,
+            "projected_backlog": 0,
+            "projected_supplied": 8,
+            "projected_served": 15,
+            "late_units_so_far": 1,
+            "conservation_pass": true
+          }
+        ],
+        "meaning": "需用时点未覆盖量；后续可以补供；不等于损失销量或实测经营收益"
+      },
+      "adjustment_check": {
+        "action_adoptable": false,
+        "quantity": null,
+        "missing": [
+          "prep_minutes"
+        ]
+      }
+    }
+  },
+  "ingestion": {
+    "first": {
+      "status": "applied",
+      "version": 1
+    },
+    "second": {
+      "status": "duplicate_ignored",
+      "version": 1
+    },
+    "events_applied": 1
+  },
+  "actual_completion_recorded": false,
+  "rules": {
+    "version": "pilot-rules-0.1",
+    "time_unit": "minute",
+    "horizon_inclusive": true,
+    "same_time_order": [
+      "expiry",
+      "projected_supply",
+      "simulated_need_due"
+    ],
+    "max_business_events": 32,
+    "max_scheduler_steps": 256,
+    "randomness": {
+      "enabled": false,
+      "seed_reserved": 20261103
+    },
+    "scope": "1店1SKU；沿用既有情景；唯一外部增量为预计完成时间4改12"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "simpy": "4.1.2",
+    "jsonschema": "4.25.1"
+  }
+}

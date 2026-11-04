@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>高峰经营异常助手 · 本地AI运行</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><div class="wrap">
+<header><div><p class="group">第8组 · 课堂模拟</p><h1>高峰经营异常助手</h1><p class="sub">先查已有计划，再决定要不要调整制作。</p></div><div class="runtime"><span class="dot"></span>实时模型与业务工具<br><small>本机运行 · 单店单商品 · v0.3</small></div></header>
+<nav aria-label="课堂情景"><button id="newBtn">新建正常情景</button><button id="delayBtn" class="primary">登记唯一延期 4 → 12分钟</button><button id="missingBtn">缺制作时间副本</button><button id="runBtn">检查当前计划</button></nav>
+<p id="message" class="message" role="status" aria-live="polite"></p>
+<div class="flow" id="flow" aria-label="业务处理进度"></div>
+<main class="layout"><section class="panel main-panel">
+<div id="status" class="status" aria-live="polite"><h2>正在连接本地服务</h2></div>
+<div id="version" class="muted small"></div><div id="stats" class="stats"></div>
+<h2>能否赶上需用时点</h2>
+<svg id="timeline" viewBox="0 0 650 180" role="img" aria-label="模拟需用时点与任务完成时点"></svg>
+<p class="small muted">需用时点来自课堂假设。迟供表示没赶上模拟时点，后续可补供。</p>
+<div id="comparison"></div>
+<div id="aiAdvice" class="advice"></div>
+<details id="evidenceDetails"><summary>本次模型选择与真实工具记录 <span id="toolCount"></span></summary><p id="runMeta" class="small muted"></p><div id="toolList"></div><pre id="rawTrace"></pre></details>
+</section><aside class="panel">
+<h2>制作岗位处理</h2><p class="small muted">普通调整由制作岗位核对；缺规则与例外交店长处理。所有操作记录为课堂演示。</p>
+<label for="actor">本次操作者</label><input id="actor" type="text" maxlength="60" value="课堂演示操作者">
+<div id="reviewForm" hidden>
+<h3>核对后决定</h3><ul id="checks"></ul>
+<p id="noQuantity" class="small warning" hidden>调整数量尚未生成。请补齐并核实条件，再重新调查。</p>
+<div id="candidateFields">
+<div class="formrow"><label for="quantity">原任务数量</label><input id="quantity" type="number" min="1" max="8" value="8"><span>份</span></div>
+<div class="formrow"><label for="ready">调整完成时点</label><input id="ready" type="number" min="5" max="20" value="8"><span>分钟</span></div>
+<label class="check"><input id="verified" type="checkbox"><span>已核对现场进度、产能、制作规则、数量与完成时间。</span></label>
+</div>
+<label for="note">核对结果或处理理由</label><textarea id="note" maxlength="500" placeholder="写清楚核对了什么，以及处理理由"></textarea>
+<div class="actions"><button id="adoptBtn" class="primary">采纳调整原待办</button><button id="previewBtn">校验改量</button><button id="ignoreBtn">忽略并留痕</button></div>
+<div id="preview" class="small"></div><label id="riskRow" class="check" hidden><input id="riskAck" type="checkbox"><span>已查看本次改量校验结果并确认影响。</span></label><button id="modifyBtn" hidden>按校验结果改量</button>
+</div>
+<div id="noReview" class="empty"></div>
+<div id="completeForm" hidden><h3>登记课堂模拟完成</h3><p class="small muted">预填数字用于本切片演示，请核对后登记。采纳没有增加库存，完成才入账。</p>
+<div class="formrow"><label for="actualQty">实际完成数量</label><input id="actualQty" type="number" min="1" max="8" value="8"><span>份</span></div>
+<div class="formrow"><label for="actualMinute">实际完成时点</label><input id="actualMinute" type="number" min="5" max="9" value="8"><span>分钟</span></div>
+<label for="fulfilled">本窗口累计已履约量（未知可留空）</label><input id="fulfilled" type="number" min="0" max="7" value="4"><p class="small muted">此处预填4份为模拟核对值。预测需用不会自动当成实际履约扣账。当前切片只登记第5～9分钟完成。</p>
+<label class="check"><input id="completeAck" type="checkbox"><span>已核对本次模拟完成与履约；这是课堂登记。</span></label><button id="completeBtn" class="primary">登记完成并触发AI复评</button></div>
+<div class="ledger" id="executionState"></div>
+</aside></main>
+<details><summary>人工处理与执行留痕</summary><div id="audit"></div><button id="exportBtn">导出本次完整记录</button></details>
+<details><summary>数据来源与使用边界</summary><p>复用 Scrapling 已采集的 Sandwich Analytics 公开商品与交易关联记录。源商品1023映射为“迷你三明治 A”；源记录35741、收据3836。库存、需用、时间规则、延期与执行均为课堂模拟。</p><p>公开前缀不是连续样本，不能估计门店高峰强度；当前没有企业实测收益。制作及可售时长均不是通用安全标准。</p><p><a href="https://data.mendeley.com/datasets/9hntk3wbwc/1" target="_blank" rel="noreferrer">Cazier, Spaulding, Hassler (2025), Mendeley Data V1</a> · CC BY 4.0。逐字段来源与采集哈希随源码保存。</p></details>
+<footer>本地单人原型：真实模型调用、白名单工具、版本校验、人审和完成后复评。生产身份权限、真实POS与企业验证待后续建设。GitHub 暂停发布。<br>本页面的新操作不会覆盖学习台已提交 v1，也不替代已保存的历史人工核对。</footer>
+</div></body></html>

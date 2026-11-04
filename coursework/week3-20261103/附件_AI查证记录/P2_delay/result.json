@@ -1,0 +1,28 @@
+{
+  "status": "risk_pending_confirmation",
+  "action": "reschedule_existing_task",
+  "affected_task_id": "TASK-8",
+  "proposed_task_quantity": 8,
+  "additional_quantity": 0,
+  "proposed_ready_minute": 8,
+  "risk": "原待办第12分钟完成，第10分钟有1份不能及时覆盖；第12分钟可补供，不等于损失1份销量",
+  "evidence_ids": [
+    "P2_delay-T02",
+    "P2_delay-T03",
+    "P2_delay-T04",
+    "P2_delay-T05",
+    "P2_delay-T06"
+  ],
+  "verification": [
+    "制作岗位核实TASK-8尚未开工",
+    "制作岗位核实调整顺序后确能第8分钟完成，产能支持8份"
+  ],
+  "human_review": "真实课堂人工核对已收到；仅采纳调整，未登记实际完成",
+  "follow_up": "采纳后只更新原待办；实际完成时间和数量到来后再复核及时覆盖情况",
+  "limitations": [
+    "本次为当前对话AI助手的工具查证，不是全新独立会话",
+    "课堂页面回放这些记录，页面交互不调用在线模型",
+    "源商品与交易字段真实，经营状态、时点、规则及效果为模拟",
+    "不据本次记录推算准确率、ROI或企业采用意愿"
+  ]
+}

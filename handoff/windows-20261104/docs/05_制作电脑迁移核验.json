@@ -1,0 +1,20 @@
+{
+  "verified_at_utc": "2026-11-04T09:51:03.511201+00:00",
+  "passed": true,
+  "checks": [
+    "完整压缩、异目录解压：路径含中文与空格",
+    "迁移后文件哈希一致，应用代码不依赖原F盘路径",
+    "从其他工作目录运行中文CMD，自带Python和10项业务边界通过",
+    "模拟未安装CLI：自检明确标待处理，不声称实时AI可用",
+    "默认账本跟随本机LOCALAPPDATA，支持中文用户目录",
+    "迁移后服务可启动；仅本机访问、令牌校验、新建正常情景及重复启动处理通过",
+    "迁移后浏览器可打开实时首页；断网交接入口→五分钟HTML及键盘功能可用，无页面脚本错误",
+    "其他程序占用端口时明确失败，不结束陌生进程"
+  ],
+  "relocated_directory": "F:\\ChatGPT\\work\\fde-handoff-20261104\\换电脑验证 带空格\\FDE_Group8_Win",
+  "runtime_python": "3.13.17",
+  "builder_os": "Windows x64",
+  "new_model_requests_in_this_offline_verification": 0,
+  "target_computer_verified": false,
+  "warning": "制作电脑中的迁移验证；组员本机须自行运行02与05，不声称已远程部署"
+}

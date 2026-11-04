@@ -1,0 +1,38 @@
+{
+  "runs": [
+    {
+      "case": "normal",
+      "tool_calls": 4,
+      "status": "normal",
+      "input_sha256": "29e0a59ed6926836eb8325c982d7d6acb5b3383a7597269762097498e6d23969",
+      "first_call_utc": "2026-11-04T02:22:22.286659+00:00",
+      "last_call_utc": "2026-11-04T02:23:02.553518+00:00",
+      "prompt_frozen_before_run": false
+    },
+    {
+      "case": "delay",
+      "tool_calls": 6,
+      "status": "risk_pending_confirmation",
+      "input_sha256": "29e0a59ed6926836eb8325c982d7d6acb5b3383a7597269762097498e6d23969",
+      "first_call_utc": "2026-11-04T02:22:20.769260+00:00",
+      "last_call_utc": "2026-11-04T02:23:03.024090+00:00",
+      "prompt_frozen_before_run": false
+    },
+    {
+      "case": "missing",
+      "tool_calls": 5,
+      "status": "needs_verification",
+      "input_sha256": "29e0a59ed6926836eb8325c982d7d6acb5b3383a7597269762097498e6d23969",
+      "first_call_utc": "2026-11-04T02:22:19.842076+00:00",
+      "last_call_utc": "2026-11-04T02:23:04.809207+00:00",
+      "prompt_frozen_before_run": false
+    }
+  ],
+  "total_tool_calls": 15,
+  "run_identity": "当前对话AI助手真实选择并调用本地工具；未开启新独立会话",
+  "comparison": "P0/P1历史输入无既有待办；本轮有既有待办。不同输入，不能声称P2准确性改善。",
+  "prompt_note": "P2为本轮流程整理后的开发指令；未在运行前冻结，不声称隔离提示词实验。",
+  "observed_change": "扩大了查证范围：已有待办、及时供给、正常不提醒、缺规则时分开观察与行动。",
+  "model_and_cost": "本记录未提供精确后端型号、token和费用，未估算",
+  "human_review": "confirmed_classroom_simulation"
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "test_count": 10,
+  "tests": [
+    "test_normal_and_delay_time_axis_includes_horizon",
+    "test_missing_rule_keeps_observation_but_blocks_action",
+    "test_model_quantity_bool_negative_and_excess_rejected",
+    "test_event_replay_ignored_conflict_and_stale_rejected",
+    "test_completion_conservation_no_double_projected_supply",
+    "test_unknown_fulfillment_and_partial_cannot_close_risk",
+    "test_latest_version_and_human_checks_required",
+    "test_modify_requires_preview_and_impact_acknowledgment",
+    "test_missing_or_fabricated_evidence_never_adoptable",
+    "test_model_unavailable_has_no_replay_or_mutation"
+  ],
+  "command": "python -m unittest test_boundaries -v",
+  "exit_code": 0,
+  "record_kind": "成功执行结果的摘要；完整测试源码随包提供",
+  "model_requests": 0
+}

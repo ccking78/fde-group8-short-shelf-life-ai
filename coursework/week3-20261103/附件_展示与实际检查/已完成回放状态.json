@@ -1,0 +1,167 @@
+{
+  "case": {
+    "display_sku": "迷你三明治 A",
+    "source_item_id": "1023",
+    "source_item_name": "MINI TUNA",
+    "seed_source_item_row": 35741,
+    "seed_source_receipt_row": 3836,
+    "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1",
+    "store_id": "SIM-01",
+    "window_minutes": 20,
+    "on_hand": 12,
+    "reserved": 5,
+    "blocked": 0,
+    "old_sellable_until": 28,
+    "new_hold_minutes": 30,
+    "prep_minutes": 4,
+    "plan": {
+      "id": "TASK-8",
+      "quantity": 8,
+      "status": "not_started",
+      "ready_minute": 12,
+      "alternative_ready_minute": 8,
+      "alternative_capacity": 8
+    },
+    "demand_due": [
+      {
+        "minute": 5,
+        "quantity": 4
+      },
+      {
+        "minute": 10,
+        "quantity": 4
+      },
+      {
+        "minute": 15,
+        "quantity": 4
+      },
+      {
+        "minute": 20,
+        "quantity": 3
+      }
+    ],
+    "actual_discard_recorded": 0,
+    "history_quantities": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "origins": {
+      "source_item_id": "scraped_fact",
+      "source_item_name": "scraped_fact",
+      "source_*": "scraped_fact",
+      "display_sku": "simulated_mapping",
+      "store_id": "simulated",
+      "on_hand": "simulated",
+      "reserved": "simulated",
+      "blocked": "simulated",
+      "plan": "simulated",
+      "demand_due": "simulated_forecast_schedule",
+      "history_quantities": "simulated_history",
+      "prep_minutes": "simulated_rule",
+      "old_sellable_until": "simulated_rule",
+      "new_hold_minutes": "simulated_rule",
+      "actual_discard_recorded": "simulated_event_ledger"
+    },
+    "limitations": [
+      "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+      "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+      "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+      "交易起止时间不是厨房完成时间或顾客等待时间。",
+      "到可售截止的排除量不等于实际已报废量。"
+    ],
+    "id": "delay",
+    "name": "制作延迟",
+    "description": "同一待办改为第12分钟完成；核实排队与可调整时点，比较保持和调整原待办。",
+    "snapshot_version": "SIM-delay-v1",
+    "as_of_minute": 0,
+    "events": [
+      {
+        "id": "E0",
+        "minute": 0,
+        "type": "snapshot",
+        "origin": "simulated"
+      },
+      {
+        "id": "E1",
+        "minute": 1,
+        "type": "task_eta_changed",
+        "origin": "simulated_increment"
+      }
+    ]
+  },
+  "version": "SIM-delay-v1-decision-actual",
+  "phase": "followed",
+  "accepted": true,
+  "completed": true,
+  "followed": true,
+  "ruleChanged": false,
+  "quantity": 8,
+  "ready": 8,
+  "stock": 0,
+  "reserved": 0,
+  "pending": 0,
+  "log": [
+    {
+      "at_utc": "2026-11-04T02:35:24.995Z",
+      "snapshot": "SIM-delay-v1",
+      "actor": "演示操作者",
+      "text": "注入唯一延迟：TASK-8预计完成由4改12。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.343Z",
+      "snapshot": "SIM-delay-v1-decision",
+      "actor": "演示操作者",
+      "text": "课堂采纳：调整原TASK-8为8份，第8分钟完成，额外新增0。理由：自动化课堂演示核实，不是傅浩诚新的经营审批。采纳后在手仍12。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.474Z",
+      "snapshot": "SIM-delay-v1-decision",
+      "actor": "演示操作者",
+      "text": "模拟第2分钟：已预留5份订单履约，在手12减为7，预留清零。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.474Z",
+      "snapshot": "SIM-delay-v1-decision",
+      "actor": "演示操作者",
+      "text": "模拟第5分钟需用4，已供4，暂待0。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.474Z",
+      "snapshot": "SIM-delay-v1-decision-actual",
+      "actor": "演示操作者",
+      "text": "模拟第8分钟实际完成8：此前在手3，入库8，当前在手11；待办剩0。登记已锁定，重复点击不再入库。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.610Z",
+      "snapshot": "SIM-delay-v1-decision-actual",
+      "actor": "演示操作者",
+      "text": "模拟第10分钟后续需用4，实际模拟供给4。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.610Z",
+      "snapshot": "SIM-delay-v1-decision-actual",
+      "actor": "演示操作者",
+      "text": "模拟第15分钟后续需用4，实际模拟供给4。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.610Z",
+      "snapshot": "SIM-delay-v1-decision-actual",
+      "actor": "演示操作者",
+      "text": "模拟第20分钟后续需用3，实际模拟供给3。"
+    },
+    {
+      "at_utc": "2026-11-04T02:35:25.610Z",
+      "snapshot": "SIM-delay-v1-decision-actual",
+      "actor": "演示操作者",
+      "text": "回看20分钟：未满足0，迟供0，在手0，实际报废登记0。仅为预设模拟结果。"
+    }
+  ],
+  "actualQuantity": 8,
+  "actualMinute": 8,
+  "observedLate": 0,
+  "openBacklog": 0,
+  "endBacklog": 0
+}

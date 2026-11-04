@@ -1,0 +1,281 @@
+[
+  {
+    "display_sku": "迷你三明治 A",
+    "source_item_id": "1023",
+    "source_item_name": "MINI TUNA",
+    "seed_source_item_row": 35741,
+    "seed_source_receipt_row": 3836,
+    "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1",
+    "store_id": "SIM-01",
+    "window_minutes": 20,
+    "on_hand": 12,
+    "reserved": 5,
+    "blocked": 0,
+    "old_sellable_until": 28,
+    "new_hold_minutes": 30,
+    "prep_minutes": 4,
+    "plan": {
+      "id": "TASK-8",
+      "quantity": 8,
+      "status": "not_started",
+      "ready_minute": 4,
+      "alternative_ready_minute": 8,
+      "alternative_capacity": 8
+    },
+    "demand_due": [
+      {
+        "minute": 5,
+        "quantity": 4
+      },
+      {
+        "minute": 10,
+        "quantity": 4
+      },
+      {
+        "minute": 15,
+        "quantity": 4
+      },
+      {
+        "minute": 20,
+        "quantity": 3
+      }
+    ],
+    "actual_discard_recorded": 0,
+    "history_quantities": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "origins": {
+      "source_item_id": "scraped_fact",
+      "source_item_name": "scraped_fact",
+      "source_*": "scraped_fact",
+      "display_sku": "simulated_mapping",
+      "store_id": "simulated",
+      "on_hand": "simulated",
+      "reserved": "simulated",
+      "blocked": "simulated",
+      "plan": "simulated",
+      "demand_due": "simulated_forecast_schedule",
+      "history_quantities": "simulated_history",
+      "prep_minutes": "simulated_rule",
+      "old_sellable_until": "simulated_rule",
+      "new_hold_minutes": "simulated_rule",
+      "actual_discard_recorded": "simulated_event_ledger"
+    },
+    "limitations": [
+      "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+      "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+      "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+      "交易起止时间不是厨房完成时间或顾客等待时间。",
+      "到可售截止的排除量不等于实际已报废量。"
+    ],
+    "id": "normal",
+    "name": "正常计划",
+    "description": "现有8份待办第4分钟完成，及时覆盖，无需新增制作。",
+    "snapshot_version": "SIM-normal-v1",
+    "as_of_minute": 0,
+    "events": [
+      {
+        "id": "E0",
+        "minute": 0,
+        "type": "snapshot",
+        "origin": "simulated"
+      },
+      {
+        "id": "E1",
+        "minute": 1,
+        "type": "scheduled_review",
+        "origin": "simulated_increment"
+      }
+    ]
+  },
+  {
+    "display_sku": "迷你三明治 A",
+    "source_item_id": "1023",
+    "source_item_name": "MINI TUNA",
+    "seed_source_item_row": 35741,
+    "seed_source_receipt_row": 3836,
+    "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1",
+    "store_id": "SIM-01",
+    "window_minutes": 20,
+    "on_hand": 12,
+    "reserved": 5,
+    "blocked": 0,
+    "old_sellable_until": 28,
+    "new_hold_minutes": 30,
+    "prep_minutes": 4,
+    "plan": {
+      "id": "TASK-8",
+      "quantity": 8,
+      "status": "not_started",
+      "ready_minute": 12,
+      "alternative_ready_minute": 8,
+      "alternative_capacity": 8
+    },
+    "demand_due": [
+      {
+        "minute": 5,
+        "quantity": 4
+      },
+      {
+        "minute": 10,
+        "quantity": 4
+      },
+      {
+        "minute": 15,
+        "quantity": 4
+      },
+      {
+        "minute": 20,
+        "quantity": 3
+      }
+    ],
+    "actual_discard_recorded": 0,
+    "history_quantities": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "origins": {
+      "source_item_id": "scraped_fact",
+      "source_item_name": "scraped_fact",
+      "source_*": "scraped_fact",
+      "display_sku": "simulated_mapping",
+      "store_id": "simulated",
+      "on_hand": "simulated",
+      "reserved": "simulated",
+      "blocked": "simulated",
+      "plan": "simulated",
+      "demand_due": "simulated_forecast_schedule",
+      "history_quantities": "simulated_history",
+      "prep_minutes": "simulated_rule",
+      "old_sellable_until": "simulated_rule",
+      "new_hold_minutes": "simulated_rule",
+      "actual_discard_recorded": "simulated_event_ledger"
+    },
+    "limitations": [
+      "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+      "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+      "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+      "交易起止时间不是厨房完成时间或顾客等待时间。",
+      "到可售截止的排除量不等于实际已报废量。"
+    ],
+    "id": "delay",
+    "name": "制作延迟",
+    "description": "同一待办改为第12分钟完成；核实排队与可调整时点，比较保持和调整原待办。",
+    "snapshot_version": "SIM-delay-v1",
+    "as_of_minute": 0,
+    "events": [
+      {
+        "id": "E0",
+        "minute": 0,
+        "type": "snapshot",
+        "origin": "simulated"
+      },
+      {
+        "id": "E1",
+        "minute": 1,
+        "type": "task_eta_changed",
+        "origin": "simulated_increment"
+      }
+    ]
+  },
+  {
+    "display_sku": "迷你三明治 A",
+    "source_item_id": "1023",
+    "source_item_name": "MINI TUNA",
+    "seed_source_item_row": 35741,
+    "seed_source_receipt_row": 3836,
+    "source_url": "https://data.mendeley.com/datasets/9hntk3wbwc/1",
+    "store_id": "SIM-01",
+    "window_minutes": 20,
+    "on_hand": 12,
+    "reserved": 5,
+    "blocked": 0,
+    "old_sellable_until": 28,
+    "new_hold_minutes": 30,
+    "prep_minutes": null,
+    "plan": {
+      "id": "TASK-8",
+      "quantity": 8,
+      "status": "not_started",
+      "ready_minute": 12,
+      "alternative_ready_minute": 8,
+      "alternative_capacity": 8
+    },
+    "demand_due": [
+      {
+        "minute": 5,
+        "quantity": 4
+      },
+      {
+        "minute": 10,
+        "quantity": 4
+      },
+      {
+        "minute": 15,
+        "quantity": 4
+      },
+      {
+        "minute": 20,
+        "quantity": 3
+      }
+    ],
+    "actual_discard_recorded": 0,
+    "history_quantities": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "origins": {
+      "source_item_id": "scraped_fact",
+      "source_item_name": "scraped_fact",
+      "source_*": "scraped_fact",
+      "display_sku": "simulated_mapping",
+      "store_id": "simulated",
+      "on_hand": "simulated",
+      "reserved": "simulated",
+      "blocked": "simulated",
+      "plan": "simulated",
+      "demand_due": "simulated_forecast_schedule",
+      "history_quantities": "simulated_history",
+      "prep_minutes": "simulated_rule",
+      "old_sellable_until": "simulated_rule",
+      "new_hold_minutes": "simulated_rule",
+      "actual_discard_recorded": "simulated_event_ledger"
+    },
+    "limitations": [
+      "公开文件的两个4MiB前缀不是连续交易序列，不能估计某店高峰订单强度。",
+      "历史窗口、分钟到单、当前库存、在制、制作规则与可售规则均为课堂模拟。",
+      "源门店是否提前备成品未知；模拟映射不代表源门店实际采用该流程。",
+      "交易起止时间不是厨房完成时间或顾客等待时间。",
+      "到可售截止的排除量不等于实际已报废量。"
+    ],
+    "id": "missing",
+    "name": "缺制作时间副本",
+    "description": "从延迟案例仅删除制作时间；保留已知预计完成时点，停给可采纳调整量。",
+    "snapshot_version": "SIM-missing-v1",
+    "as_of_minute": 0,
+    "events": [
+      {
+        "id": "E0",
+        "minute": 0,
+        "type": "snapshot",
+        "origin": "simulated"
+      },
+      {
+        "id": "E1",
+        "minute": 1,
+        "type": "missing_task_evidence",
+        "origin": "simulated_increment"
+      }
+    ]
+  }
+]

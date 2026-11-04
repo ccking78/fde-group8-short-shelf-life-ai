@@ -1,0 +1,9 @@
+{
+  "contract_version": "fde-classroom-contract-1.0.0",
+  "origin": "intentional_missing_test",
+  "applies_after_version": 1,
+  "override": {
+    "prep_minutes": null
+  },
+  "missing_reason": "故意删除课堂制作时长以验证行动阻断；未补回、未新增业务事件。"
+}

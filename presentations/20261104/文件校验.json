@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-11-04T07:33:38.625623+00:00",
+  "offline_single_file_html": true,
+  "main_seconds": 240,
+  "qa_seconds": 60,
+  "new_model_requests_in_presentation": 0,
+  "files": {
+    "00_打开5分钟汇报.html": "dcdf74b81cec42351337aebfd0d620ee751fbaeb28b71c5e977e903f35255e72",
+    "01_逐页讲稿与答疑备答.md": "8892a9cf327c7f25808d0832f99778e69b9c1126edf61aac6a723e1b5be2986a",
+    "02_使用说明.md": "bfc2f6aad5477b2b144f38b611e429da24f7f8154bb2cdf3e16f3f901108f15f",
+    "可编辑源文件/build_presentation.py": "6634feb9954fce02d387f5bea4008e9e88e332aa2c6e5a65fe78eb92df350ed4",
+    "可编辑源文件/notes.json": "ed6b647b5115518486f6fa37df08c24d63f76029b36671166e15a6363d8f2c32",
+    "可编辑源文件/presentation_template.html": "19374e151be34367a5f6690adbc662d6dbd6dfb201cbd870c736f3e8cbdf3619",
+    "可编辑源文件/verify_presentation.py": "58dbd13eb42839adc6b539e78e7796107abbc99ac6bc83506c152481f0c5c1a4",
+    "可编辑源文件/演示设计与时间安排.md": "639d4e68142e7b6d674daa61d20e6819feac637fb4423348a04d6798fe8dde21",
+    "证据与核验/01_投影_帮谁.png": "3b2e5116d4d49ed918591c82822b6e6804184b20b4f3d743db063c090dadc5fc",
+    "证据与核验/02_投影_用哪张表.png": "62c835efda962c07e8e955f991a8ab99fd18fa70ce557585e4ae026cd3c5f267",
+    "证据与核验/03_投影_按什么规则.png": "cd6572526e2868f23cd92ff0f2ecc518f8f56a0517f8269ca9d38aac9e6b50d4",
+    "证据与核验/04_投影_产出什么.png": "3350996a2296847d13712b0682e72615b88043b2066a1542aa404209c357ca7a",
+    "证据与核验/05_投影_由谁拍板.png": "2cc8e8181f490cd2e24b8efe740d5f0ec71bead53eba69b6a16e096aa37d7b11",
+    "证据与核验/06_投影_答疑.png": "e8223f237c625bfd9074e0180aaba570420c83993897fcc178af1329662d9945",
+    "证据与核验/07_课堂采纳_库存未增加.png": "a44f66aae56d29a05152c5d77848bc16ad067d8bcf3dbf7a6eb64cc9e6d44eda",
+    "证据与核验/08_缺规则_无可采纳数量.png": "9b67a57017b5acbdde36bf8ee6ccdf81e8f14def277afaebc3a8b7d1ab7acd46",
+    "证据与核验/09_手机查看.png": "2517d18578761b920dbc88202fdbc3b9c479334bb9d787f4e6d7a6d99c4f1bc6",
+    "证据与核验/D1更新提交_v2回执.json": "78685bc52f7077adcc6779612a718f1353af50105e13092af44a7a8a81e37c72",
+    "证据与核验/学习台_D1_已提交v2_20261104.jpg": "ead6e89a37ddb0d1eda9a15c3b7c48499ec81bd67de63ffd99a6581e5fd88f02",
+    "证据与核验/演示核验.json": "ea326796baf27a618755a51642051458c13eee313df315077042273ca57791a7"
+  }
+}
